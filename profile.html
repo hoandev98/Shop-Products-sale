@@ -1,0 +1,499 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Your Information</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="/images/icons/favicon.png"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/css/profile.css">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+</head>
+<body class="animsition">
+	<!-- Header -->
+<header class="header-v4">
+		<!-- Header desktop -->
+
+		<!-- Header Mobile -->
+		<div class="wrap-header-mobile">
+			<!-- Logo moblie -->		
+			<div class="logo-mobile">
+				<a href="/">
+					<i class="fab fa-phoenix-squadron" style="color: #27ae60; font-size: 320%"></i>
+				</a>
+			</div>
+
+			<!-- Icon header -->
+			<div class="wrap-icon-header flex-w flex-r-m m-r-15">
+				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 js-show-modal-search">
+					<i class="zmdi zmdi-search"></i>
+				</div>
+
+				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart" data-notify="2">
+					<i class="zmdi zmdi-shopping-cart"></i>
+				</div>
+
+				<a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti" data-notify="0">
+					<i class="zmdi zmdi-favorite-outline"></i>
+				</a>
+			</div>
+
+			<!-- Button show menu -->
+			<div class="btn-show-menu-mobile hamburger hamburger--squeeze">
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
+			</div>
+		</div>
+
+
+		<!-- Menu Mobile -->
+		<div class="menu-mobile">
+			<ul class="topbar-mobile">
+				<li>
+					<div class="left-top-bar">
+						<font color="red" class="translate">Free shipping</font> <div class="translate">for standard order over $100. </div><a href="#" class="translate">Click here</a>
+					</div>zmdi zmdi-shopping-cart
+				</li>
+
+				<li>
+					<div class="right-top-bar flex-w h-full">
+
+						
+
+							<form action="/logout" method="POST">
+								<button type="submit" class="flex-c-m trans-04 p-lr-10 translate form-in-a active-top">
+									Logout
+								</button>
+							</form>
+					
+						<a href="#" class="flex-c-m trans-04 p-lr-10">
+							<div class="translate">My Balance:</div> <font color="yellow"> 100$ </font>
+						</a>
+
+						<a href="/account" class="flex-c-m trans-04 p-lr-10 translate">
+							My Account
+						</a>
+
+						
+						<a href="/" class="flex-c-m p-lr-10 trans-04 transEN">
+							EN
+						</a>
+
+						<a href="/" class="flex-c-m p-lr-10 trans-04 transVI">
+							VI
+						</a>
+					</div>
+				</li>
+			</ul>
+
+			<ul class="main-menu-m">
+				<li class="">
+					<a class="translate" href="/">Home</a>
+				</li>
+
+				<li class="">
+					<a href="/products" class="translate">Shop</a>
+				</li>
+
+				
+					<li class="">
+						<a href="/cart" class="translate">Cart</a>
+					</li>
+				
+				<li class="">
+					<a href="/blog" class="translate">Blog</a>
+				</li>
+
+				<li class="">
+					<a href="/about" class="translate">About</a>
+				</li>
+
+				<li class="">
+					<a href="/contact" class="translate">Contact</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- Modal Search -->
+		<div class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
+			<div class="container-search-header">
+
+				<button class="flex-c-m btn-hide-modal-search trans-04 js-hide-modal-search">
+					<img src="/images/icons/icon-close2.png" alt="CLOSE">
+				</button>
+
+				<form class="wrap-search-header flex-w p-l-15" method="POST" action="/search">
+					<button type="submit" class="flex-c-m trans-04">
+						<i class="zmdi zmdi-search"></i>
+					</button>
+
+					<input class="plh3" type="text" name="search" id="search" placeholder="Search...">
+				</form>
+			</div>
+		</div>
+</header>
+<script>
+	$(document).ready(function(){
+		$.ajax({
+			url: '/api/cart',
+			type: 'GET',
+			dataType: 'json',
+		}).done(function(res){
+			const sumPrice = res.sumPrice;
+			const products = res.products;
+			console.log(products.length)
+			$('#shopCart').attr('data-notify', products.length);
+			$('#sumPrice').html(sumPrice)
+			$('#cart-product-list').html(TemplateCartRSide.createProductList(products));
+		});
+	});
+
+	const TemplateCartRSide = (function(){
+		const createProductList = function(products){
+			let rs = '';
+			for (let i=0; i < products.length; i++){
+				const product = products[i];
+				const productId = product.productId;
+				const quantity = product.quantity;
+				let template = '' +
+						'   <li class="header-cart-item flex-w flex-t m-b-12">  '  +
+						'   	<div class="header-cart-item-img">  '  +
+						'   		<img src="' + productId.imageUrl + '" alt="IMG">  '  +
+						'   	</div>  '  +
+						'     '  +
+						'   	<div class="header-cart-item-txt p-t-8">  '  +
+						'   		<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">  '  +
+										productId.name  +
+						'   		</a>  '  +
+						'   		<span class="header-cart-item-info">  '  +
+										quantity + ' x $' + productId.price  +
+						'   		</span>  '  +
+						'   	</div>  '  +
+						'  </li>  ' ;
+				rs += template
+			}
+			return rs;
+		}
+		return {
+			createProductList: createProductList
+		}
+	}());
+</script>
+
+
+	<!-- Cart -->
+
+	<!-- Title page -->
+
+
+
+	<!-- Content page -->
+	<section class="bg0 p-t-104 p-b-116">
+            
+            <div style="margin:auto;" class="container">
+                    
+                <div class="flex-w flex-tr">
+                    <div class="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md">
+                        <form method="POST" action="/account">
+                            <h3 class="mtext-105 cl2 txt-center p-b-30">
+                                Change Password
+                            </h3>
+                            <span class="mtext-110 cl2 ">
+                                    Email
+                            </span>
+                            <div class="bor8 m-b-20 how-pos4-parent">
+                                <input type="email" class="stext-110 cl2 plh3 size-112 p-l-10 p-r-10 w-full" name="email">
+                            </div>
+                            <span class="mtext-110 cl2 ">
+                                    Old Password
+                            </span>
+                            <div class="bor8 m-b-20 how-pos4-parent">
+                                <input type="password" class="stext-110 cl2 plh3 size-112 p-l-10 p-r-10 w-full" name="oldpass">                      
+                            </div>
+                            <span class="mtext-110 cl2 ">
+                                    New Password
+                            </span>
+                            <div class="bor8 m-b-20 how-pos4-parent">
+                                <input type="password" class="stext-110 cl2 plh3 size-112 p-l-10 p-r-10 w-full" name="newpass">                      
+                            </div>
+                            <span class="mtext-110 cl2 ">
+                                    Rewrite New Password
+                            </span>
+                            <div class="bor8 m-b-20 how-pos4-parent">
+                                <input type="password" class="stext-110 cl2 plh3 size-112 p-l-10 p-r-10 w-full" name="renewpass">                      
+                            </div>
+                            
+                           
+                            <button type="submit" class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer">
+                                Change
+                            </button>
+                            <input type="hidden" name="kindChange" value="pw">
+                            </form>
+                        </form>
+                    </div>
+                    
+                    <div class="size-210 bor10 flex-w flex-col-m p-lr-93 p-tb-30 p-lr-15-lg w-full-md">
+                        <form method="POST" action="/account" enctype="multipart/form-data">
+                        <h4 class="mtext-105 cl2 txt-center p-b-30">
+                                    Your Information
+                        </h4>
+                        <div class="size-212 p-t-2">
+                            
+                                <div class="row">
+                              <div class="file-field">
+                                  <div class="row">
+                                <div class="mb-4 col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: center;">
+                                  <img src="https://ucarecdn.com/5d276379-552f-4a08-97e7-744a15f71477/ava.png"
+                                    class="avatar-pic" alt="" style="width: 72%;">
+                                </div>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                  <div class="btn btn-mdb-color btn-rounded float-left">
+                                    <input style="margin-left: 62px;
+									" type="file" name="image" id="image">
+                                  </div>
+                                </div>
+
+                                <div class="product-edt-remove" style="display:block; text-align: center; margin-bottom: 20%; margin-top:10px;">
+                                    <button style="padding: 10px; background-color: red;border-radius: 5px;color:aliceblue;" type="submit" class="btn btn-danger waves-effect waves-light">Upload
+                                            <i class="fa fa-upload" aria-hidden="true"></i>
+                                    </button>
+                                    <button style="padding: 10px; background-color: red;border-radius: 5px;color:aliceblue;" type="submit" class="btn btn-danger waves-effect waves-light">Remove
+                                            <i class="fa fa-times" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+
+                              </div>
+                           
+                        </div>
+                       
+                        <div class="flex-w w-full p-b-30">
+                            <span class="fs-18 cl5 txt-center size-211">
+								<i class="fa fa-map-marker" aria-hidden="true"></i>
+
+                            </span>
+                            
+                            <div class="size-212 p-t-2">
+                                <span class="mtext-110 cl2">
+                                    Address
+                                </span>
+                                
+                                <div class="stext-115 cl1 size-200 p-t-18">
+                                    <input class="form-control" type="text" name = "address" value="">
+                                  </div>       
+                            </div>
+                            
+                            
+                        </div>
+    
+                        <div class="flex-w w-full p-b-30">
+                            <span class="fs-18 cl5 txt-center size-211">
+								<i class="fa fa-phone" aria-hidden="true"></i>
+                            </span>
+    
+                            <div class="size-212 p-t-2">
+                                <span class="mtext-110 cl2">
+                                    Telephone Number
+                                </span>
+    
+                                <div class="stext-115 cl1 size-200 p-t-18">
+                                    <input class="form-control" type="text" name = "phone" value="">
+                                </div>
+                                
+                            </div>
+                        </div>
+    
+                        <div class="flex-w w-full p-b-30">
+                            <span class="fs-18 cl5 txt-center size-211">
+                                <span class="fa fa-birthday-cake" aria-hidden="true"></span>
+                            </span>
+    
+                            <div class="size-212 p-t-2">
+                                <span class="mtext-110 cl2">
+                                    Birthday
+                                </span>
+    
+                                <div class="stext-115 cl1 size-200 p-t-18">
+                                    <input class="form-control" type="text" name = "birthday" value="">
+                                </div>
+                                
+                            </div>
+                        </div>
+    
+                        <div class="flex-w w-full p-b-30">
+                            <span class="fs-18 cl5 txt-center size-211">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+
+                            </span>
+    
+                            <div class="size-212 p-t-2">
+                                <span class="mtext-110 cl2">
+                                    Email
+                                </span>
+    
+                                <div class="stext-115 cl1 size-200 p-t-18">
+                                    <input class="form-control" type="text" name = "email2" value="1234@gmail.com" >
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <form >
+                        <button type="submit" class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer">
+                            Change
+                        </button>
+                        <input type="hidden" name="kindChange" value="if">
+                        </form>
+                    </form>
+                    </div>
+                
+                </div>
+            </div>
+            
+    </section>
+	
+	
+	<!-- Map -->
+	
+						<!-- <div>
+							 	<form class="c">
+							 		<p>Add comment here</p><br />
+							 		<input type="text" id="comment" class="input1 bg-none plh1 stext-107 cl7"
+							 			placeholder="Write something..." />
+							 		
+							 		<button class="c1 stext-101 size-100 bg1 bor1 hov-btn2a"> Comment</button>
+							 		<div class="c2">
+							 			<p>
+							 				Other comment:
+							 				<hr />
+							 			</p>
+							 		</div>
+							 	</form>
+							 </div> -->
+
+						<!--  -->
+						
+<script>
+	function postCartModal() {
+		var quantity = $("#productQuantity").val();
+		var productId = $("#productId").val();
+		var productName = $('#indata1').text();
+
+		$.ajax({
+			url: "/cart",
+			type: "POST",
+			data: {
+				productId: productId,
+				productNumber: quantity
+			},
+			success: function (res) {
+				swal(productName, " is added to cart !", "success");
+				refreshCartOrder();
+			},
+			error: function (err) {
+				console.log(err)
+				swal("Failed", "success");
+			}
+		});
+
+	}
+
+	function refreshCartOrder(){
+		$.ajax({
+			url: '/api/cart',
+			type: 'GET',
+			dataType: 'json',
+		}).done(function(res){
+			const sumPrice = res.sumPrice;
+			const products = res.products;
+			console.log(products.length)
+			$('#shopCart').attr('data-notify', products.length);
+			$('#sumPrice').html(sumPrice)
+			$('#cart-product-list').html(TemplateCartRSide.createProductList(products));
+		});
+	}
+</script>
+	
+	<script>
+		$(".js-select2").each(function(){
+			$(this).select2({
+				minimumResultsForSearch: 20,
+				dropdownParent: $(this).next('.dropDownSelect2')
+			});
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="/vendor/daterangepicker/moment.min.js"></script>
+	<script src="/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="/vendor/slick/slick.min.js"></script>
+	<script src="/js/slick-custom.js"></script>
+<!--===============================================================================================-->
+	<script src="/vendor/parallax100/parallax100.js"></script>
+	<script>
+        $('.parallax100').parallax100();
+	</script>
+<!--===============================================================================================-->
+	<script src="/vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
+	<script>
+		$('.gallery-lb').each(function() { // the containers for all your galleries
+			$(this).magnificPopup({
+		        delegate: 'a', // the selector for gallery item
+		        type: 'image',
+		        gallery: {
+		        	enabled:true
+		        },
+		        mainClass: 'mfp-fade'
+		    });
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="/vendor/isotope/isotope.pkgd.min.js"></script>
+<!--===============================================================================================-->
+	<script src="/vendor/sweetalert/sweetalert.min.js"></script>
+	<script>
+		$('.js-addwish-b2').on('click', function(e){
+			e.preventDefault();
+		});
+
+		$('.js-addwish-b2').each(function(){
+			var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to wishlist !", "success");
+
+				$(this).addClass('js-addedwish-b2');
+				$(this).off('click');
+			});
+		});
+
+		$('.js-addwish-detail').each(function(){
+			var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
+
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to wishlist !", "success");
+
+				$(this).addClass('js-addedwish-detail');
+				$(this).off('click');
+			});
+		});
+
+		/*---------------------------------------------*/
+
+		$('.js-addcart-detail').each(function(){
+			var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to cart !", "success");
+			});
+		});
+	
+	</script>
+
+</body>
+</html>
