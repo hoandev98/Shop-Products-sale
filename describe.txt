@@ -1,2 +1,0 @@
-This is the assignment for the web programming course, where you design a website for discounted products.
-The project is divided into 4 branches for each task.
