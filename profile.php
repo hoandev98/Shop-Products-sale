@@ -26,13 +26,8 @@
                                 <input type="file" id="picture">
                             </div>
                             <h5 style="padding-top:10px;">Choose Picture</h5>
-                        </div>
-
-                        
-                        
+                        </div>                                     
                     </div>
-
-
                     <div class="col-sm-8 col-md-8 col-lg-8 col-xs-8">
                         <form action="#">
                             <div class="login-form">

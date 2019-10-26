@@ -1,64 +1,3 @@
-/*-----------------------------------------------------------------------------------
-		Template Name: limupa - Digital Products Store ECommerce Bootstrap 4 Template
-		Template URI: http://bootexperts.com
-		Description: This is digital products store html5 template for eCommerce websites, nice and clean design;
-		Author: HasTech
-		Author URI: 
-		Version: 1.0
------------------------------------------------------------------------------------
-		CSS INDEX
-		===================
-		01. Default Style
-			1.1 Basic
-			1.2 Transition
-			1.3 Section Title
-			1.4 Default Button
-			1.5 Text Color
-			1.6 Input
-			1.8 Background Variation Set
-			1.9 Animation
-			1.10 All Navigation & Pagination
-			1.11 Owl Carousel Box Shadow
-			1.12 Li's Mobile Menu Customization 
-			1.13 Modal Area
-			1.14 Scroll Up
-		02. Home Page One
-			2.1 Header
-			2.2 Slider
-			2.3 Li's Static Top
-			2.4 Product-area css
-			2.5 Li's Banner
-			2.6 Li's Laptop Features
-			2.7 Li's Static Home Banner
-			2.8 Li's Trending Products
-				2.9 Footer
-		03. Home Page Two
-		04. Home Page Three
-		05. Home Page Four
-		06. Other Pages
-			6.1 Li's Shop Page
-			6.2 Li's Frequently Asked Question(FAQ)
-			6.3 Li's Wishlist Page
-			6.4 Li's Checkout Page
-			6.5 Li's Login Register
-			6.6 Li's Shopping Cart
-			6.7 Li's Blog Page
-			6.8 Li's Compare Page
-			6.9 Li's Contact Pages
-			6.10 Li's About Us Page
-			6.11 Li's Shop Page
-			6.12 Li's Single Product
-			6.13 Single Product Carousel Page
-			6.14 Single Product Sale Page
-			6.15 Single Product Group Page
-			6.16 Single Product Normal Page
-			6.17 Single Product Affiliate Page
-			6.18 Single Product Tab Style Left Page
-			6.19 Single Product Tab Style Right Page
-			6.20 Single Product Gallery Left Page
-			6.21 Error 404 Page
-
------------------------------------------------------------------------------------*/
 
 /* Google Fonts------------------
 	font-family: 'Poppins', sans-serif;
@@ -67,9 +6,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Rubik:300,300i,400,400i,500,500i,700,700i,900,900i');
 /*----------------------------------------*/
 /*  01. Dfault Style
-/*----------------------------------------*/
-/*----------------------------------------*/
-/*  1.1 Basic
 /*----------------------------------------*/
 body {
 	color: #242424;
@@ -464,51 +400,6 @@ textarea:focus {
 .bg-3 {
 	background-image: url(images/slider/3.jpg);
 }
-/*Home Two | Slider Background Image*/
-.bg-4, .bg-5, .bg-6 {
-	background-image: url(images/slider/4.jpg);
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-	min-height: 475px;
-	width: 100%;
-}
-.bg-5 {
-	background-image: url(images/slider/5.jpg);
-}
-.bg-6 {
-	background-image: url(images/slider/6.jpg);
-}
-/*Home Three | Slider Background Image*/
-.bg-7, .bg-8, .bg-9 {
-	background-image: url(images/slider/7.jpg);
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-	min-height: 425px;
-	width: 100%;
-}
-.bg-8 {
-	background-image: url(images/slider/8.jpg);
-}
-.bg-9 {
-	background-image: url(images/slider/9.jpg);
-}
-/*Home Four | Slider Background Image*/
-.bg-10, .bg-11, .bg-12 {
-	background-image: url(images/slider/10.jpg);
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-	min-height: 770px;
-	width: 100%;
-}
-.bg-11 {
-	background-image: url(images/slider/11.jpg);
-}
-.bg-12 {
-	background-image: url(images/slider/12.jpg);
-}
 /*----------------------------------------*/
 /*  li's Background Variation Set 
 /*----------------------------------------*/
@@ -580,78 +471,6 @@ textarea:focus {
     animation: 1000ms ease-in-out 0s normal none 1 running slideInUp;
 }
 
-/* animation-style-02 */
-.owl-item.active .animation-style-02 .slider-content h5,
-.owl-item.active .animation-style-02 .slider-content-2 h5 {
-    -webkit-animation: 800ms ease-in-out 0s normal none 1 running zoomInUp;
-    animation: 800ms ease-in-out 0s normal none 1 running zoomInUp;
-}
-
-.owl-item.active .animation-style-02 .slider-content h2 {
-    -webkit-animation: 1200ms ease-in-out 0s normal none 1 running zoomInUp;
-    animation: 1200ms ease-in-out 0s normal none 1 running zoomInUp;
-}
-
-.owl-item.active .animation-style-02 .slider-content h3,
-.owl-item.active .animation-style-02 .slider-content-2 h3 {
-    -webkit-animation: 1600ms ease-in-out 0s normal none 1 running zoomInUp;
-    animation: 1600ms ease-in-out 0s normal none 1 running zoomInUp;
-}
-
-.owl-item.active .animation-style-02 .slider-content .slide-btn,
-.owl-item.active .animation-style-02 .slider-content-2 .slide-btn {
-    -webkit-animation: 2000ms ease-in-out 0s normal none 1 running zoomInUp;
-    animation: 2000ms ease-in-out 0s normal none 1 running zoomInUp;
-}
-@-webkit-keyframes timebar {
-	0% {
-		width: 0;
-	}
-	100% {
-		width: 100%;
-	}
-}
-@keyframes timebar {
-	0% {
-		width: 0;
-	}
-	100% {
-		width: 100%;
-	}
-}
-@keyframes timebar {
-	0% {
-		width: 0;
-	}
-	100% {
-		width: 100%;
-	}
-}
-/*Top Up Keyframes*/
-@-webkit-keyframes liSlideInUp {
-	0% {
-		-webkit-transform: translateY(250px);
-		transform: translateY(250px);
-		opacity: 0;
-	}
-	100% {
-		-webkit-transform: translateY(0);
-		transform: translateY(0);
-		opacity: 1;
-	}
-}
-@keyframes liSlideInUp {
-	0% {
-		-webkit-transform: translateY(250px);
-		transform: translateY(250px);
-		opacity: 0;
-	}
-	100% {
-		-webkit-transform: translateY(0);
-		transform: translateY(0);
-		opacity: 1;
-	}
-}
 /*----------------------------------------*/
 /*  1.10 All Navigation & Pagination
 /*----------------------------------------*/
@@ -1312,6 +1131,7 @@ textarea:focus {
 /*  2.1 Header
 /*----------------------------------------*/
 /*Header Top*/
+
 .header-top {
 	background: #f8f9f9;
 	padding: 12px 0;
@@ -1325,114 +1145,6 @@ textarea:focus {
 .phone-wrap > li > a {
 	font-size: 12px;
 	color: #242424;
-}
-/*Header Top Menu*/
-.ht-menu {
-	display: flex;
-	justify-content: flex-end;
-	-webkit-display: flex;
-	-moz-display: flex;
-	-ms--display: flex;
-}
-.ht-menu > li {
-	list-style: none;
-	padding: 0 15px;
-	position: relative;
-	display: flex;
-	align-items: center;
-	align-self: stretch;
-}
-.ht-menu > li::after {
-	content: "";
-	position: absolute;
-	background: #2424;
-	height: 15px;
-	width: 1px;
-	right: 0;
-	top: 5px;
-}
-.ht-menu > li:last-child::after {
-	content: unset;
-}
-.ht-menu > li:last-child {
-	padding-right: 0;
-}
-.ht-menu > li span {
-	font-size: 12px;
-}
-/*Header Top Currency*/
-.currency-selector-wrapper, .language-selector-wrapper {
-	margin-right: 5px;
-}
-.ht-menu > li > span i {
-	font-size: 10px;
-	font-weight: 400;
-	color: #a4a4a4;
-	display: inline-block;
-	position: relative;
-}
-.ht-setting-trigger, .ht-currency-trigger, .ht-language-trigger {
-	cursor: pointer;
-	transition: all 0.3s ease-in-out;
-}
-.ht-currency-trigger:hover, .ht-language-trigger:hover {
-	color: #fed700;
-}
-.ht-currency-trigger:hover i, .ht-language-trigger:hover i{
-	color: #fed700;
-}
-.ht-setting, .ht-currency, .ht-language {
-	position: absolute;
-	right: 0;
-	top: 100%;
-	z-index: 9;
-	display: none;
-}
-.setting, .currency, .language {
-		border-top: 2px solid #fed700;
-		padding: 20px 20px 10px;
-		background: #ffffff;
-		text-align: left;
-		-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-		box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-		transition: all 0.3s ease-in-out;
-}
-.setting {
-		min-width: 150px;
-}
-.currency, .language {
-		min-width: 120px;
-}
-.currency li {
-		padding: 0 10px;
-		color: #636363;
-		line-height: 22px;
-		font-size: 12px;
-}
-.ht-setting-list > li {
-		transition: all 0.3s ease-in-out;
-}
-.ht-setting-list > li.active {
-	background: #fed700;
-}
-.ht-setting-list > li:hover {
-		background: #fed700;
-}
-.ht-setting-list > li > a {
-	padding: 0 10px;
-	display: block;
-	font-size: 12px;
-	line-height: 22px;
-	margin-bottom: 10px;
-}
-.ht-setting-list > li:hover > a {
-	color: #ffffff;
-}
-.ht-setting-list > li.active > a {
-	color: #fff;
-}
-.ht-setting-list > li > a > img {
-	padding-right: 5px;
 }
 /*Header Middle*/
 .header-middle {
@@ -1781,33 +1493,7 @@ textarea:focus {
 	content: "";
 
 }
-/* .hb-menu nav > ul > li:nth-child(n+5) > a::after {
-	/* content: none; */
- */
-/*
-.hb-menu nav > ul > li:hover  a::after {
-	transform: rotate(180deg);
-} */
-.ht-menu > li .ht-currency-trigger span::after,
-.ht-menu > li .ht-language-trigger span::after,
-.hm-minicart-trigger .item-text::after {
-	content: "\f106";
-	float: right;
-	font-weight: 400;
-	font-size: 18px;
-	font-family: fontawesome;
-	color: #242424;
-	transition: all 0.3s ease-in-out;
-}
-.ht-menu > li:hover .ht-currency-trigger span,
-.ht-menu > li:hover .ht-currency-trigger span::after, 
-.ht-menu > li:hover .ht-language-trigger span,
-.ht-menu > li:hover .ht-language-trigger span::after {
-	color: #fed700;
-}
-.ht-menu > li .ht-setting-trigger span::after, 
-.ht-menu > li .ht-currency-trigger span::after, 
-.ht-menu > li .ht-language-trigger span::after, 
+ 
 .hm-minicart-trigger .item-text::after {
 	content: "\f107";
 	font-size: 14px;
@@ -1818,9 +1504,6 @@ textarea:focus {
 .hm-minicart-trigger .item-text::after {
 	color: #fff;
 } 
-.ht-menu > li .ht-setting-trigger.is-active span::after, 
-.ht-menu > li .ht-currency-trigger.is-active span::after, 
-.ht-menu > li .ht-language-trigger.is-active span::after,
 .hm-minicart-trigger.is-active .item-text::after {
 	transform: rotate(-180deg);
 }
@@ -2974,372 +2657,7 @@ text-align: center;
 	color: #242424;
 	text-decoration: underline;
 }
-/*----------------------------------------*/
-/*  03. Home Page Two
-/*----------------------------------------*/
-.li-header-4 {
-	background: #293a6c;
-}
-.li-header-4 .header-top {
-	background: transparent;
-	border-bottom: 1px solid rgba(255,255,255,.1);
-}
-.li-header-4 .header-top-left > ul > li span, 
-.li-header-4 .header-top-left > ul > li a {
-	color: #fff;
-}
-.li-header-4 .ht-menu > li span, 
-.li-header-4 .ht-menu > li .ht-setting-trigger span::after, 
-.li-header-4 .ht-menu > li .ht-currency-trigger span::after, 
-.li-header-4 .ht-menu > li .ht-language-trigger span::after {
-	color: #fff;
-}
-.li-header-4 .hm-wishlist > a {
-	background: #ffffff;
-}
-.li-header-4 .header-bottom {
-	background: #293a6c;
-	border-top: 1px solid rgba(255,255,255,.1);
-	color: #ffffff;
-}
-.li-header-4 .hb-menu nav > ul > li > a, 
-.li-header-4 .hb-menu nav > ul > li > a:after {
-	color: #ffffff;
-	transition: all 0.3s ease-in-out;
-}
-.li-header-4 .hb-menu nav > ul > li:hover > a, 
-.li-header-4 .hb-menu nav > ul > li:hover > a::after {
-	color: #fed700;
-}
-/*Header Bottom*/
-.hb-info {
-	line-height: 50px;
-}
-/*Category Menu*/
-.category-menu {
-	position: relative;
-}
-.category-heading {
-	position: relative;
-	cursor: pointer;
-	background: #fed700;
-	height: 55px;
-	border-radius: 3px 3px 0 0;
-	border-bottom: 3px solid #fed700;
-}
-.category-heading > h2 {
-	margin: 0;
-	color: #242424;
-	line-height: 55px;
-	padding: 0;
-	text-transform: uppercase;
-	font-size: 16px;
-	font-weight: 500;
-	position: relative;
-}
-.categories-toggle > span {
-	padding-left: 10px;
-}
-.category-heading > h2::before {
-	font-size: 20px;
-	vertical-align: top;
-	content: '\f00a';
-	font-family: fontawesome;
-	font-weight: normal;
-	text-align: center;
-	line-height: 55px;
-	color: #242424;
-	float: left;
-	display: block;
-	padding-left: 30px;
-}
-.category-heading > h2::after {
-	content: "\f107";
-	height: 10px;
-	position: absolute;
-	top: 0;
-	right: 20px;
-	font-family: fontawesome;
-}
-.category-heading > h2 > i {
-	float: ;
-	text-align: ;
-	float: right;
-	padding-right: 20px;
-	font-size: 12px;
-}
-.category-menu-list {
-	position: absolute;
-	left: 0;
-	top: calc(100% - 1px);
-	display: block;
-	width: 100%;
-	border: 1px solid #e7e7e7;
-	z-index: 9;
-}
-.category-menu-2 .category-menu-list > ul {
-	background: #fff;
-	border-radius: 0px 0px 4px 4px;
-}
-.category-menu-list > ul > li {
-	list-style: none;
-	padding: 3.2px 20px 3.2px 29px;
-	position: relative;
-	background: #fff;
-}
-.category-menu-2 .category-menu-list > ul > li {
-	padding: 0.5px 20px 0.5px 29px;
-}
-.header-bottom-area.header-style-3 .category-menu-list > ul > li:first-child{
-	border-top: 1px solid #ebebeb;
-}
-.category-menu-list > ul > li > a, 
-.cat-dropdown > li > a {
-	display: block;
-	text-transform: capitalize;
-	color: #333;
-	height: 40px;
-	line-height: 39px;
-	overflow: hidden;
-	font-size: 13px;
-}
-.category-menu-list > ul > li > a:hover,
-.cat-dropdown > li > a:hover{
-    color: #fed700;
-}
-.category-menu-list > ul > li > a:hover:before{
-    background: #fed700;
-    border-color: #fed700;
-}
-.category-menu-list > ul > li:last-child > a:before{
-    display: none;
-}
-.category-menu-list > ul > li.right-menu > a::after {
-	content: "\f107";
-	font-family: FontAwesome;
-	float: right;
-	vertical-align: top;
-	transition: all 0.3s ease-in-out;
-}
-.category-menu-list > ul > li.right-menu > a:hover::after {
-	transform: rotate(-90deg);
-}
-.category-menu-list > ul > li.rx-parent > a,
-.category-menu-list > ul > li.rx-show a {
-	font-size: 14px;
-	font-weight: 400;
-	color: #242424;
-	position: relative;
-	padding-left: 20px;
-}
-.rx-parent {
-  cursor: pointer;
-  border-top: 1px solid #e1e1e1;
-}
-.rx-parent a.rx-default i, .rx-parent a.rx-show i {
-	position: absolute;
-	left: 0;
-	top: 12px;
-}
-li.rx-parent a.rx-default::after {
-	content: "\f067";
-	font-family: fontawesome;
-	position: absolute;
-	left: 0;
-	top: 0;
-}
-li.rx-parent a.rx-show::after {
-	content: "\f068";
-	font-family: fontawesome;
-	position: absolute;
-	left: 0;
-	top: 0;
-}
-.category-menu-list ul > li span.fa {
-	float: left;
-	padding-top: 13px;
-	margin-left: -15px;
-	margin-right: 15px;
-}
-.rx-child, .category-menu-list ul li a.rx-show {
-	display: none;
-}
-.category-menu-list ul li.rx-change a.rx-show {
-	display: block;
-}
-.category-menu-list ul li.rx-change a.rx-default {
-	display: none;
-}
-.cat-dropdown,.cat-mega-menu {
-	position: absolute;
-	top: 0;
-	left: 100%;
-    background: #ffffff;
-	z-index: 999;
-	width: 220px;
-	border: 1px solid #e5e5e5;
-    box-shadow: none;
-    border: 1px solid #ededed;
-    box-shadow: 4px 4px 4px -3px #808080;
-	opacity: 0;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	visibility: hidden;
-	-webkit-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
-}
-.cat-dropdown li,
-.cat-mega-menu ul li{
-    list-style: none;
-}
-.cat-dropdown > li > a{
-    font-size: 14px;
-}
-.cat-dropdown > li > a:hover{
-    color: #fed700;
-}
-.cat-mega-menu {
-	width: 540px;
-	padding: 4px 0 10px 0;
-	overflow: hidden;
-}
-li.right-menu .cat-mega-menu > li, li.right-menu .cat-mega-menu-2 > li {
-	width: 33.333%;
-	float: left;
-	padding: 15px 20px 10px 30px;
-	list-style: none;
-}
-li.right-menu .cat-mega-menu-2 > li {
-	width: 50%;
-}
-.cat-mega-menu > li.cat-mega-title > a {
-	font-weight: 700;
-	text-transform: capitalize;
-	font-size: 13px;
-	margin-bottom: 15px;
-	display: block;
-	line-height: 36px;
-    position: relative;
-}
-.cat-mega-menu > li > ul > li > a{
-    font-size: 13px;
-    display: block;
-    line-height: 25px;
-}
-.cat-mega-menu > li > ul > li > a:hover{
-    color: #fed700;
-}
-.category-menu-list > ul > li:hover .cat-dropdown,.category-menu-list > ul > li:hover .cat-mega-menu{
-    opacity: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    visibility: visible;
-} 
-.header-top-search {
-	position: relative;
-}
-.search-categories > form {
-	position: relative;
-	width: 100%;
-	float: left;
-	height: 50px;
-	color: #a9a9a9;
-}
-/*----------------------------------------*/
-/*  04. Home Page Three
-/*----------------------------------------*/
-/*Li's Featured Product With Banner*/
-.featured-pro-with-banner {
-	background: #f7f7f7;
-	padding: 50px 0 30px;
-	margin-top: 50px;
-}
-.featured-product-img {
-	width: 38%;
-	float: left;
-	padding: 15px;
-}
-.featured-manufacturer {
-	color: #a4a4a4;
-	font-size: 13px;
-	margin-top: 9px;
-	font-weight: 400;
-	text-transform: capitalize;
-	transition: all 0.3s ease-in-out;
-}
-.featured-product-active .owl-item {
-	padding: 15px;
-}
-.featured-pro-wrapper {
-	display: inline-block;
-	width: 100%;
-	background: #fff;
-	border: 1px solid transparent;
-	border-radius: 4px;
-	-webkit-transition: all 300ms ease-in;
-	-moz-transition: all 300ms ease-in;
-	-ms-transition: all 300ms ease-in;
-	-o-transition: all 300ms ease-in;
-	transition: all 300ms ease-in;
-}
-.featured-pro-wrapper:hover {
-	box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
-}
-.featured-pro-wrapper .product-img {
-	float: left;
-	width: 38%;
-	padding: 18.2px;
-}
-.featured-pro-wrapper .featured-pro-content {
-	float: right;
-	width: 62%;
-	padding: 18.2px;
-}
-.featured-pro-content h4 a {
-	font-size: 14px;
-	font-weight: 500;
-	color: #0363cd;
-}
-.featured-pro-content h4:hover {
-	text-decoration: underline;
-	color: #0363cd;
-}
-.featured-pro-content .rating-box {
-	padding-top: 5px;
-}
-.featured-pro-wrapper:hover .featured-price-box {
-	opacity: 0;
-}
-.featured-product-action .add-actions-link {
-	margin-top: 0;
-	padding-top: 0;
-}
-.featured-product-action {
-	position: relative;
-	top: 20px;
-	transition: all 0.5s ease-in-out;
-	opacity: 0;
-	visibility: hidden;
-}
-.featured-pro-wrapper:hover .featured-product-action {
-	top: 0;
-	opacity: 1;
-	visibility: visible;
-}
-.featured-price-box {
-	transition: all 0.5s ease-in-out;
-}
-/*----------------------------------------*/
-/*  05. Home Page Four
-/*----------------------------------------*/
-.product-img {
-	width: 30%;
-	float: left;
-	padding: 15px;
-}
-.featured-pro-content {
-	width: 70%;
-	float: right;
-	padding: 15px;
-}
+
 /*----------------------------------------*/
 /*  6.1 Li's Shop Page
 /*----------------------------------------*/
@@ -5233,35 +4551,7 @@ span.required {
 .feedback-btn a:hover {
 	background: #fed700;
 }
-/*----------------------------------------*/
-/* 6.13 Single Product Carousel Page
-/*----------------------------------------*/
-.sp-carousel-page .single-product {
-	border: 1px solid #e1e1e1;
-}
-.sp-carousel-content {
-	text-align: center;
-}
-.sp-carousel-content .single-add-to-cart {
-	width: 100%;
-}
-.sp-carousel-content .quantity {
-	display: inline-block;
-}
-.sp-carousel-content .cart-quantity label {
-	display: inline-block;
-	margin-right: 10px;
-}
-.sp-carousel-content .cart-plus-minus {
-	float: unset;
-	display: inline-block;
-}
-.sp-carousel-content .cart-quantity {
-	margin-top: 5px;
-}
-.sp-carousel-content .product-social-sharing {
-	padding-top: 30px;
-}
+
 /*----------------------------------------*/
 /* 6.14 Single Product Sale Page
 /*----------------------------------------*/
@@ -5272,28 +4562,7 @@ span.required {
 	margin-top: 25px;
 	margin-bottom: 25px;
 }
-/*----------------------------------------*/
-/* 6.15 Single Product Group Page
-/*----------------------------------------*/
-.sp-group-content .product-quantity label {
-	padding: 13px 0 0;
-	margin: 0;
-}
-.sp-group-content .product-desc {
-	border-bottom: none;
-}
-.sp-group-content .product-variants {
-	padding-top: 10px;
-}
-/*----------------------------------------*/
-/* 6.16 Single Product Normal Page
-/*----------------------------------------*/
-.sp-normal-content .cart-quantity {
-	margin-top: 0;
-}
-.sp-normal-content .product-additional-info {
-	padding-top: 28px;
-}
+
 /*----------------------------------------*/
 /* 6.17 Single Product Affiliate Page
 /*----------------------------------------*/
@@ -5306,59 +4575,9 @@ span.required {
 	float: left;
 	width: 100%;
 }
-/*----------------------------------------*/
-/* 6.18 Single Product Tab Style Left Page
-/*----------------------------------------*/
-.sp-tab-style-left-page .product-details-images {
-	float: right;
-	width: calc(100% - 110px);
-	padding-left: 10px;
-}
-.sp-tab-style-left-page .tab-style-left {
-	float: left;
-	width: 110px;
-}
-.tab-style-left .slick-slide img,
-.tab-style-right .slick-slide img {
-	width: 100%;
-}
-.sp-tab-style-left-page .tab-style-left .slick-slide,
-.tab-style-right .slick-slide {
-	border: 1px solid transparent;
-	padding: 5px;
-	transition: all 0.3s ease-in-out;
-}
-.sp-tab-style-left-page .tab-style-left .slick-slide:hover,
-.tab-style-right .slick-slide:hover {
-	border-color: #fed700;
-}
-/*----------------------------------------*/
-/* 6.19 Single Product Tab Style Right Page
-/*----------------------------------------*/
-.sp-tab-style-right-page .product-details-images {
-	float: left;
-	width: calc(100% - 110px);
-	padding-left: 10px;
-}
-.sp-tab-style-left-page .tab-style-left {
-	padding-top: 40px;
-}
-.sp-tab-style-right-page .tab-style-right {
-	float: right;
-	width: 110px;
-	padding-top: 40px;
-}
-/*----------------------------------------*/
-/* 6.20 Single Product Gallery Left Page
-/*----------------------------------------*/
-.sp-gallery-left .lg-image {
-	outline: 1px solid #e1e1e1;
-	transition: all 0.3s ease-in-out;
-	padding: 5px;
-}
-.sp-gallery-left .lg-image:hover {
-	outline: 1px solid #fed700;
-}
+
+
+
 /*----------------------------------------*/
 /* 6.21 Error 404 Page
 /*----------------------------------------*/
