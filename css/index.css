@@ -1,0 +1,71 @@
+.countdown{
+    display: inline-block;
+    margin: 13px;
+    }
+    .ribbon{
+        position: absolute;
+        left: -13px;
+        top: -17px;
+        z-index: 1;
+        overflow: hidden;
+        width: 200px;
+        height: 200px;
+        text-align: right;
+    }
+    .ribbon span{
+        display: inline-grid ;
+        align-items: center;
+        font-size: 12px;
+      
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 20px;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        width: 168px;
+        height: 28px;
+        box-shadow: 0 3px 10px -5px #000;
+        position: absolute;
+        top: 11px;
+        left: -55px;
+        background: red;
+    }
+    .ribbon span::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 100%;
+        z-index: -1;
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        border-top: 3px solid transparent;
+        border-left-color: #8f0808;
+        border-top-color: #8f0808;
+    }
+    .ribbon span::after{
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 100%;
+        z-index: -1;
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        border-top: 3px solid transparent;
+        border-left-color: #8f0808;
+        border-top-color: #8f0808;
+        
+    }
+    @media only screen and (max-width: 426px) {
+        .time-sale {
+            display: block !important;
+            width: 100%;
+            margin: auto;
+            text-align: center;
+        }.product-sale-countdown {
+            margin: auto;
+            margin-bottom: 10px;
+        }
+    }

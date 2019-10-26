@@ -9,6 +9,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Favicon -->
+        <script>document.getElementsByTagName("html")[0].className += " js";</script>
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
         <!-- Material Design Iconic Font-V2.2.0 -->
         <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
@@ -217,7 +218,7 @@
                                         </li>
                                         <!-- Header Middle Wishlist Area End Here -->
                                         <!-- Begin Header Mini Cart Area -->
-                                        <li class="hm-minicart">
+                                        <li class="cart-empty hm-minicart">
                                             <div class="hm-minicart-trigger">
                                                 <span class="item-icon"></span>
                                                 <span class="item-text">£80.00
@@ -226,8 +227,8 @@
                                             </div>
                                             <span></span>
                                             <div class="minicart">
-                                                <ul class="minicart-product-list">
-                                                    <li>
+                                                <ul class="minicart-product-list cart-count">
+                                                    <li class="delete-item">
                                                         <a href="single-product.html" class="minicart-product-image">
                                                             <img src="images/product/small-size/5.jpg" alt="cart products">
                                                         </a>
@@ -235,7 +236,7 @@
                                                             <h6><a href="single-product.html">Aenean eu tristique</a></h6>
                                                             <span>£40 x 1</span>
                                                         </div>
-                                                        <button class="close" title="Remove">
+                                                        <button class="close delete" title="Remove">
                                                             <i class="fa fa-close"></i>
                                                         </button>
                                                     </li>
@@ -530,7 +531,7 @@
                                                     <div class="inc qtybutton"><i class="fa fa-angle-up"></i></div>
                                                 </div>
                                             </div>
-                                            <button class="add-to-cart" type="submit">Add to cart</button>
+                                            <button data-price="44" class="add-to-cart" type="submit">Add to cart</button>
                                         </form>
                                     </div>
                                     <div class="product-additional-info pt-25">
@@ -1366,6 +1367,8 @@
         <script src="js/scrollUp.min.js"></script>
         <!-- Main/Activator js -->
         <script src="js/main.js"></script>
+        <script src="js/cart.js"></script>
+        <script src="js/util.js"></script>
     </body>
 
 <!-- single-product31:32-->
