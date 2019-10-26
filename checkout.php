@@ -1,5 +1,6 @@
-<?php include "./include/header.html" ?>
-            <!-- Header Area End Here -->
+            <?php 
+                include './include/header.html';
+            ?>
             <!-- Begin Li's Breadcrumb Area -->
             <div class="breadcrumb-area">
                 <div class="container">
@@ -70,12 +71,8 @@
                                             <div class="country-select clearfix">
                                                 <label>Country <span class="required">*</span></label>
                                                 <select class="nice-select wide">
-                                                  <option data-display="Bangladesh">Bangladesh</option>
-                                                  <option value="uk">London</option>
-                                                  <option value="rou">Romania</option>
-                                                  <option value="fr">French</option>
-                                                  <option value="de">Germany</option>
-                                                  <option value="aus">Australia</option>
+                                                  <option data-display="VietNam">VietNam</option>
+                                                  <option value="us">USA</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -109,18 +106,6 @@
                                             </div>
                                         </div>
                                         <div class="col-md-12">
-                                            <div class="checkout-form-list">
-                                                <label>Town / City <span class="required">*</span></label>
-                                                <input type="text">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="checkout-form-list">
-                                                <label>State / County <span class="required">*</span></label>
-                                                <input placeholder="" type="text">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
                                             <div class="checkout-form-list">
                                                 <label>Postcode / Zip <span class="required">*</span></label>
                                                 <input placeholder="" type="text">
@@ -162,12 +147,8 @@
                                                 <div class="country-select clearfix">
                                                     <label>Country <span class="required">*</span></label>
                                                     <select class="nice-select wide">
-                                                      <option data-display="Bangladesh">Bangladesh</option>
-                                                      <option value="uk">London</option>
-                                                      <option value="rou">Romania</option>
-                                                      <option value="fr">French</option>
-                                                      <option value="de">Germany</option>
-                                                      <option value="aus">Australia</option>
+                                                      <option data-display="VietNam">VietNam</option>
+                                                      <option value="us">USA</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -198,18 +179,6 @@
                                             <div class="col-md-12">
                                                 <div class="checkout-form-list">
                                                     <input placeholder="Apartment, suite, unit etc. (optional)" type="text">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkout-form-list">
-                                                    <label>Town / City <span class="required">*</span></label>
-                                                    <input type="text">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <div class="checkout-form-list">
-                                                    <label>State / County <span class="required">*</span></label>
-                                                    <input placeholder="" type="text">
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
@@ -331,54 +300,31 @@
                 </div>
             </div>
             <!--Checkout Area End-->
-            <!-- Begin Footer Area -->
-            <?php include "./include/footer.html" ?>
-            <!-- Footer Area End Here -->
+            <?php
+                include './include/footer.html';
+            ?>
         </div>
         <!-- Body Wrapper End Here -->
-        <!-- jQuery-V1.12.4 -->
         <script src="js/vendor/jquery-1.12.4.min.js"></script>
-        <!-- Popper js -->
         <script src="js/vendor/popper.min.js"></script>
-        <!-- Bootstrap V4.1.3 Fremwork js -->
         <script src="js/bootstrap.min.js"></script>
-        <!-- Ajax Mail js -->
         <script src="js/ajax-mail.js"></script>
-        <!-- Meanmenu js -->
         <script src="js/jquery.meanmenu.min.js"></script>
-        <!-- Wow.min js -->
         <script src="js/wow.min.js"></script>
-        <!-- Slick Carousel js -->
         <script src="js/slick.min.js"></script>
-        <!-- Owl Carousel-2 js -->
         <script src="js/owl.carousel.min.js"></script>
-        <!-- Magnific popup js -->
         <script src="js/jquery.magnific-popup.min.js"></script>
-        <!-- Isotope js -->
         <script src="js/isotope.pkgd.min.js"></script>
-        <!-- Imagesloaded js -->
         <script src="js/imagesloaded.pkgd.min.js"></script>
-        <!-- Mixitup js -->
         <script src="js/jquery.mixitup.min.js"></script>
-        <!-- Countdown -->
         <script src="js/jquery.countdown.min.js"></script>
-        <!-- Counterup -->
         <script src="js/jquery.counterup.min.js"></script>
-        <!-- Waypoints -->
         <script src="js/waypoints.min.js"></script>
-        <!-- Barrating -->
         <script src="js/jquery.barrating.min.js"></script>
-        <!-- Jquery-ui -->
         <script src="js/jquery-ui.min.js"></script>
-        <!-- Venobox -->
         <script src="js/venobox.min.js"></script>
-        <!-- Nice Select js -->
         <script src="js/jquery.nice-select.min.js"></script>
-        <!-- ScrollUp js -->
         <script src="js/scrollUp.min.js"></script>
-        <!-- Main/Activator js -->
         <script src="js/main.js"></script>
     </body>
-
-<!-- checkout31:27-->
 </html>
