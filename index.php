@@ -99,7 +99,7 @@
                                         <div class="single-product-wrap">
                                             <div class="product-image">
                                                 <a href="single-product-sale.php">
-                                                    <img src="images/product/large-size/1.jpg" alt="Li's Product Image">
+                                                    <img src="https://didongviet.vn/pub/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/i/p/iphone-11-pro-silver-didongviet_8_1_1.jpg" alt="Li's Product Image">
                                                 </a>
                                                 <div class="ribbon">
                                                     <span class="big-sale">Big Sale </span>
@@ -111,7 +111,7 @@
                                                 <div class="product_desc_info">
                                                     <div class="product-review">
                                                         <h5 class="manufacturer">
-                                                            <a href="shop.php">Graphic Corner</a>
+                                                            <a href="shop.php">Apple</a>
                                                         </h5>
                                                         <div class="rating-box">
                                                             <ul class="rating">
@@ -123,10 +123,10 @@
                                                             </ul>
                                                         </div>
                                                     </div>
-                                                    <h4><a class="product_name" href="single-product-sale.php">Accusantium dolorem1</a></h4>
+                                                    <h4><a class="product_name" href="single-product-sale.php">Iphone 11 Pro-Max Hot!!!</a></h4>
                                                     <div class="price-box">
-                                                        <span class="new-price new-price-2">$44.11</span>
-                                                        <span class="old-price">$88.22</span>
+                                                        <span class="new-price new-price-2">$2000.11</span>
+                                                        <span class="old-price">$4000.22</span>
                                                         <span class="discount-percentage">-50%</span>
                                                     </div>
                                                 </div>

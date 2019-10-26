@@ -5,7 +5,7 @@
                 <div class="container">
                     <div class="breadcrumb-content">
                         <ul>
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.php">Home</a></li>
                             <li class="active">Blog</li>
                         </ul>
                     </div>
@@ -22,7 +22,7 @@
                                 <div class="col-lg-4 col-md-6">
                                     <div class="li-blog-single-item pb-25">
                                         <div class="li-blog-banner">
-                                            <a href="blog-details-left-sidebar.html"><img class="img-full" src="images/blog-banner/2.jpg" alt=""></a>
+                                            <a href=""><img class="img-full" src="images/blog-banner/2.jpg" alt=""></a>
                                         </div>
                                         <div class="li-blog-content">
                                             <div class="li-blog-details">
@@ -34,7 +34,7 @@
                                                 </div>
                                                <p>
                                                 Acer Aspire one D532H-2527 D150-1165 D150-KAV10 D250-1151 D255E-13708 D260 D270 POVE6 D257-1345 D257-1497 D257-13478 Acer Emachine EM250-1162 Dell inspiron mini 10 10V 1010 1011 1012 1018 Dell Latitude 2110 HP mini 110-3098NR HP 620902-001 Toshiba mini NB205-N325BL Samsung LTN 101 NT07 Lenovo Ideapad S10-2</p>
-                                                <a class="read-more" href="blog-details-left-sidebar.html">Read More...</a>
+                                                <a class="read-more" href="">Read More...</a>
                                             </div>
                                         </div>
                                     </div>
@@ -56,7 +56,7 @@
                                                Suite of products: Body, Box, Cable, Charger, Headphones, Instruction Manual, Sim Stick. Commitment to accessories zin 100% machine
 
 New Machine Fullbox 100%, Not Active, International Version, Genuine Appl</p>
-                                                <a class="read-more" href="blog-details-left-sidebar.html">Read More...</a>
+                                                <a class="read-more" href="">Read More...</a>
                                             </div>
                                         </div>
                                     </div>
@@ -68,7 +68,7 @@ New Machine Fullbox 100%, Not Active, International Version, Genuine Appl</p>
                                         </div>
                                         <div class="li-blog-content">
                                             <div class="li-blog-details">
-                                                <h3 class="li-blog-heading pt-25"><a href="blog-details-left-sidebar.html">TV newest version</a></h3>
+                                                <h3 class="li-blog-heading pt-25"><a href="">TV newest version</a></h3>
                                                 <div class="li-blog-meta">
                                                     <a class="author" href="#"><i class="fa fa-user"></i>Admin</a>
                                                     <a class="comment" href="#"><i class="fa fa-comment-o"></i> 3 comment</a>
@@ -77,7 +77,7 @@ New Machine Fullbox 100%, Not Active, International Version, Genuine Appl</p>
                                                <p>Ultimate HDR technology for perfect colors
 Ultra Clean View technology effectively reduces smudging and filtering
 Micro Dimming Pro technology enhances the contrast</p>
-                                                <a class="read-more" href="blog-details-left-sidebar.html">Read More...</a>
+                                                <a class="read-more" href="">Read More...</a>
                                             </div>
                                         </div>
                                     </div>
