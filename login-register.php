@@ -1,5 +1,6 @@
 <?php include "./include/header.html" ?>
-           
+            <!-- Header Area End Here -->
+            <!-- Begin Li's Breadcrumb Area -->
             <div class="breadcrumb-area">
                 <div class="container">
                     <div class="breadcrumb-content">
@@ -84,7 +85,7 @@
             <!-- Begin Footer Area -->
             <?php include "./include/footer.html" ?>
             <!-- Footer Area End Here -->
-        
+        </div>
         <!-- Body Wrapper End Here -->
         <!-- jQuery-V1.12.4 -->
         <script src="js/vendor/jquery-1.12.4.min.js"></script>
