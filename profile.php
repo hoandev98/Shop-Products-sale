@@ -22,7 +22,7 @@
                         <div class="picture-container">
                             <div class="picture">
                                 <img src="https://img.docbao.vn/images/fullsize/2019/04/13/tram-anh-tham-my.jpg" class="picture-src" id="picturePreview"
-                                    title="">
+                                    title="" alt="avatar">
                                 <input type="file" id="picture">
                             </div>
                             <h5 style="padding-top:10px;">Choose Picture</h5>

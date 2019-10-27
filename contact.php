@@ -16,7 +16,7 @@
             <div class="contact-main-page mt-60 mb-40 mb-md-40 mb-sm-40 mb-xs-40">
                 <div class="container mb-60">
                     <div id="google-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.9437529135835!2d106.71208507174535!3d10.815616515626623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175289a1fd5a5f1%3A0x4e01deb64d2102cd!2zQ8O0bmcgVHkgVG5oaCBW4bqtbiBU4bqjaSBUaHXhuq1uIFRp4bq_biBHaWEgTGFp!5e0!3m2!1svi!2s!4v1571496060601!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5047074473505!2d106.65550395062682!3d10.772602992286473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ec17709146b%3A0x54a1658a0639d341!2zxJDhuqFpIEjhu41jIELDoWNoIEtob2E!5e0!3m2!1svi!2s!4v1572106903207!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                     </div>
                 </div>
                 <div class="container">
@@ -77,7 +77,7 @@ If you have any questions, please contact us</p>
             <!-- Contact Main Page Area End Here -->
             <?php include "./include/footer.html" ?>
             <!-- Footer Area End Here -->
-        </div>
+       
         <!-- Body Wrapper End Here -->
         <!-- jQuery-V1.12.4 -->
         <script src="js/vendor/jquery-1.12.4.min.js"></script>

@@ -42,7 +42,7 @@
                                 <div class="col-lg-4 col-md-6">
                                     <div class="li-blog-single-item pb-25">
                                         <div class="li-blog-banner">
-                                            <a href=""><img class="img-full" src="https://cdn.tgdd.vn/Files/2019/09/12/1197622/f2_800x449.jpg"alt=""></a>
+                                            <a href=""><img class="img-full" src="https://cdn.tgdd.vn/Files/2019/09/12/1197622/f2_800x449.jpg" alt=""></a>
                                         </div>
                                         <div class="li-blog-content">
                                             <div class="li-blog-details">
@@ -64,7 +64,7 @@ New Machine Fullbox 100%, Not Active, International Version, Genuine Appl</p>
                                 <div class="col-lg-4 col-md-6">
                                     <div class="li-blog-single-item pb-25">
                                         <div class="li-blog-banner embed-responsive embed-responsive-16by9">
-                                        <iframe src="http://www.youtube.com/embed/4aQwT3n2c1Q"  allowfullscreen="" frameborder="0"></iframe>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/WUq0PWYUY_c"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                         </div>
                                         <div class="li-blog-content">
                                             <div class="li-blog-details">
@@ -109,7 +109,7 @@ Micro Dimming Pro technology enhances the contrast</p>
             </div>
             <!-- Li's Main Blog Page Area End Here -->
             <?php include "./include/footer.html" ?>
-        </div>
+        
         <!-- Body Wrapper End Here -->
         <!-- jQuery-V1.12.4 -->
         <script src="js/vendor/jquery-1.12.4.min.js"></script>
