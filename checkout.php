@@ -294,7 +294,7 @@
                                           <div class="card">
                                             <div class="card-header" id="#payment-2">
                                               <h5 class="panel-title">
-                                                <a class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                <a class="collapsed" href="" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                                   Cheque Payment
                                                 </a>
                                               </h5>
@@ -308,7 +308,7 @@
                                           <div class="card">
                                             <div class="card-header" id="#payment-3">
                                               <h5 class="panel-title">
-                                                <a class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                <a class="collapsed" href="" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                                   PayPal
                                                 </a>
                                               </h5>
@@ -334,9 +334,7 @@
             <!-- Begin Footer Area -->
             <?php include "./include/footer.html" ?>
             <!-- Footer Area End Here -->
-        </div>
-        <!-- Body Wrapper End Here -->
-        <!-- jQuery-V1.12.4 -->
+       
         <script src="js/vendor/jquery-1.12.4.min.js"></script>
         <!-- Popper js -->
         <script src="js/vendor/popper.min.js"></script>

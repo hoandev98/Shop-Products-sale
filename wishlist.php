@@ -66,7 +66,7 @@
             </div>
             <!--Wishlist Area End-->
           
-<?php include "./include/footerhtml" ?>
+<?php include "./include/footer.html" ?>
             <!-- Footer Area End Here -->
             <!-- Begin Modal Area -->
             <div class="modal fade open-modal" tabindex="-1" role="dialog" aria-hidden="true">
