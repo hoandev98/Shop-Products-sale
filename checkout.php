@@ -22,7 +22,7 @@
                                 <h3>Returning customer? <span id="showlogin">Click here to login</span></h3>
                                 <div id="checkout-login" class="coupon-content">
                                     <div class="coupon-info">
-                                        <p class="coupon-text">Quisque gravida turpis sit amet nulla posuere lacinia. Cras sed est sit amet ipsum luctus.</p>
+                                        
                                         <form action="#">
                                             <p class="form-row-first">
                                                 <label>Username or email <span class="required">*</span></label>
@@ -70,7 +70,7 @@
                                             <div class="country-select clearfix">
                                                 <label>Country <span class="required">*</span></label>
                                                 <select class="nice-select wide">
-                                                  <option data-display="Bangladesh">Bangladesh</option>
+                                                  <option data-display="Vietnam">Vietnam</option>
                                                   <option value="uk">London</option>
                                                   <option value="rou">Romania</option>
                                                   <option value="fr">French</option>
@@ -162,7 +162,7 @@
                                                 <div class="country-select clearfix">
                                                     <label>Country <span class="required">*</span></label>
                                                     <select class="nice-select wide">
-                                                      <option data-display="Bangladesh">Bangladesh</option>
+                                                      <option data-display="Vietnam">Vietnam</option>
                                                       <option value="uk">London</option>
                                                       <option value="rou">Romania</option>
                                                       <option value="fr">French</option>
@@ -255,21 +255,21 @@
                                         <tbody>
                                             <tr class="cart_item">
                                               <td class="cart-product-name"> Vestibulum suscipit<strong class="product-quantity"> × 1</strong></td>
-                                              <td class="cart-product-total"><span class="amount">£165.00</span></td>  
+                                              <td class="cart-product-total"><span class="amount">$165.00</span></td>  
                                             </tr>
                                             <tr class="cart_item">
                                               <td class="cart-product-name"> Vestibulum suscipit<strong class="product-quantity"> × 1</strong></td>
-                                              <td class="cart-product-total"><span class="amount">£165.00</span></td>  
+                                              <td class="cart-product-total"><span class="amount">$165.00</span></td>  
                                             </tr>
                                         </tbody>
                                         <tfoot>
                                             <tr class="cart-subtotal">
                                                 <th>Cart Subtotal</th>
-                                                <td><span class="amount">£215.00</span></td>
+                                                <td><span class="amount">$215.00</span></td>
                                             </tr>
                                             <tr class="order-total">
                                                 <th>Order Total</th>
-                                                <td><strong><span class="amount">£215.00</span></strong></td>
+                                                <td><strong><span class="amount">$215.00</span></strong></td>
                                             </tr>
                                         </tfoot>
                                     </table>

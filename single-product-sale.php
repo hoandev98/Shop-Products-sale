@@ -559,7 +559,7 @@ IPhone 11 64GB version 1 High-end smartphone Sim, beautiful appearance and stron
             <!-- Footer Area End Here -->
             <!-- Begin Quick View | Modal Area -->
             
-         
+         </div>
         <!-- Body Wrapper End Here -->
         <!-- jQuery-V1.12.4 -->
         <script src="js/vendor/jquery-1.12.4.min.js"></script>

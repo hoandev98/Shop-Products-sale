@@ -111,6 +111,7 @@ Micro Dimming Pro technology enhances the contrast</p>
             <?php include "./include/footer.html" ?>
         
         <!-- Body Wrapper End Here -->
+        </div>
         <!-- jQuery-V1.12.4 -->
         <script src="js/vendor/jquery-1.12.4.min.js"></script>
         <!-- Popper js -->

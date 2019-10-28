@@ -429,7 +429,7 @@ textarea:focus {
 /*----------------------------------------*/
 /* Slider Progress Bar */
 .slider-active .owl-item.active .slider-progress {
-	-webkit-animation: 5000ms ease-in-out 0s normal none 1 running timebar;
+	-webkit-animation: 500ms ease-in-out 0s normal none 1 running timebar;
 	animation: 10000ms ease-in-out 0s normal none 1 running timebar;
 	background: rgba(0, 0, 0, .3);
 	height: 5px;
@@ -470,7 +470,78 @@ textarea:focus {
     -webkit-animation: 1000ms ease-in-out 0s normal none 1 running slideInUp;
     animation: 1000ms ease-in-out 0s normal none 1 running slideInUp;
 }
+/* animation-style-02 */
+.owl-item.active .animation-style-02 .slider-content h5,
+.owl-item.active .animation-style-02 .slider-content-2 h5 {
+    -webkit-animation: 800ms ease-in-out 0s normal none 1 running zoomInUp;
+    animation: 800ms ease-in-out 0s normal none 1 running zoomInUp;
+}
 
+.owl-item.active .animation-style-02 .slider-content h2 {
+    -webkit-animation: 1200ms ease-in-out 0s normal none 1 running zoomInUp;
+    animation: 1200ms ease-in-out 0s normal none 1 running zoomInUp;
+}
+
+.owl-item.active .animation-style-02 .slider-content h3,
+.owl-item.active .animation-style-02 .slider-content-2 h3 {
+    -webkit-animation: 1600ms ease-in-out 0s normal none 1 running zoomInUp;
+    animation: 1600ms ease-in-out 0s normal none 1 running zoomInUp;
+}
+
+.owl-item.active .animation-style-02 .slider-content .slide-btn,
+.owl-item.active .animation-style-02 .slider-content-2 .slide-btn {
+    -webkit-animation: 2000ms ease-in-out 0s normal none 1 running zoomInUp;
+    animation: 2000ms ease-in-out 0s normal none 1 running zoomInUp;
+}
+@-webkit-keyframes timebar {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}
+@keyframes timebar {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}
+@keyframes timebar {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}
+/*Top Up Keyframes*/
+@-webkit-keyframes liSlideInUp {
+	0% {
+		-webkit-transform: translateY(250px);
+		transform: translateY(250px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes liSlideInUp {
+	0% {
+		-webkit-transform: translateY(250px);
+		transform: translateY(250px);
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
 /*----------------------------------------*/
 /*  1.10 All Navigation & Pagination
 /*----------------------------------------*/
@@ -4654,6 +4725,3 @@ span.required {
 .small-version {
   display: none;
 }
-/*----------------------------------------------------------------------------------------------------*/
-/*------------------------------------------> The End <-----------------------------------------------*/
-/*----------------------------------------------------------------------------------------------------*/
