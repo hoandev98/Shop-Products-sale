@@ -1,6 +1,6 @@
 
 <?php include "./include/header.html" ?>
-<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="/css/index.css">
             <!-- Begin Slider With Banner Area -->
             <div class="slider-with-banner">
                 <div class="container">
@@ -2776,14 +2776,14 @@
                                     <div class="sm-image"><img src="https://didongviet.vn/pub/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/i/p/iphone-11-red-didongviet_8_1.jpg" alt="product image thumb"></div>
                                     <div class="sm-image"><img src="https://didongviet.vn/pub/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/i/p/iphone-11-xanh-didongviet_10_1.jpg" alt="product image thumb"></div>
                                 </div>
-                            </div>
+                                    </div>
                                     <!--// Product Details Left -->
                                 </div>
 
                                 <div class="col-lg-7 col-md-6 col-sm-6">
                                     <div class="product-details-view-content pt-60">
                                         <div class="product-info">
-                                            <h2>Today is a good day Framed poster</h2>
+                                            <h2>Iphone 11 pro-max</h2>
                                             <span class="product-details-ref">Reference: Iphone 11</span>
                                             <div class="rating-box pt-20">
                                                 <ul class="rating rating-with-review-item">
@@ -2797,7 +2797,7 @@
                                                 </ul>
                                             </div>
                                             <div class="price-box pt-20">
-                                                <span class="new-price new-price-2">$2000.11</span>
+                                                <span class="new-price new-price-2">$2000.98</span>
                                             </div>
                                             <div class="product-desc">
                                             <p>
@@ -2812,8 +2812,8 @@ IPhone 11 64GB version 1 High-end smartphone Sim, beautiful appearance and stron
                                                     <label>Dimension</label>
                                                     <select class="nice-select">
                                                         <option value="1" title="S" selected="selected">Red</option>
-                                                        <option value="2" title="M">Black</option>
-                                                        <option value="3" title="L">Gold</option>
+                                                        <option value="2" title="M">Gold</option>
+                                                        <option value="3" title="L">Black</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -2850,7 +2850,7 @@ IPhone 11 64GB version 1 High-end smartphone Sim, beautiful appearance and stron
                 </div>
             </div>   
             <!-- Quick View | Modal Area End Here -->
-       
+        </div>
         <!-- Body Wrapper End Here -->
         <!-- jQuery-V1.12.4 -->
         <script src="js/vendor/jquery-1.12.4.min.js"></script>

@@ -62,7 +62,11 @@
         <!-- Login Content Area End Here -->
         <!-- Begin Footer Area -->
        <?php include "./include/footer.html" ?>
+<<<<<<< HEAD
 </div>
+=======
+       </div>
+>>>>>>> profile-contacts-blog
     <!-- Body Wrapper End Here -->
     <!-- jQuery-V1.12.4 -->
     <script src="js/vendor/jquery-1.12.4.min.js"></script>

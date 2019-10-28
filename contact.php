@@ -77,7 +77,11 @@ If you have any questions, please contact us</p>
             <!-- Contact Main Page Area End Here -->
             <?php include "./include/footer.html" ?>
             <!-- Footer Area End Here -->
+<<<<<<< HEAD
         </div>
+=======
+       </div>
+>>>>>>> profile-contacts-blog
         <!-- Body Wrapper End Here -->
         <!-- jQuery-V1.12.4 -->
         <script src="js/vendor/jquery-1.12.4.min.js"></script>

@@ -1380,7 +1380,11 @@
                 </div>
             </div>   
             <!-- Quick View | Modal Area End Here -->
+<<<<<<< HEAD
         </div>
+=======
+     </div>
+>>>>>>> profile-contacts-blog
         <!-- Body Wrapper End Here -->
         <!-- jQuery-V1.12.4 -->
         <script src="js/vendor/jquery-1.12.4.min.js"></script>
