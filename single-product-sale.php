@@ -1,4 +1,4 @@
-<?php include "./include/header.html" ?>
+<?php include "./include/header.php" ?>
             <!-- Header Area End Here -->
             <!-- Begin Li's Breadcrumb Area -->
             <div class="breadcrumb-area">
@@ -555,7 +555,7 @@ IPhone 11 64GB version 1 High-end smartphone Sim, beautiful appearance and stron
             </section>
             <!-- Li's Laptop Product Area End Here -->
             <!-- Begin Footer Area -->
-            <?php include "./include/footer.html" ?>
+            <?php include "./include/footer.php" ?>
             <!-- Footer Area End Here -->
             <!-- Begin Quick View | Modal Area -->
             

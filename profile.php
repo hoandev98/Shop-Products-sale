@@ -1,4 +1,4 @@
-<?php include "./include/header.html" ?>
+<?php include "./include/header.php" ?>
 <link rel="stylesheet" href="css/profile.css">
         <!-- Header Area End Here -->
         <!-- Begin Li's Breadcrumb Area -->
@@ -61,12 +61,8 @@
         </div>
         <!-- Login Content Area End Here -->
         <!-- Begin Footer Area -->
-       <?php include "./include/footer.html" ?>
-<<<<<<< HEAD
-</div>
-=======
+       <?php include "./include/footer.php" ?>
        </div>
->>>>>>> profile-contacts-blog
     <!-- Body Wrapper End Here -->
     <!-- jQuery-V1.12.4 -->
     <script src="js/vendor/jquery-1.12.4.min.js"></script>

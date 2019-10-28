@@ -1,13 +1,13 @@
 
           
-            <?php include "./include/header.html" ?>
+            <?php include "./include/header.php" ?>
             <!-- Header Area End Here -->
             <!-- Begin Li's Breadcrumb Area -->
             <div class="breadcrumb-area">
                 <div class="container">
                     <div class="breadcrumb-content">
                         <ul>
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.php">Home</a></li>
                             <li class="active">Single Product</li>
                         </ul>
                     </div>
@@ -114,7 +114,7 @@
                                         </form>
                                     </div>
                                     <div class="product-additional-info pt-25">
-                                        <a class="wishlist-btn" href="wishlist.html"><i class="fa fa-heart-o"></i>Add to wishlist</a>
+                                        <a class="wishlist-btn" href="wishlist.php"><i class="fa fa-heart-o"></i>Add to wishlist</a>
                                         <div class="product-social-sharing pt-25">
                                             <ul>
                                                 <li class="facebook"><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
@@ -307,7 +307,7 @@
                                         <!-- single-product-wrap start -->
                                         <div class="single-product-wrap">
                                             <div class="product-image">
-                                                <a href="single-product.html">
+                                                <a href="single-product.php">
                                                     <img src="images/product/large-size/1.jpg" alt="Li's Product Image">
                                                 </a>
                                                 <span class="sticker">New</span>
@@ -316,7 +316,7 @@
                                                 <div class="product_desc_info">
                                                     <div class="product-review">
                                                         <h5 class="manufacturer">
-                                                            <a href="product-details.html">Graphic Corner</a>
+                                                            <a href="product-details.php">Graphic Corner</a>
                                                         </h5>
                                                         <div class="rating-box">
                                                             <ul class="rating">
@@ -328,7 +328,7 @@
                                                             </ul>
                                                         </div>
                                                     </div>
-                                                    <h4><a class="product_name" href="single-product.html">Accusantium dolorem1</a></h4>
+                                                    <h4><a class="product_name" href="single-product.php">Accusantium dolorem1</a></h4>
                                                     <div class="price-box">
                                                         <span class="new-price">$46.80</span>
                                                     </div>
@@ -337,7 +337,7 @@
                                                     <ul class="add-actions-link">
                                                         <li class="add-cart active"><a href="#">Add to cart</a></li>
                                                         <li><a href="#" title="quick view" class="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></li>
-                                                        <li><a class="links-details" href="wishlist.html"><i class="fa fa-heart-o"></i></a></li>
+                                                        <li><a class="links-details" href="wishlist.php"><i class="fa fa-heart-o"></i></a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -348,7 +348,7 @@
                                         <!-- single-product-wrap start -->
                                         <div class="single-product-wrap">
                                             <div class="product-image">
-                                                <a href="single-product.html">
+                                                <a href="single-product.php">
                                                     <img src="images/product/large-size/2.jpg" alt="Li's Product Image">
                                                 </a>
                                                 <span class="sticker">New</span>
@@ -357,7 +357,7 @@
                                                 <div class="product_desc_info">
                                                     <div class="product-review">
                                                         <h5 class="manufacturer">
-                                                            <a href="product-details.html">Studio Design</a>
+                                                            <a href="product-details.php">Studio Design</a>
                                                         </h5>
                                                         <div class="rating-box">
                                                             <ul class="rating">
@@ -369,7 +369,7 @@
                                                             </ul>
                                                         </div>
                                                     </div>
-                                                    <h4><a class="product_name" href="single-product.html">Mug Today is a good day</a></h4>
+                                                    <h4><a class="product_name" href="single-product.php">Mug Today is a good day</a></h4>
                                                     <div class="price-box">
                                                         <span class="new-price new-price-2">$71.80</span>
                                                         <span class="old-price">$77.22</span>
@@ -380,7 +380,7 @@
                                                     <ul class="add-actions-link">
                                                         <li class="add-cart active"><a href="#">Add to cart</a></li>
                                                         <li><a href="#" title="quick view" class="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></li>
-                                                        <li><a class="links-details" href="wishlist.html"><i class="fa fa-heart-o"></i></a></li>
+                                                        <li><a class="links-details" href="wishlist.php"><i class="fa fa-heart-o"></i></a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -391,7 +391,7 @@
                                         <!-- single-product-wrap start -->
                                         <div class="single-product-wrap">
                                             <div class="product-image">
-                                                <a href="single-product.html">
+                                                <a href="single-product.php">
                                                     <img src="images/product/large-size/3.jpg" alt="Li's Product Image">
                                                 </a>
                                                 <span class="sticker">New</span>
@@ -400,7 +400,7 @@
                                                 <div class="product_desc_info">
                                                     <div class="product-review">
                                                         <h5 class="manufacturer">
-                                                            <a href="product-details.html">Graphic Corner</a>
+                                                            <a href="product-details.php">Graphic Corner</a>
                                                         </h5>
                                                         <div class="rating-box">
                                                             <ul class="rating">
@@ -412,7 +412,7 @@
                                                             </ul>
                                                         </div>
                                                     </div>
-                                                    <h4><a class="product_name" href="single-product.html">Accusantium dolorem1</a></h4>
+                                                    <h4><a class="product_name" href="single-product.php">Accusantium dolorem1</a></h4>
                                                     <div class="price-box">
                                                         <span class="new-price">$46.80</span>
                                                     </div>
@@ -421,7 +421,7 @@
                                                     <ul class="add-actions-link">
                                                         <li class="add-cart active"><a href="#">Add to cart</a></li>
                                                         <li><a href="#" title="quick view" class="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></li>
-                                                        <li><a class="links-details" href="wishlist.html"><i class="fa fa-heart-o"></i></a></li>
+                                                        <li><a class="links-details" href="wishlist.php"><i class="fa fa-heart-o"></i></a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -432,7 +432,7 @@
                                         <!-- single-product-wrap start -->
                                         <div class="single-product-wrap">
                                             <div class="product-image">
-                                                <a href="single-product.html">
+                                                <a href="single-product.php">
                                                     <img src="images/product/large-size/4.jpg" alt="Li's Product Image">
                                                 </a>
                                                 <span class="sticker">New</span>
@@ -441,7 +441,7 @@
                                                 <div class="product_desc_info">
                                                     <div class="product-review">
                                                         <h5 class="manufacturer">
-                                                            <a href="product-details.html">Studio Design</a>
+                                                            <a href="product-details.php">Studio Design</a>
                                                         </h5>
                                                         <div class="rating-box">
                                                             <ul class="rating">
@@ -453,7 +453,7 @@
                                                             </ul>
                                                         </div>
                                                     </div>
-                                                    <h4><a class="product_name" href="single-product.html">Mug Today is a good day</a></h4>
+                                                    <h4><a class="product_name" href="single-product.php">Mug Today is a good day</a></h4>
                                                     <div class="price-box">
                                                         <span class="new-price new-price-2">$71.80</span>
                                                         <span class="old-price">$77.22</span>
@@ -464,7 +464,7 @@
                                                     <ul class="add-actions-link">
                                                         <li class="add-cart active"><a href="#">Add to cart</a></li>
                                                         <li><a href="#" title="quick view" class="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></li>
-                                                        <li><a class="links-details" href="wishlist.html"><i class="fa fa-heart-o"></i></a></li>
+                                                        <li><a class="links-details" href="wishlist.php"><i class="fa fa-heart-o"></i></a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -475,7 +475,7 @@
                                         <!-- single-product-wrap start -->
                                         <div class="single-product-wrap">
                                             <div class="product-image">
-                                                <a href="single-product.html">
+                                                <a href="single-product.php">
                                                     <img src="images/product/large-size/5.jpg" alt="Li's Product Image">
                                                 </a>
                                                 <span class="sticker">New</span>
@@ -484,7 +484,7 @@
                                                 <div class="product_desc_info">
                                                     <div class="product-review">
                                                         <h5 class="manufacturer">
-                                                            <a href="product-details.html">Graphic Corner</a>
+                                                            <a href="product-details.php">Graphic Corner</a>
                                                         </h5>
                                                         <div class="rating-box">
                                                             <ul class="rating">
@@ -496,7 +496,7 @@
                                                             </ul>
                                                         </div>
                                                     </div>
-                                                    <h4><a class="product_name" href="single-product.html">Accusantium dolorem1</a></h4>
+                                                    <h4><a class="product_name" href="single-product.php">Accusantium dolorem1</a></h4>
                                                     <div class="price-box">
                                                         <span class="new-price">$46.80</span>
                                                     </div>
@@ -505,7 +505,7 @@
                                                     <ul class="add-actions-link">
                                                         <li class="add-cart active"><a href="#">Add to cart</a></li>
                                                         <li><a href="#" title="quick view" class="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></li>
-                                                        <li><a class="links-details" href="wishlist.html"><i class="fa fa-heart-o"></i></a></li>
+                                                        <li><a class="links-details" href="wishlist.php"><i class="fa fa-heart-o"></i></a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -516,7 +516,7 @@
                                         <!-- single-product-wrap start -->
                                         <div class="single-product-wrap">
                                             <div class="product-image">
-                                                <a href="single-product.html">
+                                                <a href="single-product.php">
                                                     <img src="images/product/large-size/6.jpg" alt="Li's Product Image">
                                                 </a>
                                                 <span class="sticker">New</span>
@@ -525,7 +525,7 @@
                                                 <div class="product_desc_info">
                                                     <div class="product-review">
                                                         <h5 class="manufacturer">
-                                                            <a href="product-details.html">Studio Design</a>
+                                                            <a href="product-details.php">Studio Design</a>
                                                         </h5>
                                                         <div class="rating-box">
                                                             <ul class="rating">
@@ -537,7 +537,7 @@
                                                             </ul>
                                                         </div>
                                                     </div>
-                                                    <h4><a class="product_name" href="single-product.html">Mug Today is a good day</a></h4>
+                                                    <h4><a class="product_name" href="single-product.php">Mug Today is a good day</a></h4>
                                                     <div class="price-box">
                                                         <span class="new-price new-price-2">$71.80</span>
                                                         <span class="old-price">$77.22</span>
@@ -548,7 +548,7 @@
                                                     <ul class="add-actions-link">
                                                         <li class="add-cart active"><a href="#">Add to cart</a></li>
                                                         <li><a href="#" title="quick view" class="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></li>
-                                                        <li><a class="links-details" href="wishlist.html"><i class="fa fa-heart-o"></i></a></li>
+                                                        <li><a class="links-details" href="wishlist.php"><i class="fa fa-heart-o"></i></a></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -565,7 +565,7 @@
             <!-- Li's Laptop Product Area End Here -->
             <!-- Begin Footer Area -->
             
-            <?php include "./include/footer.html" ?>
+            <?php include "./include/footer.php" ?>
             <!-- Footer Area End Here -->
             <!-- Begin Quick View | Modal Area -->
             <div class="modal fade modal-wrapper" id="exampleModalCenter" >
@@ -660,7 +660,7 @@
                                                 </form>
                                             </div>
                                             <div class="product-additional-info pt-25">
-                                                <a class="wishlist-btn" href="wishlist.html"><i class="fa fa-heart-o"></i>Add to wishlist</a>
+                                                <a class="wishlist-btn" href="wishlist.php"><i class="fa fa-heart-o"></i>Add to wishlist</a>
                                                 <div class="product-social-sharing pt-25">
                                                     <ul>
                                                         <li class="facebook"><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>

@@ -1,4 +1,4 @@
-<?php include "./include/header.html" ?>
+<?php include "./include/header.php" ?>
             <!-- Header Area End Here -->
             <!-- Begin Li's Breadcrumb Area -->
             <div class="breadcrumb-area">
@@ -83,7 +83,7 @@
             </div>
             <!-- Login Content Area End Here -->
             <!-- Begin Footer Area -->
-            <?php include "./include/footer.html" ?>
+            <?php include "./include/footer.php" ?>
             <!-- Footer Area End Here -->
         </div>
         <!-- Body Wrapper End Here -->

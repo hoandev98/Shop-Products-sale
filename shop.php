@@ -1,5 +1,5 @@
 
-<?php include "./include/header.html" ?>
+<?php include "./include/header.php" ?>
             <!-- Header Area End Here -->
             <!-- Begin Li's Breadcrumb Area -->
             <div class="breadcrumb-area">
@@ -1266,7 +1266,7 @@
             <!-- Content Wraper Area End Here -->
             <!-- Begin Footer Area -->
             
-        <?php include "./include/footer.html" ?>
+        <?php include "./include/footer.php" ?>
             <!-- Footer Area End Here -->
             <!-- Begin Quick View | Modal Area -->
             <div class="modal fade modal-wrapper" id="exampleModalCenter" >
@@ -1380,11 +1380,7 @@
                 </div>
             </div>   
             <!-- Quick View | Modal Area End Here -->
-<<<<<<< HEAD
-        </div>
-=======
      </div>
->>>>>>> profile-contacts-blog
         <!-- Body Wrapper End Here -->
         <!-- jQuery-V1.12.4 -->
         <script src="js/vendor/jquery-1.12.4.min.js"></script>

@@ -31,7 +31,7 @@
                                     </form>
                                 </div>
                                 <div class="error-button">
-                                    <a href="index.html">Back to home page</a>
+                                    <a href="index.php">Back to home page</a>
                                 </div>
                             </div>
                         </div>
@@ -41,7 +41,7 @@
             <!-- Error 404 Area End -->
             <!-- Begin Footer Area -->
             
-<?php include "./include/footer.html" ?>
+<?php include "./include/footer.php" ?>
             <!-- Footer Area End Here -->
         </div>
         <!-- Body Wrapper End Here -->

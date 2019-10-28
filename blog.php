@@ -1,4 +1,4 @@
-<?php include "./include/header.html" ?>
+<?php include "./include/header.php" ?>
             <!-- Header Area End Here -->
             <!-- Begin Li's Breadcrumb Area -->
             <div class="breadcrumb-area">
@@ -108,7 +108,7 @@ Micro Dimming Pro technology enhances the contrast</p>
                 </div>
             </div>
             <!-- Li's Main Blog Page Area End Here -->
-            <?php include "./include/footer.html" ?>
+            <?php include "./include/footer.php" ?>
         </div>
         <!-- Body Wrapper End Here -->
         </div>

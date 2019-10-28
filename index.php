@@ -1,6 +1,8 @@
 
-<?php include "./include/header.html" ?>
-<link rel="stylesheet" href="/css/index.css">
+<?php include "./include/header.php" ?>
+
+<?php include './config/database.php'; ?>
+<link rel="stylesheet" href="css/index.css">
             <!-- Begin Slider With Banner Area -->
             <div class="slider-with-banner">
                 <div class="container">
@@ -2624,7 +2626,7 @@
           
              <!-- Li's Trendding Products Area End Here -->
             <!-- Begin Footer Area -->
-            <?php include "./include/footer.html" ?>
+            <?php include "./include/footer.php" ?>
             <!-- Footer Area End Here -->
             <!-- Begin Quick View | Modal Area -->
             <div class="modal fade modal-wrapper" id="exampleModalCenter" >

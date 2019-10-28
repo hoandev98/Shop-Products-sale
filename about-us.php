@@ -1,4 +1,4 @@
-<?php include "./include/header.html" ?>
+<?php include "./include/header.php" ?>
             <div class="breadcrumb-area">
                 <div class="container">
                     <div class="breadcrumb-content">
@@ -201,7 +201,7 @@
             </div>
             <!-- team area wrapper end -->
             <!-- Begin Footer Area -->
-            <?php include "./include/footer.html" ?>
+            <?php include "./include/footer.php" ?>
             <!-- Footer Area End Here -->
         </div>
         <!-- Body Wrapper End Here -->

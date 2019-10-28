@@ -1,4 +1,4 @@
-<?php include "./include/header.html" ?>
+<?php include "./include/header.php" ?>
             <!-- Header Area End Here -->
             <!-- Begin Li's Breadcrumb Area -->
             <div class="breadcrumb-area">
@@ -75,13 +75,9 @@ If you have any questions, please contact us</p>
                 </div>
             </div>
             <!-- Contact Main Page Area End Here -->
-            <?php include "./include/footer.html" ?>
+            <?php include "./include/footer.php" ?>
             <!-- Footer Area End Here -->
-<<<<<<< HEAD
-        </div>
-=======
        </div>
->>>>>>> profile-contacts-blog
         <!-- Body Wrapper End Here -->
         <!-- jQuery-V1.12.4 -->
         <script src="js/vendor/jquery-1.12.4.min.js"></script>
