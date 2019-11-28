@@ -78,7 +78,7 @@
                         <ul class="des">
                             <li>
                                 <span>Address: </span>
-                                209, 13 Main Street, Binh Thanh, Ho Chi MInh City – VietNam
+                                209, 13 Main Street, Binh Thanh, Ho Chi MInh City, VietNam
                             </li>
                             <li>
                                 <span>Phone: </span>

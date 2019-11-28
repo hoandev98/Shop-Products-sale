@@ -1,12 +1,12 @@
 
-<?php include "./include/header.html" ?>
+<?php include "./include/header.php" ?>
             <!-- Header Area End Here -->
             <!-- Begin Li's Breadcrumb Area -->
             <div class="breadcrumb-area">
                 <div class="container">
                     <div class="breadcrumb-content">
                         <ul>
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.php">Home</a></li>
                             <li class="active">Wishlist</li>
                         </ul>
                     </div>
@@ -66,7 +66,7 @@
             </div>
             <!--Wishlist Area End-->
           
-<?php include "./include/footer.html" ?>
+<?php include "./include/footer.php" ?>
             <!-- Footer Area End Here -->
            
             <!-- Modal Area End Here -->
