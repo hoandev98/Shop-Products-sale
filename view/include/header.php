@@ -9,39 +9,39 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="public/images/favicon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="./../public/images/favicon.png">
         <!-- Material Design Iconic Font-V2.2.0 -->
-        <link rel="stylesheet" href="public/css/material-design-iconic-font.min.css">
+        <link rel="stylesheet" href="./../public/css/material-design-iconic-font.min.css">
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="public/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./../public/css/font-awesome.min.css">
         <!-- Font Awesome Stars-->
-        <link rel="stylesheet" href="public/css/fontawesome-stars.css">
+        <link rel="stylesheet" href="./../public/css/fontawesome-stars.css">
         <!-- Meanmenu CSS -->
-        <link rel="stylesheet" href="public/css/meanmenu.css">
+        <link rel="stylesheet" href="./../public/css/meanmenu.css">
         <!-- owl carousel CSS -->
-        <link rel="stylesheet" href="public/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../public/css/owl.carousel.min.css">
         <!-- Slick Carousel CSS -->
-        <link rel="stylesheet" href="public/css/slick.css">
+        <link rel="stylesheet" href="./../public/css/slick.css">
         <!-- Animate CSS -->
-        <link rel="stylesheet" href="public/css/animate.css">
+        <link rel="stylesheet" href="./../public/css/animate.css">
         <!-- Jquery-ui CSS -->
-        <link rel="stylesheet" href="public/css/jquery-ui.min.css">
+        <link rel="stylesheet" href="./../public/css/jquery-ui.min.css">
         <!-- Venobox CSS -->
-        <link rel="stylesheet" href="public/css/venobox.css">
+        <link rel="stylesheet" href="./../public/css/venobox.css">
         <!-- Nice Select CSS -->
-        <link rel="stylesheet" href="public/css/nice-select.css">
+        <link rel="stylesheet" href="./../public/css/nice-select.css">
         <!-- Magnific Popup CSS -->
-        <link rel="stylesheet" href="public/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../public/css/magnific-popup.css">
         <!-- Bootstrap V4.1.3 Fremwork CSS -->
-        <link rel="stylesheet" href="public/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../public/css/bootstrap.min.css">
         <!-- Helper CSS -->
-        <link rel="stylesheet" href="public/css/helper.css">
+        <link rel="stylesheet" href="./../public/css/helper.css">
         <!-- Main Style CSS -->
-        <link rel="stylesheet" href="public/style.css">
+        <link rel="stylesheet" href="./../public/style.css">
         <!-- Responsive CSS -->
-        <link rel="stylesheet" href="public/css/responsive.css">
+        <link rel="stylesheet" href="./../public/css/responsive.css">
         <!-- Modernizr js -->
-        <script src="public/js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="./../public/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
         <!-- Begin Body Wrapper -->
@@ -79,8 +79,8 @@
                             <!-- Begin Header Logo Area -->
                             <div class="col-lg-3">
                                 <div class="logo pb-sm-30 pb-xs-30">
-                                    <a href="index.php">
-                                        <img src="public/images/menu/logo/1.jpg" alt="">
+                                    <a href="./../index.php">
+                                        <img src="./../public/images/menu/logo/1.jpg" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -242,7 +242,7 @@
                                 <div class="hb-menu">
                                     <nav>
                                         <ul>
-                                            <li class="homepage"><a href="index.php">Home</a>
+                                            <li class="homepage"><a href="./../index.php">Home</a>
                                              
                                             </li>
                                             <li class="megamenu-holder"><a href="shop.php">Shop</a>

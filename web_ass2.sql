@@ -28,6 +28,9 @@ SET time_zone = "+00:00";
 -- Table structure for table `chitiethoadon`
 --
 
+CREATE DATABASE `web_ass2`;
+USE `web_ass2`;
+
 DROP TABLE IF EXISTS `chitiethoadon`;
 CREATE TABLE IF NOT EXISTS `chitiethoadon` (
   `MaHD` int(11) NOT NULL,
