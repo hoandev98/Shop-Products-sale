@@ -27,7 +27,7 @@
                         <!-- About Image Start -->
                         <div class="col-lg-5 col-md-10">
                             <div class="about-image-wrap">
-                                <img class="img-full" src="images/product/large-size/13.jpg" alt="About Us" />
+                                <img class="img-full" src="/shop-products-sale/public/images/product/large-size/13.jpg" alt="About Us" />
                             </div>
                         </div>
                         <!-- About Image End -->
@@ -44,7 +44,7 @@
                             <div class="limupa-counter white-smoke-bg">
                                 <div class="container">
                                     <div class="counter-img">
-                                        <img src="images/about-us/icon/1.png" alt="">
+                                        <img src="/shop-products-sale/public/images/about-us/icon/1.png" alt="">
                                     </div>
                                     <div class="counter-info">
                                         <div class="counter-number">
@@ -62,7 +62,7 @@
                             <!-- Begin limupa Counter Area -->
                             <div class="limupa-counter gray-bg">
                                 <div class="counter-img">
-                                    <img src="images/about-us/icon/2.png" alt="">
+                                    <img src="/shop-products-sale/public/images/about-us/icon/2.png" alt="">
                                 </div>
                                 <div class="counter-info">
                                     <div class="counter-number">
@@ -79,7 +79,7 @@
                             <!-- Begin limupa Counter Area -->
                             <div class="limupa-counter white-smoke-bg">
                                 <div class="counter-img">
-                                    <img src="images/about-us/icon/3.png" alt="">
+                                    <img src="/shop-products-sale/public/images/about-us/icon/3.png" alt="">
                                 </div>
                                 <div class="counter-info">
                                     <div class="counter-number">
@@ -96,7 +96,7 @@
                             <!-- Begin limupa Counter Area -->
                             <div class="limupa-counter gray-bg">
                                 <div class="counter-img">
-                                    <img src="images/about-us/icon/4.png" alt="">
+                                    <img src="/shop-products-sale/public/images/about-us/icon/4.png" alt="">
                                 </div>
                                 <div class="counter-info">
                                     <div class="counter-number">
@@ -127,7 +127,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="team-member mb-60 mb-sm-30 mb-xs-30">
                                 <div class="team-thumb">
-                                    <img src="images/team/1.png" alt="Our Team Member">
+                                    <img src="/shop-products-sale/public/images/team/1.png" alt="Our Team Member">
                                 </div>
                                 <div class="team-content text-center">
                                     <h3>Jonathan Scott</h3>
@@ -145,7 +145,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="team-member mb-60 mb-sm-30 mb-xs-30">
                                 <div class="team-thumb">
-                                    <img src="images/team/2.png" alt="Our Team Member">
+                                    <img src="/shop-products-sale/public/images/team/2.png" alt="Our Team Member">
                                 </div>
                                 <div class="team-content text-center">
                                     <h3>Oliver Bastin</h3>
@@ -163,7 +163,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="team-member mb-30 mb-sm-60">
                                 <div class="team-thumb">
-                                    <img src="images/team/3.png" alt="Our Team Member">
+                                    <img src="/shop-products-sale/public/images/team/3.png" alt="Our Team Member">
                                 </div>
                                 <div class="team-content text-center">
                                     <h3>Erik Jonson</h3>
@@ -181,7 +181,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="team-member mb-30 mb-sm-60 mb-xs-60">
                                 <div class="team-thumb">
-                                    <img src="images/team/4.png" alt="Our Team Member">
+                                    <img src="/shop-products-sale/public/images/team/4.png" alt="Our Team Member">
                                 </div>
                                 <div class="team-content text-center">
                                     <h3>Maria Mandy</h3>

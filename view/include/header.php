@@ -42,6 +42,8 @@
         <link rel="stylesheet" href="./../public/css/responsive.css">
         <!-- Modernizr js -->
         <script src="./../public/js/vendor/modernizr-2.8.3.min.js"></script>
+
+        <link rel="stylesheet" href="../public/css/shopping-cart.css">
     </head>
     <body>
         <!-- Begin Body Wrapper -->
@@ -201,7 +203,7 @@
                                                     </li>
                                                     <li>
                                                         <a href="single-product.php" class="minicart-product-image">
-                                                            <img src="images/product/small-size/6.jpg" alt="cart products">
+                                                            <img src="/Shop-Products-sale/public/images/product/small-size/6.jpg" alt="cart products">
                                                         </a>
                                                         <div class="minicart-product-details">
                                                             <h6><a href="single-product.php">Aenean eu tristique</a></h6>

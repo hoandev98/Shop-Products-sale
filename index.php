@@ -202,7 +202,7 @@
                                                     </li>
                                                     <li>
                                                         <a href="single-product.php" class="minicart-product-image">
-                                                            <img src="images/product/small-size/6.jpg" alt="cart products">
+                                                            <img src="/Shop-Products-sale/public/images/product/small-size/6.jpg" alt="cart products">
                                                         </a>
                                                         <div class="minicart-product-details">
                                                             <h6><a href="single-product.php">Aenean eu tristique</a></h6>
@@ -850,12 +850,12 @@
                                             </div>
                                         </div>
                                         <div class="product-details-thumbs slider-thumbs-1">                                        
-                                            <div class="sm-image"><img src="images/product/small-size/1.jpg" alt="product image thumb"></div>
-                                            <div class="sm-image"><img src="images/product/small-size/2.jpg" alt="product image thumb"></div>
-                                            <div class="sm-image"><img src="images/product/small-size/3.jpg" alt="product image thumb"></div>
-                                            <div class="sm-image"><img src="images/product/small-size/4.jpg" alt="product image thumb"></div>
-                                            <div class="sm-image"><img src="images/product/small-size/5.jpg" alt="product image thumb"></div>
-                                            <div class="sm-image"><img src="images/product/small-size/6.jpg" alt="product image thumb"></div>
+                                            <div class="sm-image"><img src="/Shop-Products-sale/public/images/product/small-size/1.jpg" alt="product image thumb"></div>
+                                            <div class="sm-image"><img src="/Shop-Products-sale/public/images/product/small-size/2.jpg" alt="product image thumb"></div>
+                                            <div class="sm-image"><img src="/Shop-Products-sale/public/images/product/small-size/3.jpg" alt="product image thumb"></div>
+                                            <div class="sm-image"><img src="/Shop-Products-sale/public/images/product/small-size/4.jpg" alt="product image thumb"></div>
+                                            <div class="sm-image"><img src="/Shop-Products-sale/public/images/product/small-size/5.jpg" alt="product image thumb"></div>
+                                            <div class="sm-image"><img src="/Shop-Products-sale/public/images/product/small-size/6.jpg" alt="product image thumb"></div>
                                         </div>
                                     </div>
                                     <!--// Product Details Left -->
