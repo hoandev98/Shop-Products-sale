@@ -6,7 +6,7 @@ class DB_driver
         $localhost = "localhost",
         $user = "root",
         $pass = "",
-        $DbName = "web_ass2";
+        $DbName = "web";
 
     // Hàm Kết Nối
     function connect()

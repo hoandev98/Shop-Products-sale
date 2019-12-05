@@ -181,8 +181,8 @@
                                         <li class="hm-minicart">
                                             <div class="hm-minicart-trigger">
                                                 <span class="item-icon"></span>
-                                                <span class="item-text">$80.00
-                                                    <span class="cart-item-count">2</span>
+                                                <span class="item-text total-minicard">$0.00
+                                                    <span class="cart-item-count quantity-minicard">0</span>
                                                 </span>
                                             </div>
                                             <span></span>
@@ -190,7 +190,7 @@
                                                 <ul class="minicart-product-list">
                                                     <li>
                                                         <a href="single-product.php" class="minicart-product-image">
-                                                            <img src="images/product/small-size/5.jpg" alt="cart products">
+                                                            <img src="/Shop-Products-sale/public/images/product/small-size/5.jpg" alt="cart products">
                                                         </a>
                                                         <div class="minicart-product-details">
                                                             <h6><a href="single-product.php">Aenean eu tristique</a></h6>
@@ -1086,6 +1086,7 @@ IPhone 11 64GB version 1 High-end smartphone Sim, beautiful appearance and stron
         <!-- Main/Activator js -->
         <script src="public/js/main.js"></script>
         <script src="public/jsAjax/ajaxHome.js"></script>
+        <script type="text/javascript" src="public/js/header.js?1500"></script>
     </body>
 
 <!-- index30:23-->

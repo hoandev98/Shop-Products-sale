@@ -1,13 +1,12 @@
-function addCardToCookie(key, value) {
-    document.cookie = key + "=" + value + ";";
+if (document.readyState == 'loading') {
+    document.addEventListener('DOMContentLoaded', ready)
+} else {
+    ready()
 }
 
 // Hien thi card
-window.onload = function () {
+function ready() {
     // key la maSP value la so luong
-    console.log("ieie");
-    this.setCookie("1", "3", 0);
-    this.setCookie("2", "10", 0);
     var ca = document.cookie.split(';');
     var listID = [];
     var listQuantity = [];
@@ -59,22 +58,94 @@ function showTableCard(data, listQuantity) {
     result += "<tbody>";
     for (var i = 0; i < data.length; i++) {
         result += "<tr>";
-        result += "<td class=\"li-product-remove\"><a href=\"#\"><i class=\"fa fa-times\"></i></a></td>";
-        result += "<td class=\"li-product-thumbnail\"><a href=\"#\"><img src=" + data[i].HinhAnh + " alt=\"Li's Product Image\"></a></td>";
+        result += "<td class=\"li-product-remove\"><a onClick='deleteItemCard(" + data[i].MaSP + ")' style='cursor: pointer'><i class=\"fa fa-times\"></i></a></td>";
+        result += "<td class=\"li-product-thumbnail\"><a href=\"#\"><img style='width: 150px; height: 150px' src=" + data[i].HinhAnh + " alt=\"Li's Product Image\"></a></td>";
         result += "<td class=\"li-product-name\"><a href=\"#\">" + data[i].TenSP + "</a></td>";
-        result += "<td class=\"li-product-price\"><span class=\"amount\">$" + data[i].DonGia + "</span></td>";
+        result += "<td class=\"li-product-price\"><span class=\"amount item-price\">$" + data[i].DonGia + "</span></td>";
         result += "<td class=\"quantity\">";
         result += "<label>Quantity</label>";
         result += "<div>";
         result += "<input class=\"input-product-quantity\" value=" + listQuantity[i] + " type=\"number\">";
         result += "</div>";
         result += "</td>";
-        result += "<td class=\"product-subtotal\"><span class=\"amount\">$70.00</span></td>";
+        result += "<td class=\"product-subtotal\"><span class=\"amount item-total\">$" + data[i].DonGia*listQuantity[i] + "</span></td>";
         result += "</tr>";
     }
     result += "</tbody>";
     result += "</table>";
-    // document.getElementById("listcard").innerHTML = result;
     $("#listcard").html(result);
+    // show minicard
+    showMini(data, listQuantity);
+    // end show
+
+    var tableContain = document.getElementById("listcard");
+    var item = tableContain.getElementsByClassName("input-product-quantity");
+    
+    for (var i = 0; i < item.length; i++) {
+        item[i].addEventListener('change', quantityChanged);
+    }
+
+    updateTotal();
 }
 
+function quantityChanged(event) {
+    var input = event.target
+    if (isNaN(input.value) || input.value <= 0) {
+        input.value = 1
+    }
+    updateTotal();
+}
+
+function updateTotal() {
+    var tableContain = document.getElementById("listcard");
+    var itemPrice = tableContain.getElementsByClassName("item-price");
+    var itemTotal = tableContain.getElementsByClassName("item-total");
+    var itemQuantity = tableContain.getElementsByClassName("input-product-quantity");
+    var total = 0;
+    for (var i = 0; i < itemPrice.length; i++){
+        var price = parseFloat(itemPrice[i].innerText.replace('$', ''));
+        var quantity = itemQuantity[i].value;
+        var s = (price * quantity);
+        s = Math.round(s * 100) / 100;
+        itemTotal[i].innerText = '$' + s;
+        total += s;
+    }
+    total = Math.round(total * 100) / 100;
+    document.getElementsByClassName('sub-total-amount')[0].innerText = '$' + total;
+    document.getElementsByClassName('total-amount')[0].innerText = '$' + total;
+    // Gan minicard
+    document.getElementsByClassName("quantity-minicard")[0].innerText = itemPrice.length;
+    document.getElementsByClassName("total-minicard")[0].innerHTML = '$' + total;
+    document.getElementsByClassName("subtotal-minicard")[0].innerHTML = '$' + total;
+}
+
+function deleteItemCard(id) {
+    console.log(id);
+    setCookie(id, "", -1);
+    alert("Delete Success!")
+    // cap nhat lai
+    ready();
+}
+
+function showMini(data, listQuantity) {
+    var result = "";
+    result += `<ul class="minicart-product-list">`;
+    for (var i = 0; i < data.length; i++) {
+        result += `
+        <li>
+            <a href="single-product.php" class="minicart-product-image">
+                <img style="width: 48px; height: 48px" src="${data[i].HinhAnh}" alt="cart products">
+            </a>
+            <div class="minicart-product-details">
+                <h6><a href="single-product.php">${data[i].TenSP}</a></h6>
+                <span>$${data[i].DonGia}</span>
+            </div>
+            <button class="close" title="Remove">
+                <i class="fa fa-close"></i>
+            </button>
+        </li>
+        `;
+    }
+    result += `</ul>`;
+    document.getElementsByClassName("show-minicard")[0].innerHTML = result;
+}

@@ -43,7 +43,7 @@
         <!-- Modernizr js -->
         <script src="./../public/js/vendor/modernizr-2.8.3.min.js"></script>
 
-        <link rel="stylesheet" href="../public/css/shopping-cart.css">
+        <link rel="stylesheet" type="text/css" href="../public/css/shopping-cart.css">
     </head>
     <body>
         <!-- Begin Body Wrapper -->
@@ -182,16 +182,18 @@
                                         <li class="hm-minicart">
                                             <div class="hm-minicart-trigger">
                                                 <span class="item-icon"></span>
-                                                <span class="item-text">$80.00
-                                                    <span class="cart-item-count">2</span>
+                                                <span class="item-text">
+                                                    <span class="total-minicard">$0.00</span>
+                                                    <span class="cart-item-count quantity-minicard">0</span>
                                                 </span>
                                             </div>
                                             <span></span>
-                                            <div class="minicart">
-                                                <ul class="minicart-product-list">
+                                            <div class="minicart" style="z-index: 1001">
+                                                <div class="show-minicard"></div>
+                                                <!-- <ul class="minicart-product-list">
                                                     <li>
                                                         <a href="single-product.php" class="minicart-product-image">
-                                                            <img src="images/product/small-size/5.jpg" alt="cart products">
+                                                            <img src="/Shop-Products-sale/public/images/product/small-size/5.jpg" alt="cart products">
                                                         </a>
                                                         <div class="minicart-product-details">
                                                             <h6><a href="single-product.php">Aenean eu tristique</a></h6>
@@ -213,8 +215,8 @@
                                                             <i class="fa fa-close"></i>
                                                         </button>
                                                     </li>
-                                                </ul>
-                                                <p class="minicart-total">SUBTOTAL: <span>$80.00</span></p>
+                                                </ul> -->
+                                                <p class="minicart-total">SUBTOTAL: <span class="subtotal-minicard">$0.00</span></p>
                                                 <div class="minicart-button">
                                                     <a href="shopping-cart.php" class="li-button li-button-fullwidth li-button-dark">
                                                         <span>View Full Cart</span>

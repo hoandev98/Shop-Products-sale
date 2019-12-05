@@ -67,10 +67,10 @@
                                         <div class="cart-page-total">
                                             <h2>Cart totals</h2>
                                             <ul>
-                                                <li>Subtotal <span>$130.00</span></li>
-                                                <li>Total <span>$130.00</span></li>
+                                                <li>Subtotal <span class="sub-total-amount">$0.00</span></li>
+                                                <li>Total <span class="total-amount">$0.00</span></li>
                                             </ul>
-                                            <a href="#">Proceed to checkout</a>
+                                            <a href="checkout.php">Proceed to checkout</a>
                                         </div>
                                     </div>
                                 </div>
@@ -126,10 +126,9 @@
         <!-- ScrollUp js -->
         <script src="./../public/js/scrollUp.min.js"></script>
 
-        <script src="./../public/js/addToCard.js"></script>
+        <script type="text/javascript" src="./../public/js/addToCard.js?1500"></script>
         <!-- Main/Activator js -->
         <script src="./../public/js/main.js"></script>
-
         
     </body>
 

@@ -726,6 +726,7 @@
         <script src="./../public/js/main.js"></script>
         <script src="./../public/js/cart.js"></script>
         <script src="./../public/js/util.js"></script>
+        <script type="text/javascript" src="../public/js/header.js?1500"></script>
     </body>
 
 <!-- single-product31:32-->

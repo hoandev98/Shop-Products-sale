@@ -121,6 +121,7 @@ If you have any questions, please contact us</p>
         <script src="./../public/js/scrollUp.min.js"></script>
         <!-- Main/Activator js -->
         <script src="./../public/js/main.js"></script>
+        <script type="text/javascript" src="../public/js/header.js?1500"></script>
             <!-- Google Map -->
             <!-- <script src="https://maps.google.com/maps/api/js?sensor=false&amp;libraries=geometry&amp;v=3.22&amp;key=AIzaSyChs2QWiAhnzz0a4OEhzqCXwx_qA9ST_lE"></script> -->
             

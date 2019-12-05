@@ -87,6 +87,7 @@
         <script src="./../public/js/scrollUp.min.js"></script>
         <!-- Main/Activator js -->
         <script src="./../public/js/main.js"></script>
+        <script type="text/javascript" src="../public/js/header.js?1500"></script>
     </body>
 
 <!-- 40432:14-->
