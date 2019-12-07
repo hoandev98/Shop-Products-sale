@@ -111,7 +111,7 @@
 /* 08. Countdown
 /*----------------------------------------*/
    $(".li-countdown")
-     .countdown("2019/12/01", function(event) {
+     .countdown("2019/12/30", function(event) {
        $(this).html(
          event.strftime('<div class="count">%D <span>Days:</span></div> <div class="count">%H <span>Hours:</span></div> <div class="count">%M <span>Mins:</span></div><div class="count"> %S <span>Secs</span></div>')
        );
