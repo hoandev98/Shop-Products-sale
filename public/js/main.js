@@ -430,8 +430,10 @@
 /*----------------------------------------*/
  $(".cart-plus-minus").append('<div class="dec qtybutton"><i class="fa fa-angle-down"></i></div><div class="inc qtybutton"><i class="fa fa-angle-up"></i></div>');
  $(".qtybutton").on("click", function() {
+     console.log("IEIEIE");
     var $button = $(this);
     var oldValue = $button.parent().find("input").val();
+    console.log(oldValue);
     if ($button.hasClass('inc')) {
        var newVal = parseFloat(oldValue) + 1;
     } else {

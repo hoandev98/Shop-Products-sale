@@ -6,7 +6,7 @@
                 <div class="container">
                     <div class="breadcrumb-content">
                         <ul>
-                            <li><a href="index.php">Home</a></li>
+                            <li><a href="./../index.php">Home</a></li>
                             <li class="active">Shopping Cart</li>
                         </ul>
                     </div>
@@ -20,7 +20,8 @@
                         <div class="col-12">
                             <form action="#">
                                 <div class="table-content table-responsive">
-                                    <table class="table">
+                                    <div id="listcard"></div>
+                                    <!-- <table class="table">
                                         <thead>
                                             <tr>
                                                 <th class="li-product-remove">remove</th>
@@ -34,36 +35,19 @@
                                         <tbody>
                                             <tr>
                                                 <td class="li-product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
-                                                <td class="li-product-thumbnail"><a href="#"><img src="images/product/small-size/5.jpg" alt="Li's Product Image"></a></td>
-                                                <td class="li-product-name"><a href="#">Accusantium dolorem1</a></td>
-                                                <td class="li-product-price"><span class="amount">$46.80</span></td>
-                                                <td class="quantity">
-                                                    <label>Quantity</label>
-                                                    <div class="cart-plus-minus">
-                                                        <input class="cart-plus-minus-box" value="1" type="text">
-                                                        <div class="dec qtybutton"><i class="fa fa-angle-down"></i></div>
-                                                        <div class="inc qtybutton"><i class="fa fa-angle-up"></i></div>
-                                                    </div>
-                                                </td>
-                                                <td class="product-subtotal"><span class="amount">$70.00</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="li-product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
-                                                <td class="li-product-thumbnail"><a href="#"><img src="images/product/small-size/6.jpg" alt="Li's Product Image"></a></td>
+                                                <td class="li-product-thumbnail"><a href="#"><img src="/Shop-Products-sale/public/images/product/small-size/6.jpg" alt="Li's Product Image"></a></td>
                                                 <td class="li-product-name"><a href="#">Mug Today is a good day</a></td>
                                                 <td class="li-product-price"><span class="amount">$71.80</span></td>
                                                 <td class="quantity">
                                                     <label>Quantity</label>
-                                                    <div class="cart-plus-minus">
-                                                        <input class="cart-plus-minus-box" value="1" type="text">
-                                                        <div class="dec qtybutton"><i class="fa fa-angle-down"></i></div>
-                                                        <div class="inc qtybutton"><i class="fa fa-angle-up"></i></div>
+                                                    <div>
+                                                        <input class="input-product-quantity" value="1" type="number">
                                                     </div>
                                                 </td>
                                                 <td class="product-subtotal"><span class="amount">$60.50</span></td>
                                             </tr>
                                         </tbody>
-                                    </table>
+                                    </table> -->
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
@@ -83,10 +67,10 @@
                                         <div class="cart-page-total">
                                             <h2>Cart totals</h2>
                                             <ul>
-                                                <li>Subtotal <span>$130.00</span></li>
-                                                <li>Total <span>$130.00</span></li>
+                                                <li>Subtotal <span class="sub-total-amount">$0.00</span></li>
+                                                <li>Total <span class="total-amount">$0.00</span></li>
                                             </ul>
-                                            <a href="#">Proceed to checkout</a>
+                                            <a href="checkout.php">Proceed to checkout</a>
                                         </div>
                                     </div>
                                 </div>
@@ -102,47 +86,50 @@
         </div>
         <!-- Body Wrapper End Here -->
         <!-- jQuery-V1.12.4 -->
-        <script src="js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="./../public/js/vendor/jquery-1.12.4.min.js"></script>
         <!-- Popper js -->
-        <script src="js/vendor/popper.min.js"></script>
+        <script src="./../public/js/vendor/popper.min.js"></script>
         <!-- Bootstrap V4.1.3 Fremwork js -->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="./../public/js/bootstrap.min.js"></script>
         <!-- Ajax Mail js -->
-        <script src="js/ajax-mail.js"></script>
+        <script src="./../public/js/ajax-mail.js"></script>
         <!-- Meanmenu js -->
-        <script src="js/jquery.meanmenu.min.js"></script>
+        <script src="./../public/js/jquery.meanmenu.min.js"></script>
         <!-- Wow.min js -->
-        <script src="js/wow.min.js"></script>
+        <script src="./../public/js/wow.min.js"></script>
         <!-- Slick Carousel js -->
-        <script src="js/slick.min.js"></script>
+        <script src="./../public/js/slick.min.js"></script>
         <!-- Owl Carousel-2 js -->
-        <script src="js/owl.carousel.min.js"></script>
+        <script src="./../public/js/owl.carousel.min.js"></script>
         <!-- Magnific popup js -->
-        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="./../public/js/jquery.magnific-popup.min.js"></script>
         <!-- Isotope js -->
-        <script src="js/isotope.pkgd.min.js"></script>
+        <script src="./../public/js/isotope.pkgd.min.js"></script>
         <!-- Imagesloaded js -->
-        <script src="js/imagesloaded.pkgd.min.js"></script>
+        <script src="./../public/js/imagesloaded.pkgd.min.js"></script>
         <!-- Mixitup js -->
-        <script src="js/jquery.mixitup.min.js"></script>
+        <script src="./../public/js/jquery.mixitup.min.js"></script>
         <!-- Countdown -->
-        <script src="js/jquery.countdown.min.js"></script>
+        <script src="./../public/js/jquery.countdown.min.js"></script>
         <!-- Counterup -->
-        <script src="js/jquery.counterup.min.js"></script>
+        <script src="./../public/js/jquery.counterup.min.js"></script>
         <!-- Waypoints -->
-        <script src="js/waypoints.min.js"></script>
+        <script src="./../public/js/waypoints.min.js"></script>
         <!-- Barrating -->
-        <script src="js/jquery.barrating.min.js"></script>
+        <script src="./../public/js/jquery.barrating.min.js"></script>
         <!-- Jquery-ui -->
-        <script src="js/jquery-ui.min.js"></script>
+        <script src="./../public/js/jquery-ui.min.js"></script>
         <!-- Venobox -->
-        <script src="js/venobox.min.js"></script>
+        <script src="./../public/js/venobox.min.js"></script>
         <!-- Nice Select js -->
-        <script src="js/jquery.nice-select.min.js"></script>
+        <script src="./../public/js/jquery.nice-select.min.js"></script>
         <!-- ScrollUp js -->
-        <script src="js/scrollUp.min.js"></script>
+        <script src="./../public/js/scrollUp.min.js"></script>
+
+        <script type="text/javascript" src="./../public/js/addToCard.js?1500"></script>
         <!-- Main/Activator js -->
-        <script src="js/main.js"></script>
+        <script src="./../public/js/main.js"></script>
+        
     </body>
 
 <!-- shopping-cart31:32-->

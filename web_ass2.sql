@@ -28,6 +28,9 @@ SET time_zone = "+00:00";
 -- Table structure for table `chitiethoadon`
 --
 
+CREATE DATABASE `web_ass2`;
+USE `web_ass2`;
+
 DROP TABLE IF EXISTS `chitiethoadon`;
 CREATE TABLE IF NOT EXISTS `chitiethoadon` (
   `MaHD` int(11) NOT NULL,
@@ -235,7 +238,7 @@ CREATE TABLE IF NOT EXISTS `sanpham` (
 --
 
 INSERT INTO `sanpham` (`MaSP`, `MaLSP`, `TenSP`, `DonGia`, `SoLuong`, `HinhAnh`, `MaKM`, `Details`, `SoSao`, `SoDanhGia`, `TrangThai`) VALUES
-(1, 8, 'SamSung Galaxy J4+', 3490000, 10, 'img/products/samsung-galaxy-j4-plus-pink-400x400.jpg', 4, 'IPS LCD, 6.0\', HD+', 0, 0, 1),
+(1, 8, 'SamSung Galaxy J4+', 3490000, 10, '/shop-products-sale/public/images/product/large-size/1.jpg', 4, 'IPS LCD, 6.0\', HD+', 0, 0, 1),
 (2, 7, 'Oppo F9', 7690000, 10, 'img/products/oppo-f9-red-600x600.jpg', 2, 'LTPS LCD, 6.3\', Full HD+', 4, 2, 1),
 (3, 10, 'Nokia 5.1 Plus', 4790000, 10, 'img/products/nokia-51-plus-black-18thangbh-400x400.jpg', 2, 'IPS LCD, 5.8\', HD+', 0, 0, 1),
 (4, 1, 'iPhone X 256GB Silver', 31990000, 10, 'img/products/iphone-x-256gb-silver-400x400.jpg', 3, 'OLED, 5.8\', Super Retina', 3, 3, 1),

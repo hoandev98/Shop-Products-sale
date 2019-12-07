@@ -1,11 +1,11 @@
 <?php
-    require_once('../model/config/DB_classes.php');
+    require_once('../model/config/DB_class.php');
 
     if(!isset($_POST['request']) && !isset($_GET['request'])) die(null);
 
     switch ($_POST['request']) {
-    	// lấy tất cả sản phẩm
-    	case 'getall':
+        // lấy tất cả sản phẩm
+        case 'getall':
 				$dssp = (new SanPhamBUS())->select_all();
                 for($i = 0; $i < sizeof($dssp); $i++) {
                     // thêm thông tin khuyến mãi
