@@ -312,6 +312,7 @@
     
         /* <li> trong homeproduct có class="sanPham" , khai báo trong classes.js */
         .sanPham {
+            overflow: hidden;
             display: inline-block;
             position: static;
             margin: 5px;
@@ -424,11 +425,16 @@
         /* Khuyen mai */
             /* label la tag khuyen mai */
             .sanPham label {
+                padding-bottom: 20px !important;
+                width: 110px;
+                transform: rotate(-45deg);
+                text-align: center;
+                overflow: hidden;
                 z-index: 1;
                 display: inline-block;
                 position: absolute;
-                top: 207px;
-                left: 10px;
+                top: 19px;
+                left: -25px;
                 font-size: 12px;
                 color: #fff;
                 font-weight: 600;
