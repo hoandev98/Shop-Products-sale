@@ -8,7 +8,7 @@ if (document.readyState == 'loading') {
 function loadShop() {
     $.ajax({
         type: "POST",
-        url: "./../controller/handlingProduct.php",
+        url: "/shop/controller/xulysanpham.php",
         dataType: "json",
         timeout: 1500,
         data: {
@@ -60,10 +60,9 @@ function showListProducts(data) {
                                 <span class="new-price">$${price}</span>
                             </div>
                         </div>
-                        <div class="add-actions">
+                        <div class="add-actions" style="z-index: 10;">
                             <ul class="add-actions-link">
                                 <li style="cursor: pointer" class="add-cart active"><a onClick="addToCard(${id})">Add to cart</a></li>
-                                <li><a href="#" title="quick view" class="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></li>
                                 <li><a class="links-details" onClick="addToWishList(${id})"><i class="fa fa-heart-o"></i></a></li>
                             </ul>
                         </div>
@@ -91,7 +90,7 @@ function convertToRate(num) {
 }
 
 function addToCard(id) {
-    if (setCookie(id, "1", 0)) {
+    if (setCookie("name" + id, "1", 0)) {
         alert("Đặt hàng thành công!");
         loadMiniCard();
     } else {
@@ -129,7 +128,7 @@ function loadMiniCard() {
     }
     $.ajax({
         type: "POST",
-        url: "./../controller/handlingProduct.php",
+        url: "/shop/controller/xulysanpham.php",
         dataType: "json",
         timeout: 1500,
         data: {
@@ -152,11 +151,11 @@ function showMiniCard(data, listQuantity) {
     for (var i = 0; i < data.length; i++) {
         result += `
         <li>
-            <a href="single-product.php" class="minicart-product-image">
+            <a href="single-product-sale.php" class="minicart-product-image">
                 <img style="width: 48px; height: 48px" src="${data[i].HinhAnh}" alt="cart products">
             </a>
             <div class="minicart-product-details">
-                <h6><a href="single-product.php">${data[i].TenSP}</a></h6>
+                <h6><a href="single-product-sale.php">${data[i].TenSP}</a></h6>
                 <span>$${data[i].DonGia}</span>
             </div>
             <button class="close" title="Remove">
@@ -180,6 +179,7 @@ function addToWishList(id) {
     var idWishList = "wishlist" + id;
     setCookieWishList(idWishList, "", 0);
     alert("Thêm vào danh sách yêu thích thành công!");
+    updateWishList();
 }
 
 function setCookieWishList(name, value, days) {
@@ -190,4 +190,15 @@ function setCookieWishList(name, value, days) {
         expires = "; expires=" + date.toUTCString();
     }
     document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+function updateWishList() {
+    var ca = document.cookie.split(';');
+    var dem = 0;
+    for (var i = 0; i < ca.length; i++) {
+        if (ca[i].split('=')[0].includes("wishlist")) {
+            dem++;
+        }
+    }
+    document.getElementById("numberWishList").innerText = dem;
 }

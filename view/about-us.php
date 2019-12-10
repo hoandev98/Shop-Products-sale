@@ -1,9 +1,9 @@
-<?php include "./include/header.php" ?>
+<?php include "./include/headerOther.php" ?>
             <div class="breadcrumb-area">
                 <div class="container">
                     <div class="breadcrumb-content">
                         <ul>
-                            <li><a href="./../index.php">Home</a></li>
+                            <li><a href="/shop/index.php">Home</a></li>
                             <li class="active">About Us</li>
                         </ul>
                     </div>
@@ -27,7 +27,7 @@
                         <!-- About Image Start -->
                         <div class="col-lg-5 col-md-10">
                             <div class="about-image-wrap">
-                                <img class="img-full" src="/shop-products-sale/public/images/product/large-size/13.jpg" alt="About Us" />
+                                <img class="img-full" src="/shop/public/images/product/large-size/13.jpg" alt="About Us" />
                             </div>
                         </div>
                         <!-- About Image End -->
@@ -44,7 +44,7 @@
                             <div class="limupa-counter white-smoke-bg">
                                 <div class="container">
                                     <div class="counter-img">
-                                        <img src="/shop-products-sale/public/images/about-us/icon/1.png" alt="">
+                                        <img src="/shop/public/images/about-us/icon/1.png" alt="">
                                     </div>
                                     <div class="counter-info">
                                         <div class="counter-number">
@@ -62,7 +62,7 @@
                             <!-- Begin limupa Counter Area -->
                             <div class="limupa-counter gray-bg">
                                 <div class="counter-img">
-                                    <img src="/shop-products-sale/public/images/about-us/icon/2.png" alt="">
+                                    <img src="/shop/public/images/about-us/icon/2.png" alt="">
                                 </div>
                                 <div class="counter-info">
                                     <div class="counter-number">
@@ -79,7 +79,7 @@
                             <!-- Begin limupa Counter Area -->
                             <div class="limupa-counter white-smoke-bg">
                                 <div class="counter-img">
-                                    <img src="/shop-products-sale/public/images/about-us/icon/3.png" alt="">
+                                    <img src="/shop/public/images/about-us/icon/3.png" alt="">
                                 </div>
                                 <div class="counter-info">
                                     <div class="counter-number">
@@ -96,7 +96,7 @@
                             <!-- Begin limupa Counter Area -->
                             <div class="limupa-counter gray-bg">
                                 <div class="counter-img">
-                                    <img src="/shop-products-sale/public/images/about-us/icon/4.png" alt="">
+                                    <img src="/shop/public/images/about-us/icon/4.png" alt="">
                                 </div>
                                 <div class="counter-info">
                                     <div class="counter-number">
@@ -127,7 +127,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="team-member mb-60 mb-sm-30 mb-xs-30">
                                 <div class="team-thumb">
-                                    <img src="/shop-products-sale/public/images/team/1.png" alt="Our Team Member">
+                                    <img src="/shop/public/images/team/1.png" alt="Our Team Member">
                                 </div>
                                 <div class="team-content text-center">
                                     <h3>Jonathan Scott</h3>
@@ -145,7 +145,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="team-member mb-60 mb-sm-30 mb-xs-30">
                                 <div class="team-thumb">
-                                    <img src="/shop-products-sale/public/images/team/2.png" alt="Our Team Member">
+                                    <img src="/shop/public/images/team/2.png" alt="Our Team Member">
                                 </div>
                                 <div class="team-content text-center">
                                     <h3>Oliver Bastin</h3>
@@ -163,7 +163,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="team-member mb-30 mb-sm-60">
                                 <div class="team-thumb">
-                                    <img src="/shop-products-sale/public/images/team/3.png" alt="Our Team Member">
+                                    <img src="/shop/public/images/team/3.png" alt="Our Team Member">
                                 </div>
                                 <div class="team-content text-center">
                                     <h3>Erik Jonson</h3>
@@ -181,7 +181,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="team-member mb-30 mb-sm-60 mb-xs-60">
                                 <div class="team-thumb">
-                                    <img src="/shop-products-sale/public/images/team/4.png" alt="Our Team Member">
+                                    <img src="/shop/public/images/team/4.png" alt="Our Team Member">
                                 </div>
                                 <div class="team-content text-center">
                                     <h3>Maria Mandy</h3>
@@ -206,48 +206,48 @@
         </div>
         <!-- Body Wrapper End Here -->
         <!-- jQuery-V1.12.4 -->
-        <script src="./../public/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="/shop/public/js/vendor/jquery-1.12.4.min.js"></script>
         <!-- Popper js -->
-        <script src="./../public/js/vendor/popper.min.js"></script>
+        <script src="/shop/public/js/vendor/popper.min.js"></script>
         <!-- Bootstrap V4.1.3 Fremwork js -->
-        <script src="./../public/js/bootstrap.min.js"></script>
+        <script src="/shop/public/js/bootstrap.min.js"></script>
         <!-- Ajax Mail js -->
-        <script src="./../public/js/ajax-mail.js"></script>
+        <script src="/shop/public/js/ajax-mail.js"></script>
         <!-- Meanmenu js -->
-        <script src="./../public/js/jquery.meanmenu.min.js"></script>
+        <script src="/shop/public/js/jquery.meanmenu.min.js"></script>
         <!-- Wow.min js -->
-        <script src="./../public/js/wow.min.js"></script>
+        <script src="/shop/public/js/wow.min.js"></script>
         <!-- Slick Carousel js -->
-        <script src="./../public/js/slick.min.js"></script>
+        <script src="/shop/public/js/slick.min.js"></script>
         <!-- Owl Carousel-2 js -->
-        <script src="./../public/js/owl.carousel.min.js"></script>
+        <script src="/shop/public/js/owl.carousel.min.js"></script>
         <!-- Magnific popup js -->
-        <script src="./../public/js/jquery.magnific-popup.min.js"></script>
+        <script src="/shop/public/js/jquery.magnific-popup.min.js"></script>
         <!-- Isotope js -->
-        <script src="./../public/js/isotope.pkgd.min.js"></script>
+        <script src="/shop/public/js/isotope.pkgd.min.js"></script>
         <!-- Imagesloaded js -->
-        <script src="./../public/js/imagesloaded.pkgd.min.js"></script>
+        <script src="/shop/public/js/imagesloaded.pkgd.min.js"></script>
         <!-- Mixitup js -->
-        <script src="./../public/js/jquery.mixitup.min.js"></script>
+        <script src="/shop/public/js/jquery.mixitup.min.js"></script>
         <!-- Countdown -->
-        <script src="./../public/js/jquery.countdown.min.js"></script>
+        <script src="/shop/public/js/jquery.countdown.min.js"></script>
         <!-- Counterup -->
-        <script src="./../public/js/jquery.counterup.min.js"></script>
+        <script src="/shop/public/js/jquery.counterup.min.js"></script>
         <!-- Waypoints -->
-        <script src="./../public/js/waypoints.min.js"></script>
+        <script src="/shop/public/js/waypoints.min.js"></script>
         <!-- Barrating -->
-        <script src="./../public/js/jquery.barrating.min.js"></script>
+        <script src="/shop/public/js/jquery.barrating.min.js"></script>
         <!-- Jquery-ui -->
-        <script src="./../public/js/jquery-ui.min.js"></script>
+        <script src="/shop/public/js/jquery-ui.min.js"></script>
         <!-- Venobox -->
-        <script src="./../public/js/venobox.min.js"></script>
+        <script src="/shop/public/js/venobox.min.js"></script>
         <!-- Nice Select js -->
-        <script src="./../public/js/jquery.nice-select.min.js"></script>
+        <script src="/shop/public/js/jquery.nice-select.min.js"></script>
         <!-- ScrollUp js -->
-        <script src="./../public/js/scrollUp.min.js"></script>
+        <script src="/shop/public/js/scrollUp.min.js"></script>
         <!-- Main/Activator js -->
-        <script src="./../public/js/main.js"></script>
-        <script type="text/javascript" src="../public/jsAjax/header.js?1500"></script>
+        <script src="/shop/public/js/main.js"></script>
+        <script type="text/javascript" src="/shop/public/jsAjax/header.js?1500"></script>
     </body>
 
 <!-- about-us32:14-->

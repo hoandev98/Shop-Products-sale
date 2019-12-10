@@ -110,8 +110,7 @@ session_start(); ?>
         <script src="public/js/scrollUp.min.js"></script>
         <!-- Main/Activator js -->
         <script src="public/js/main.js"></script>
-        <script src="public/jsAjax/ajaxHome.js"></script>
-        <script type="text/javascript" src="public/jsAjax/header.js?1500"></script>
+    
     </body>
 
 <!-- index30:23-->

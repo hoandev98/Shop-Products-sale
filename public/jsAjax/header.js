@@ -9,16 +9,19 @@ function loadMiniCard() {
     var ca = document.cookie.split(';');
     var listID = [];
     var listQuantity = [];
+    var dem = 0;
     for (var i = 0; i < ca.length; i++) {
-        if (!ca[i].split('=')[0].includes("wishlist")){
-            listID.push(ca[i].split('=')[0]);
+        if (ca[i].split('=')[0].includes("name")){
+            listID.push(ca[i].split('=')[0].replace("name",""));
             listQuantity.push(ca[i].split('=')[1]);
+        } else if (ca[i].split('=')[0].includes("wishlist")) {
+            dem++;
         }
     }
-    console.log(listID);
+    document.getElementById("numberWishList").innerText = dem;
     $.ajax({
         type: "POST",
-        url: "/shop-products-sale/controller/handlingProduct.php",
+        url: "/shop/controller/xulysanpham.php",
         dataType: "json",
         timeout: 1500,
         data: {
@@ -67,8 +70,7 @@ function showMiniCard(data, listQuantity) {
 }
 
 function deleteItemMiniCard(id) {
-    console.log(id);
-    setCookieHeader(id, "", -1);
+    setCookieHeader("name" + id, "", -1);
     // alert("Delete Success!")
     // cap nhat lai
     loadMiniCard();

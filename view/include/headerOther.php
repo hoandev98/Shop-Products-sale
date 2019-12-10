@@ -1,5 +1,52 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    
+<!-- index28:48-->
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title><?php echo isset($page_title) ? $page_title : "shop-ecommerce"; ?></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="/shop/public/images/favicon.png">
+        <!-- Material Design Iconic Font-V2.2.0 -->
+        <link rel="stylesheet" href="/shop/public/css/material-design-iconic-font.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="/shop/public/css/font-awesome.min.css">
+        <!-- Font Awesome Stars-->
+        <link rel="stylesheet" href="/shop/public/css/fontawesome-stars.css">
+        <!-- Meanmenu CSS -->
+        <link rel="stylesheet" href="/shop/public/css/meanmenu.css">
+        <!-- owl carousel CSS -->
+        <link rel="stylesheet" href="/shop/public/css/owl.carousel.min.css">
+        <!-- Slick Carousel CSS -->
+        <link rel="stylesheet" href="/shop/public/css/slick.css">
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="/shop/public/css/animate.css">
+        <!-- Jquery-ui CSS -->
+        <link rel="stylesheet" href="/shop/public/css/jquery-ui.min.css">
+        <!-- Venobox CSS -->
+        <link rel="stylesheet" href="/shop/public/css/venobox.css">
+        <!-- Nice Select CSS -->
+        <link rel="stylesheet" href="/shop/public/css/nice-select.css">
+        <!-- Magnific Popup CSS -->
+        <link rel="stylesheet" href="/shop/public/css/magnific-popup.css">
+        <!-- Bootstrap V4.1.3 Fremwork CSS -->
+        <link rel="stylesheet" href="/shop/public/css/bootstrap.min.css">
+        <!-- Helper CSS -->
+        <link rel="stylesheet" href="/shop/public/css/helper.css">
+        <!-- Main Style CSS -->
+        <link rel="stylesheet" href="/shop/public/style.css">
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="/shop/public/css/responsive.css">
+        <!-- Modernizr js -->
+        <script src="/shop/public/js/vendor/modernizr-2.8.3.min.js"></script>
 
-            <header>
+        <link rel="stylesheet" type="text/css" href="/shop/public/css/shopping-cart.css">
+    </head>
+            
+    <header>
                 <!-- Begin Header Top Area -->
                 <div class="header-top">
                     <div class="container">
@@ -138,3 +185,4 @@
                 </div>
                 <!-- Mobile Menu Area End Here -->
             </header>
+

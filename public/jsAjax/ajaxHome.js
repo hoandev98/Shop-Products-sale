@@ -3,8 +3,13 @@ var ProductsPerPage = 4;
 var DanhSachSanPham = [];
 var DataCompany = [];
 var CurrentFilters = [];
+if (document.readyState == 'loading') {
+    document.addEventListener('DOMContentLoaded', loadAjaxHome)
+} else {
+    loadAjaxHome()
+}
 
-window.onload = function() {
+function loadAjaxHome() {
     khoiTao();
     var tags = ["Samsung", "iPhone", "Coolpad", "Oppo", "Mobi"];
     for (var t of tags) addTags(t, "index.php?search=" + t);

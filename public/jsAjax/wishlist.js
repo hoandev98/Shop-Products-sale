@@ -17,7 +17,7 @@ function loadWishList() {
     console.log(listID);
     $.ajax({
         type: "POST",
-        url: "./../controller/handlingProduct.php",
+        url: "/shop/controller/xulysanpham.php",
         dataType: "json",
         timeout: 1500,
         data: {

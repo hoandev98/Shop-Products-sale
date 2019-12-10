@@ -11,14 +11,14 @@ function ready() {
     var listID = [];
     var listQuantity = [];
     for (var i = 0; i < ca.length; i++) {
-        if (!ca[i].split('=')[0].includes("wishlist")){
-            listID.push(ca[i].split('=')[0]);
+        if (ca[i].split('=')[0].includes("name")){
+            listID.push(ca[i].split('=')[0].replace("name",""));
             listQuantity.push(ca[i].split('=')[1]);
         }
     }
     $.ajax({
         type: "POST",
-        url: "http://localhost:88/controller/handlingProduct.php",
+        url: "/shop/controller/xulysanpham.php",
         dataType: "json",
         timeout: 1500,
         data: {
@@ -123,8 +123,7 @@ function updateTotal() {
 }
 
 function deleteItemCard(id) {
-    console.log(id);
-    setCookie(id, "", -1);
+    setCookie("name" + id, "", -1);
     alert("Delete Success!")
     // cap nhat lai
     ready();
