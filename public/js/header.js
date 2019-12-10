@@ -15,7 +15,7 @@ function loadMiniCard() {
     }
     $.ajax({
         type: "POST",
-        url: "./../controller/handlingProduct.php",
+        url: "http://localhost:88/shop/controller/handlingProduct.php",
         dataType: "json",
         timeout: 1500,
         data: {
