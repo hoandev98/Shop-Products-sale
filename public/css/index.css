@@ -12,51 +12,15 @@
         height: 89px;
         text-align: right;
     }
-    .ribbon span{
-        display: inline-grid ;
-        align-items: center;
-        font-size: 12px;
-      
-        color: #fff;
-        text-transform: uppercase;
-        text-align: center;
-        line-height: 20px;
-        transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
-        width: 168px;
-        height: 28px;
-        box-shadow: 0 3px 10px -5px #000;
-        position: absolute;
-        top: 11px;
-        left: -55px;
-        background: red;
+    /* header */
+    #tags{
+        /* background-color: #288ad6; */
     }
-    .ribbon span::before{
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 100%;
-        z-index: -1;
-        border-left: 3px solid transparent;
-        border-right: 3px solid transparent;
-        border-bottom: 3px solid transparent;
-        border-top: 3px solid transparent;
-        border-left-color: #8f0808;
-        border-top-color: #8f0808;
-    }
-    .ribbon span::after{
-        content: "";
-        position: absolute;
-        right: 0;
-        top: 100%;
-        z-index: -1;
-        border-left: 3px solid transparent;
-        border-right: 3px solid transparent;
-        border-bottom: 3px solid transparent;
-        border-top: 3px solid transparent;
-        border-left-color: #8f0808;
-        border-top-color: #8f0808;
-        
+    #tags .option-header{
+        border: 2px solid black !important;
+        margin-bottom: 5px !important;
+        cursor: pointer !important;
+        /* background-color: #fed700; */
     }
     @media only screen and (max-width: 426px) {
         .time-sale {
@@ -68,7 +32,17 @@
             margin: auto;
             margin-bottom: 10px;
         }
+        .irs .irs-to{
+            left: 79% !important;
+        }
     }
+.irs .irs-from{
+    left: 0 !important;
+}
+.irs .irs-to{
+    left: 95% !important;
+    right: 0 !important;
+}
 
     .timNangCao{
         width: 100%;
@@ -131,7 +105,7 @@
             margin: 10px 5px;
         }
         .dropdown-content {
-            z-index: 1;
+            z-index: 10;
             position: absolute;
             min-width: 170px;
             border-radius: 5px;
@@ -534,5 +508,10 @@
                 box-shadow: none;
             }
             
+            @media only screen and (max-width: 768px) {
+                .irs .irs-to{
+                    left: 92% !important;
+                }
+            }
         /* ===== End Them Vao Gio Hang ==== */
     /* ====== End Home Product ======= */

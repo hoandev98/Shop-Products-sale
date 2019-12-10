@@ -174,15 +174,6 @@
             $sql .= " ORDER BY $tenThanhPhanCanSort $typeSort";
         }
 
-        // Phân trang
-        // if($page != 0 || $page == null) { // nếu == 0 thì trả về hết
-        //     if($page == null) $page = 1; // mặc định là trang 1 (nếu không ghi gì hết)
-        //     $productsPerPage = 10; // số lượng sản phẩm trong 1 trang
-        //     $startIndex = ($page-1)*$productsPerPage;
-        //     $sql .= ($sql==$ori?" 1=1 ":""); // fix lỗi dư chữ where
-        //     $sql .= " LIMIT $startIndex,$productsPerPage";
-        // }
-
         // chạy sql
         $result = $db->get_list($sql);
         $db->dis_connect();

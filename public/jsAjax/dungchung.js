@@ -342,68 +342,6 @@ function promoToWeb(name, value) { // khuyen mai
     return label;
 }
 
-//  ================================ END WEB 2 =================================
-
-// Tạo event, hiệu ứng cho form tài khoản
-// function setupEventTaiKhoan() {
-//     var taikhoan = document.getElementsByClassName('taikhoan')[0];
-//     var list = taikhoan.getElementsByTagName('input');
-
-//     // Tạo eventlistener cho input để tạo hiệu ứng label
-//     // Gồm 2 event onblur, onfocus được áp dụng cho từng input trong list bên trên
-//     ['blur', 'focus'].forEach(function(evt) {
-//         for (var i = 0; i < list.length; i++) {
-//             list[i].addEventListener(evt, function(e) {
-//                 var label = this.previousElementSibling; // lấy element ĐỨNG TRƯỚC this, this ở đây là input
-//                 if (e.type === 'blur') { // khi ấn chuột ra ngoài
-//                     if (this.value === '') { // không có value trong input thì đưa label lại như cũ
-//                         label.classList.remove('active');
-//                         label.classList.remove('highlight');
-//                     } else { // nếu có chữ thì chỉ tắt hightlight chứ không tắt active, active là dịch chuyển lên trên
-//                         label.classList.remove('highlight');
-//                     }
-//                 } else if (e.type === 'focus') { // khi focus thì label active + hightlight
-//                     label.classList.add('active');
-//                     label.classList.add('highlight');
-//                 }
-//             });
-//         }
-//     })
-
-//     // Event chuyển tab login-signup
-//     var tab = document.getElementsByClassName('tab');
-//     for (var i = 0; i < tab.length; i++) {
-//         var a = tab[i].getElementsByTagName('a')[0];
-//         a.addEventListener('click', function(e) {
-//             e.preventDefault(); // tắt event mặc định
-
-//             // Thêm active(màu xanh lá) cho li chứa tag a này => ấn login thì login xanh, signup thì signup sẽ xanh
-//             this.parentElement.classList.add('active');
-
-//             // Sau khi active login thì phải tắt active sigup và ngược lại
-//             // Trường hợp a này thuộc login => <li>Login</li> sẽ có nextElement là <li>SignUp</li>
-//             if (this.parentElement.nextElementSibling) {
-//                 this.parentElement.nextElementSibling.classList.remove('active');
-//             }
-//             // Trường hợp a này thuộc signup => <li>SignUp</li> sẽ có .previousElement là <li>Login</li>
-//             if (this.parentElement.previousElementSibling) {
-//                 this.parentElement.previousElementSibling.classList.remove('active');
-//             }
-
-//             // Ẩn phần nhập của login nếu ấn signup và ngược lại
-//             // href của 2 tab signup và login là #signup và #login -> tiện cho việc getElement dưới đây
-//             var target = this.href.split('#')[1];
-//             document.getElementById(target).style.display = 'block';
-
-//             var hide = (target == 'login' ? 'signup' : 'login');
-//             document.getElementById(hide).style.display = 'none';
-//         })
-//     }
-
-//     // Đoạn code tạo event trên được chuyển về js thuần từ code jquery
-//     // Code jquery cho phần tài khoản được lưu ở cuối file này
-// }
-
 // ==================== Những hàm khác ===================== 
 function numToString(num, char) {
     return num.toLocaleString().split(',').join(char || '.');
@@ -530,11 +468,10 @@ function autocomplete(inp, arr) {
 
 // Thêm từ khóa tìm kiếm
 function addTags(nameTag, link) {
-    var new_tag = `<a href=` + link + `>` + nameTag + `</a>`;
-
-    // Thêm <a> vừa tạo vào khung tìm kiếm
-    var khung_tags = document.getElementsByClassName('tags')[0];
-    khung_tags.innerHTML += new_tag;
+    var new_tag = `<option class="option-header" value=` + link + `>` + nameTag + `</option>`;
+    // var khung_tags = document.getElementById('tags');
+    $( "#tags" ).append( new_tag);
+    // khung_tags.innerHtml +=new_tag;
 }
 
 function smallmenu(number) {

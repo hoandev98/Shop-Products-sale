@@ -27,9 +27,9 @@ function showSaleProducts()
                                 </div>
                                 <div class="li-countdown product-sale-countdown countdown"><div class="count">00 <span>Days:</span></div> <div class="count">00 <span>Hours:</span></div> <div class="count">00 <span>Mins:</span></div><div class="count"> 00 <span>Secs</span></div></div>
                                 
-                                <div class="companyMenu group flexContain"></div>
+                                <div class="companyMenu group flexContain container"></div>
 
-                                <div class="timNangCao">
+                                <div class="timNangCao container">
                                     <div class="flexContain">
                                         <div class="pricesRangeFilter dropdown">
                                             <button class="dropbtn">Giá tiền</button>
@@ -58,7 +58,7 @@ function showSaleProducts()
                             
                                 </div> <!-- End khung chọn bộ lọc -->
                             
-                                <div class="choosedFilter flexContain"></div> <!-- Những bộ lọc đã chọn -->
+                                <div class="choosedFilter flexContain container"></div> <!-- Những bộ lọc đã chọn -->
                                 <hr>
                             
                                 <!-- Mặc định mới vào trang sẽ ẩn đi, nế có filter thì mới hiện lên -->
@@ -80,7 +80,7 @@ function showSaleProducts()
                                 </div>
                             
                                 <!-- Div hiển thị khung sp hot, khuyến mãi, mới ra mắt ... -->
-                                <div class="contain-khungSanPham"></div>
+                                <div class="contain-khungSanPham container"></div>
                             </div>
                         </div>
                     </div>

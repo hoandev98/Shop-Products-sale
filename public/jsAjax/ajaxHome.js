@@ -76,7 +76,7 @@ function hienThiKhungSanPhamMacDinh() {
 
     $('.contain-khungSanPham').html('');
 
-    var soLuong = (window.innerWidth < 1200 ? 4 : 5); // màn hình nhỏ thì hiển thị 4 sp, to thì hiển thị 5
+    var soLuong = (window.innerWidth < 1200 ? 4 : 8); // màn hình nhỏ thì hiển thị 4 sp, to thì hiển thị 5
 
     // Các màu
     var yellow_red = ['#ff9c00', '#ec1f1f'];
