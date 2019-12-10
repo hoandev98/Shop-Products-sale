@@ -16,7 +16,7 @@ function ready() {
     }
     $.ajax({
         type: "POST",
-        url: "./../controller/handlingProduct.php",
+        url: "http://localhost:88/controller/handlingProduct.php",
         dataType: "json",
         timeout: 1500,
         data: {
