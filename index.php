@@ -181,44 +181,21 @@
                                         <li class="hm-minicart">
                                             <div class="hm-minicart-trigger">
                                                 <span class="item-icon"></span>
-                                                <span class="item-text total-minicard">$0.00
+                                                <span class="item-text">
+                                                    <span class="total-minicard">$0.00</span>
                                                     <span class="cart-item-count quantity-minicard">0</span>
                                                 </span>
                                             </div>
                                             <span></span>
-                                            <div class="minicart">
-                                                <ul class="minicart-product-list">
-                                                    <li>
-                                                        <a href="single-product.php" class="minicart-product-image">
-                                                            <img src="/Shop-Products-sale/public/images/product/small-size/5.jpg" alt="cart products">
-                                                        </a>
-                                                        <div class="minicart-product-details">
-                                                            <h6><a href="single-product.php">Aenean eu tristique</a></h6>
-                                                            <span>£40 x 1</span>
-                                                        </div>
-                                                        <button class="close" title="Remove">
-                                                            <i class="fa fa-close"></i>
-                                                        </button>
-                                                    </li>
-                                                    <li>
-                                                        <a href="single-product.php" class="minicart-product-image">
-                                                            <img src="/Shop-Products-sale/public/images/product/small-size/6.jpg" alt="cart products">
-                                                        </a>
-                                                        <div class="minicart-product-details">
-                                                            <h6><a href="single-product.php">Aenean eu tristique</a></h6>
-                                                            <span>£40 x 1</span>
-                                                        </div>
-                                                        <button class="close" title="Remove">
-                                                            <i class="fa fa-close"></i>
-                                                        </button>
-                                                    </li>
-                                                </ul>
-                                                <p class="minicart-total">SUBTOTAL: <span>$80.00</span></p>
+                                            <div class="minicart" style="z-index: 1001">
+                                                <div class="show-minicard"></div>
+                                                
+                                                <p class="minicart-total">SUBTOTAL: <span class="subtotal-minicard">$0.00</span></p>
                                                 <div class="minicart-button">
-                                                    <a href="view/shopping-cart.php" class="li-button li-button-fullwidth li-button-dark">
+                                                    <a href="shopping-cart.php" class="li-button li-button-fullwidth li-button-dark">
                                                         <span>View Full Cart</span>
                                                     </a>
-                                                    <a href="./view/checkout.php" class="li-button li-button-fullwidth">
+                                                    <a href="checkout.php" class="li-button li-button-fullwidth">
                                                         <span>Checkout</span>
                                                     </a>
                                                 </div>
@@ -1086,7 +1063,7 @@ IPhone 11 64GB version 1 High-end smartphone Sim, beautiful appearance and stron
         <!-- Main/Activator js -->
         <script src="public/js/main.js"></script>
         <script src="public/jsAjax/ajaxHome.js"></script>
-        <script type="text/javascript" src="public/js/header.js?1500"></script>
+        <script type="text/javascript" src="public/jsAjax/header.js?1500"></script>
     </body>
 
 <!-- index30:23-->

@@ -20,7 +20,8 @@
                         <div class="col-12">
                             <form action="#">
                                 <div class="table-content table-responsive">
-                                    <table class="table">
+                                    <div id="list-wishlist"></div>
+                                    <!-- <table class="table">
                                         <thead>
                                             <tr>
                                                 <th class="li-product-remove">remove</th>
@@ -57,7 +58,7 @@
                                                 <td class="li-product-add-cart"><a href="#">add to cart</a></td>
                                             </tr>
                                         </tbody>
-                                    </table>
+                                    </table> -->
                                 </div>
                             </form>
                         </div>
@@ -114,7 +115,8 @@
         <script src="./../public/js/scrollUp.min.js"></script>
         <!-- Main/Activator js -->
         <script src="./../public/js/main.js"></script>
-        <script type="text/javascript" src="../public/js/header.js?1500"></script>
+        <script type="text/javascript" src="../public/jsAjax/header.js?1500"></script>
+        <script type="text/javascript" src="../public/jsAjax/wishlist.js?1500"></script>
     </body>
 
 <!-- wishlist31:30-->

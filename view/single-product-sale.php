@@ -603,7 +603,7 @@ IPhone 11 64GB version 1 High-end smartphone Sim, beautiful appearance and stron
         <script src="./../public/js/scrollUp.min.js"></script>
         <!-- Main/Activator js -->
         <script src="./../public/js/main.js"></script>
-        <script type="text/javascript" src="../public/js/header.js?1500"></script>
+        <script type="text/javascript" src="../public/jsAjax/header.js?1500"></script>
     </body>
 
 <!-- single-product-sale31:50-->

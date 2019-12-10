@@ -19,6 +19,7 @@ function loadShop() {
         },
         error: function (e) {
             console.log("Fail");
+            showListProducts([]);
         }
     })
 }
@@ -63,7 +64,7 @@ function showListProducts(data) {
                             <ul class="add-actions-link">
                                 <li style="cursor: pointer" class="add-cart active"><a onClick="addToCard(${id})">Add to cart</a></li>
                                 <li><a href="#" title="quick view" class="quick-view-btn" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-eye"></i></a></li>
-                                <li><a class="links-details" href="wishlist.php"><i class="fa fa-heart-o"></i></a></li>
+                                <li><a class="links-details" onClick="addToWishList(${id})"><i class="fa fa-heart-o"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -92,7 +93,6 @@ function convertToRate(num) {
 function addToCard(id) {
     if (setCookie(id, "1", 0)) {
         alert("Đặt hàng thành công!");
-        alert("IEIE");
         loadMiniCard();
     } else {
         alert("Sản phầm đã tồn tại trong giỏ hàng!");
@@ -174,4 +174,20 @@ function showMiniCard(data, listQuantity) {
     document.getElementsByClassName("quantity-minicard")[0].innerText = data.length;
     document.getElementsByClassName("total-minicard")[0].innerHTML = '$' + total;
     document.getElementsByClassName("subtotal-minicard")[0].innerHTML = '$' + total;
+}
+
+function addToWishList(id) {
+    var idWishList = "wishlist" + id;
+    setCookieWishList(idWishList, "", 0);
+    alert("Thêm vào danh sách yêu thích thành công!");
+}
+
+function setCookieWishList(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }

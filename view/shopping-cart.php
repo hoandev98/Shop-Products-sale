@@ -126,7 +126,7 @@
         <!-- ScrollUp js -->
         <script src="./../public/js/scrollUp.min.js"></script>
 
-        <script type="text/javascript" src="./../public/js/addToCard.js?1500"></script>
+        <script type="text/javascript" src="./../public/jsAjax/addToCard.js?1500"></script>
         <!-- Main/Activator js -->
         <script src="./../public/js/main.js"></script>
         

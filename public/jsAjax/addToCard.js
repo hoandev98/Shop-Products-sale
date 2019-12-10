@@ -11,8 +11,10 @@ function ready() {
     var listID = [];
     var listQuantity = [];
     for (var i = 0; i < ca.length; i++) {
-        listID.push(ca[i].split('=')[0]);
-        listQuantity.push(ca[i].split('=')[1]);
+        if (!ca[i].split('=')[0].includes("wishlist")){
+            listID.push(ca[i].split('=')[0]);
+            listQuantity.push(ca[i].split('=')[1]);
+        }
     }
     $.ajax({
         type: "POST",
@@ -28,6 +30,7 @@ function ready() {
         },
         error: function (e) {
             console.log("Fail");
+            showTableCard([], []);
         }
     })
 }

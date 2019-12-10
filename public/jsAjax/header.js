@@ -10,12 +10,15 @@ function loadMiniCard() {
     var listID = [];
     var listQuantity = [];
     for (var i = 0; i < ca.length; i++) {
-        listID.push(ca[i].split('=')[0]);
-        listQuantity.push(ca[i].split('=')[1]);
+        if (!ca[i].split('=')[0].includes("wishlist")){
+            listID.push(ca[i].split('=')[0]);
+            listQuantity.push(ca[i].split('=')[1]);
+        }
     }
+    console.log(listID);
     $.ajax({
         type: "POST",
-        url: "./../controller/handlingProduct.php",
+        url: "/shop-products-sale/controller/handlingProduct.php",
         dataType: "json",
         timeout: 1500,
         data: {
@@ -26,6 +29,7 @@ function loadMiniCard() {
             showMiniCard(data, listQuantity);
         },
         error: function (e) {
+            showMiniCard([], []);
             console.log("Fail");
         }
     })
@@ -45,7 +49,7 @@ function showMiniCard(data, listQuantity) {
                 <h6><a href="single-product.php">${data[i].TenSP}</a></h6>
                 <span>$${data[i].DonGia}</span>
             </div>
-            <button class="close" title="Remove">
+            <button onClick="deleteItemMiniCard(${data[i].MaSP})" class="close" title="Remove">
                 <i class="fa fa-close"></i>
             </button>
         </li>
@@ -60,4 +64,22 @@ function showMiniCard(data, listQuantity) {
     document.getElementsByClassName("quantity-minicard")[0].innerText = data.length;
     document.getElementsByClassName("total-minicard")[0].innerHTML = '$' + total;
     document.getElementsByClassName("subtotal-minicard")[0].innerHTML = '$' + total;
+}
+
+function deleteItemMiniCard(id) {
+    console.log(id);
+    setCookieHeader(id, "", -1);
+    // alert("Delete Success!")
+    // cap nhat lai
+    loadMiniCard();
+}
+
+function setCookieHeader(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }

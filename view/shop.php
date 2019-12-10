@@ -1,4 +1,3 @@
-
 <?php include "./include/header.php" ?>
             <!-- Header Area End Here -->
             <!-- Begin Li's Breadcrumb Area -->
@@ -971,8 +970,8 @@
         <!-- Main/Activator js -->
         <script src="./../public/js/main.js"></script>
 
-        <script type="text/javascript" src="./../public/js/shop.js?1500"></script>
-        <script type="text/javascript" src="../public/js/header.js?1500"></script>
+        <script type="text/javascript" src="./../public/jsAjax/shop.js?1500"></script>
+        <script type="text/javascript" src="../public/jsAjax/header.js?1500"></script>
     </body>
 
 <!-- shop-left-sidebar31:48-->

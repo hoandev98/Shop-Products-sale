@@ -190,32 +190,7 @@
                                             <span></span>
                                             <div class="minicart" style="z-index: 1001">
                                                 <div class="show-minicard"></div>
-                                                <!-- <ul class="minicart-product-list">
-                                                    <li>
-                                                        <a href="single-product.php" class="minicart-product-image">
-                                                            <img src="/Shop-Products-sale/public/images/product/small-size/5.jpg" alt="cart products">
-                                                        </a>
-                                                        <div class="minicart-product-details">
-                                                            <h6><a href="single-product.php">Aenean eu tristique</a></h6>
-                                                            <span>£40 x 1</span>
-                                                        </div>
-                                                        <button class="close" title="Remove">
-                                                            <i class="fa fa-close"></i>
-                                                        </button>
-                                                    </li>
-                                                    <li>
-                                                        <a href="single-product.php" class="minicart-product-image">
-                                                            <img src="/Shop-Products-sale/public/images/product/small-size/6.jpg" alt="cart products">
-                                                        </a>
-                                                        <div class="minicart-product-details">
-                                                            <h6><a href="single-product.php">Aenean eu tristique</a></h6>
-                                                            <span>£40 x 1</span>
-                                                        </div>
-                                                        <button class="close" title="Remove">
-                                                            <i class="fa fa-close"></i>
-                                                        </button>
-                                                    </li>
-                                                </ul> -->
+                                                
                                                 <p class="minicart-total">SUBTOTAL: <span class="subtotal-minicard">$0.00</span></p>
                                                 <div class="minicart-button">
                                                     <a href="shopping-cart.php" class="li-button li-button-fullwidth li-button-dark">
