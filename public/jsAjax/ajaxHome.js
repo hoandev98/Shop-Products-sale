@@ -102,7 +102,7 @@ function hienThiKhungSanPhamMacDinh() {
 function setupCompany() {
     $.ajax({
         type: "POST",
-        url: "http://localhost:88/shop/controller/xulyloaisanpham.php",
+        url: "/shop/controller/xulyloaisanpham.php",
         dataType: "json",
         timeout: 1500, // sau 1.5 giây mà không phản hồi thì dừng => hiện lỗi
         data: {
@@ -193,7 +193,7 @@ function filtersAjax(filters, callback) {
     }
     $.ajax({
         type: "POST",
-        url: "http://localhost:88/shop/controller/xulysanpham.php",
+        url: "/shop/controller/xulysanpham.php",
         dataType: "json",
         timeout: 10500, // sau 1.5 giây mà không phản hồi thì dừng => hiện lỗi
         data: {
@@ -222,7 +222,7 @@ function filtersAjax(filters, callback) {
 function ajaxThemSanPham(p, onSuccess, onFail) {
     $.ajax({
         type: "POST",
-        url: "http://localhost:88/shop/controller/xulysanpham.php",
+        url: "/shop/controller/xulysanpham.php",
         dataType: "json",
         timeout: 1500, // sau 1.5 giây mà không phản hồi thì dừng => hiện lỗi
         data: {
