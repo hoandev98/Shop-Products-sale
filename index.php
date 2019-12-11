@@ -52,6 +52,7 @@ session_start(); ?>
         <script src="public/jsAjax/ajaxHome.js"></script>
         <script type="text/javascript" src="public/jsAjax/dungchung.js"></script>
         <script type="text/javascript" src="public/jsAjax/header.js?1500"></script>
+        <script src="public/jsAjax/productDetail.js"></script>
         
         <?php require_once "view/include/showSale.php"; ?>
     </head>

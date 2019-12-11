@@ -197,10 +197,10 @@
     }
     
     .khungSanPham h3.tenKhung {
+        max-width: 30%;
         line-height: 1.5em;
-        font-size: 1.5em;
+        font-size: 2em;
         text-align: center;
-        margin: 0 auto;
         border-radius: 1em;
         color: white;
         transform: translateY(-0.75em);
@@ -511,6 +511,14 @@
             @media only screen and (max-width: 768px) {
                 .irs .irs-to{
                     left: 92% !important;
+                }
+                .khungSanPham h3.tenKhung {
+                    max-width: 50%;
+                    border-radius: 1em;
+                    
+                }
+                .sanPham{
+                    width: 30.5%;
                 }
             }
         /* ===== End Them Vao Gio Hang ==== */

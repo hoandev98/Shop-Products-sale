@@ -81,7 +81,7 @@ function hienThiKhungSanPhamMacDinh() {
 
     $('.contain-khungSanPham').html('');
 
-    var soLuong = (window.innerWidth < 1200 ? 4 : 8); // màn hình nhỏ thì hiển thị 4 sp, to thì hiển thị 5
+    var soLuong = (window.innerWidth < 1200 ? 3 : 8); // màn hình nhỏ thì hiển thị 4 sp, to thì hiển thị 5
 
     // Các màu
     var yellow_red = ['#ff9c00', '#ec1f1f'];
@@ -283,7 +283,7 @@ function addToWeb(p, ele, returnString) {
 
     // tách theo dấu ' ' vào gắn lại bằng dấu '-', code này giúp bỏ hết khoảng trắng và thay vào bằng dấu '-'.
     // Tạo link tới chi tiết sản phẩm, chuyển tất cả ' ' thành '-'
-    var chitietSp = 'chitietsanpham.php?' + p.MaSP;
+    var chitietSp = 'view/single-product-sale.php?' + p.MaSP;
 
     // Cho mọi thứ vào tag <li>... </li>
     var newLi =

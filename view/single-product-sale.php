@@ -1,4 +1,6 @@
 <?php include "./include/headerOther.php" ?>
+<script src="http://localhost:88/shop/public/jsAjax/productDetail.js"></script>
+<script src="http://localhost:88/shop/public/jsAjax/dungchung.js"></script>
             <!-- Header Area End Here -->
             <!-- Begin Li's Breadcrumb Area -->
             <div class="breadcrumb-area">
@@ -13,39 +15,39 @@
             </div>
             <!-- Li's Breadcrumb Area End Here -->
             <!-- content-wraper start -->
-            <div class="content-wraper">
+            <div id="contentProductDetail" class="content-wraper">
                 <div class="container">
                     <div class="row single-product-area">
                         <div class="col-lg-5 col-md-6">
                            <!-- Product Details Left -->
                             <div class="product-details-left">
                                 <div class="product-details-images slider-navigation-1">
-                                    <div class="lg-image">
-                                        <img src="https://didongviet.vn/pub/media/catalog/product//i/p/iphone-11-pro-max-didongviet_1_1.jpg" alt="product image">
+                                    <div class="lg-image1 lg-image">
+                                        <img src="" alt="product image">
                                     </div>
-                                    <div class="lg-image">
-                                        <img  src="https://didongviet.vn/pub/media/catalog/product//i/p/iphone-11-pro-max-trang-didongviet_3.jpg" alt="product image">
+                                    <div class="lg-image2 lg-image">
+                                        <img  src="" alt="product image">
                                     </div>
-                                    <div class="lg-image">
-                                        <img src="https://didongviet.vn/pub/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/i/p/iphone-11-vang-didongviet_10_1.jpg" alt="product image">
+                                    <div class="lg-image3 lg-image">
+                                        <img src="" alt="product image">
                                     </div>
-                                    <div class="lg-image">
-                                        <img src="https://didongviet.vn/pub/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/i/p/iphone-11-pro-max-vang-didongviet_3.jpg" alt="product image">
+                                    <!-- <div class="lg-image4 lg-image">
+                                        <img src="" alt="product image">
                                     </div>
-                                    <div class="lg-image">
-                                        <img src="https://didongviet.vn/pub/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/i/p/iphone-11-red-didongviet_8_1.jpg" alt="product image">
+                                    <div class="lg-image5 lg-image">
+                                        <img src="" alt="product image">
                                     </div>
-                                    <div class="lg-image">
-                                        <img src="https://didongviet.vn/pub/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/i/p/iphone-11-xanh-didongviet_10_1.jpg" alt="product image">
-                                    </div>
+                                    <div class="lg-image6 lg-image">
+                                        <img src="" alt="product image">
+                                    </div> -->
                                 </div>
                                 <div class="product-details-thumbs slider-thumbs-1">
-                                    <div class="sm-image"><img src="https://didongviet.vn/pub/media/catalog/product//i/p/iphone-11-pro-max-didongviet_1_1.jpg"  alt="product image thumb"></div>
-                                    <div class="sm-image"><img src="https://didongviet.vn/pub/media/catalog/product//i/p/iphone-11-pro-max-trang-didongviet_3.jpg" alt="product image thumb"></div>
-                                    <div class="sm-image"><img src="https://didongviet.vn/pub/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/i/p/iphone-11-vang-didongviet_10_1.jpg" alt="product image thumb"></div>
-                                    <div class="sm-image"><img src="https://didongviet.vn/pub/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/i/p/iphone-11-pro-max-vang-didongviet_3.jpg" alt="product image thumb"></div>
-                                    <div class="sm-image"><img src="https://didongviet.vn/pub/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/i/p/iphone-11-red-didongviet_8_1.jpg" alt="product image thumb"></div>
-                                    <div class="sm-image"><img src="https://didongviet.vn/pub/media/catalog/product/cache/926507dc7f93631a094422215b778fe0/i/p/iphone-11-xanh-didongviet_10_1.jpg" alt="product image thumb"></div>
+                                    <div class="sm-image1 sm-image"><img src=""  alt="product image thumb"></div>
+                                    <div class="sm-image2 sm-image"><img src="" alt="product image thumb"></div>
+                                    <div class="sm-image3 sm-image"><img src="" alt="product image thumb"></div>
+                                    <!-- <div class="sm-image4 sm-image"><img src="" alt="product image thumb"></div> -->
+                                    <!-- <div class="sm-image5 sm-image"><img src="" alt="product image thumb"></div>
+                                    <div class="sm-image6 sm-image"><img src="" alt="product image thumb"></div> -->
                                 </div>
                             </div>
                             <!--// Product Details Left -->
@@ -54,32 +56,20 @@
                         <div class="col-lg-7 col-md-6">
                             <div class="product-details-view-content sp-sale-content pt-60">
                                 <div class="product-info">
-                                    <h2>Iphone 11 pro-max</h2>
-                                    <span class="product-details-ref">Reference: Iphone 11</span>
+                                    <h2 id="nameProducts"></h2>
+                                    <span id="product-details-ref" class="product-details-ref"></span>
                                     <div class="rating-box pt-20">
-                                        <ul class="rating rating-with-review-item">
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li><i class="fa fa-star-o"></i></li>
-                                            <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                            <li class="no-star"><i class="fa fa-star-o"></i></li>
-                                            <li class="review-item"><a href="#">Read Review</a></li>
-                                            <li class="review-item"><a href="#">Write Review</a></li>
+                                        <ul id="ratingPageDetail" class="rating rating-with-review-item">
                                         </ul>
                                     </div>
-                                    <div class="price-box pt-20">
-                                        <span class="new-price new-price-2">$2000.98</span>
+                                    <div id="area_price" class="price-box pt-20">
+                                        <!-- <span id="newPrince" class="new-price new-price-2">$2000.98</span> -->
                                     </div>
                                     <div class="countersection">
                                         <div class="li-countdown product-sale-countdown"></div>
                                     </div>
                                     <div class="product-desc">
-                                        <p>
-                                            <span>
-IPhone 11 64GB version 1 High-end smartphone Sim, beautiful appearance and strong configuration (Mobile Vietnam commits to sell genuine Apple iPhone, 10 times more money if detecting fake goods. Good for users to use freely.
-
-<br>IPhone 11 64GB is warranted for 12 months at Vietnam Mobile. The system also offers special warranty packages such as falls, water drops at extremely affordable costs. Especially, there is the Trade - In old collection, which is renewed and renewed without compensation, customers will feel secure and satisfied when shopping at Mobile Vietnam.</span>
-                                        </p>
+                                        
                                     </div>
                                     <div class="product-variants">
                                         <div class="produt-variants-size">
@@ -157,8 +147,8 @@ IPhone 11 64GB version 1 High-end smartphone Sim, beautiful appearance and stron
                         <div class="col-lg-12">
                             <div class="li-product-tab">
                                 <ul class="nav li-product-menu">
-                                   <li><a class="active" data-toggle="tab" href="#description"><span>Description</span></a></li>
-                                   <li><a data-toggle="tab" href="#product-details"><span>Product Details</span></a></li>
+                                   <li><a class="active" data-toggle="tab" href="#description"><span>Same Products</span></a></li>
+                
                                    <li><a data-toggle="tab" href="#reviews"><span>Reviews</span></a></li>
                                 </ul>               
                             </div>
@@ -166,20 +156,10 @@ IPhone 11 64GB version 1 High-end smartphone Sim, beautiful appearance and stron
                         </div>
                     </div>
                     <div class="tab-content">
-                        <div id="description" class="tab-pane active show" role="tabpanel">
-                            <div class="product-description">
-                                <span>The best is yet to come! Give your walls a voice with a framed poster. This aesthethic, optimistic poster will look great in your desk or in an open-space office. Painted wooden frame with passe-partout for more depth.</span>
-                            </div>
+                        <div id="sameProducts" class="tab-pane active show" role="tabpanel">
+                           
                         </div>
-                        <div id="product-details" class="tab-pane" role="tabpanel">
-                            <div class="product-details-manufacturer">
-                                <a href="#">
-                                    <img src="images/product-details/1.jpg" alt="Product Manufacturer Image">
-                                </a>
-                                <p><span>Reference</span> demo_7</p>
-                                <p><span>Reference</span> demo_7</p>
-                            </div>
-                        </div>
+    
                         <div id="reviews" class="tab-pane" role="tabpanel">
                             <div class="product-reviews">
                                 <div class="product-details-comment-block">

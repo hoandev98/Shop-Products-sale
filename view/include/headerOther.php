@@ -5,7 +5,7 @@
 <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title><?php echo isset($page_title) ? $page_title : "shop-ecommerce"; ?></title>
+        <title class="title">shop-ecommerce</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Favicon -->
