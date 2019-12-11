@@ -22,20 +22,7 @@
         cursor: pointer !important;
         /* background-color: #fed700; */
     }
-    @media only screen and (max-width: 426px) {
-        .time-sale {
-            display: block !important;
-            width: 100%;
-            margin: auto;
-            text-align: center;
-        }.product-sale-countdown {
-            margin: auto;
-            margin-bottom: 10px;
-        }
-        .irs .irs-to{
-            left: 79% !important;
-        }
-    }
+   
 .irs .irs-from{
     left: 0 !important;
 }
@@ -322,8 +309,8 @@
                 -webkit-transition-duration: 0.2s;
                      -o-transition-duration: 0.2s;
                         transition-duration: 0.2s;
-                width: 200px;
-                height: 200px;
+                width: 70%;
+                height: 70%px;
             }
             /* Di chuyen anh? len tren */
             .sanPham:hover {
@@ -483,7 +470,7 @@
                 right: 5px;
             } */
             .themvaogio {
-                background: #d6d4d4 !important;
+                background: #d6d4d4 ;
                 margin-left: 10px ;
                 border: 1px solid #e3e7eb;
                 border-radius: 10px;
@@ -511,6 +498,61 @@
             @media only screen and (max-width: 768px) {
                 .irs .irs-to{
                     left: 92% !important;
+                }
+                .sanPham {
+                    overflow: hidden;
+                    display: inline-block;
+                    position: static;
+                    margin: 5px;
+                    width: 23%;
+                    height: 375px;
+                    /* border: 1px solid #eee; */
+                    /* border-bottom: none; */
+                    border-radius: 5px ;
+                    -webkit-transition-duration: .3s;
+                         -o-transition-duration: .3s;
+                            transition-duration: .3s;
+                }
+                .sanPham a .price{
+                    height: 50px;
+
+                }
+                .sanPham a img{
+                    height: 120px;
+                    width: 120px;
+                }
+                .sanPham h3 {
+                    height: 60px;
+                }
+            }
+            @media only screen and (max-width: 426px) {
+                .time-sale {
+                    display: block !important;
+                    width: 100%;
+                    margin: auto;
+                    text-align: center;
+                }
+                .product-sale-countdown {
+                    margin: auto;
+                    margin-bottom: 10px;
+                }
+                .irs .irs-to{
+                    left: 79% !important;
+                }
+                .sanPham{
+                    height: 400px;
+                    width: 95%;
+                }
+                .sanPham a img{
+                    height: 200px;
+                    width: 200px;
+                }
+                .divAddtoCart{
+                    opacity: 1;
+                }
+                .themvaogio{
+                    background: #e8ff4a;
+                    margin-left: 40px;
                 }
             }
         /* ===== End Them Vao Gio Hang ==== */
