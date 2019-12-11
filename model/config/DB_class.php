@@ -102,7 +102,13 @@ class TaiKhoanBUS extends DB_business
 {
     function __construct()
     {
-        $this->setTable("TaiKhoan", "TenTaiKhoan");
+        $this->setTable("NguoiDung", "TaiKhoan");
+    }
+
+    function getTaiKhoanBangMa($mand) {
+        $sql = "SELECT * FROM nguoidung WHERE MaND=$mand";
+        $dsdg = (new TaiKhoanBUS())->get_row($sql);
+        return $dsdg;
     }
 }
 
@@ -159,5 +165,20 @@ class ChiTietHoaDonBUS extends DB_business
     {
         $sql = "select * from " . $this->_table_name . " where " . $this->_key . " ='" . $id . "'";
         return $this->get_list($sql);
+    }
+}
+
+// Lớp đánh giá
+class DanhGiaBUS extends DB_business
+{
+    function __construct()
+    {
+        $this->setTable("danhgia", "MaSP");
+    }
+
+    function getDanhGiaCuaSP($masp) {
+        $sql = "SELECT * FROM danhgia WHERE MaSP=$masp";
+        $dsdg = (new DanhGiaBUS())->get_list($sql);
+        return $dsdg;
     }
 }

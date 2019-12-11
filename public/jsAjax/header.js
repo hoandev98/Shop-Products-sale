@@ -18,6 +18,7 @@ function loadMiniCard() {
             dem++;
         }
     }
+    // wishlist header
     document.getElementById("numberWishList").innerText = dem;
     $.ajax({
         type: "POST",

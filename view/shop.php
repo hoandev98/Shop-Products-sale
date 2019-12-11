@@ -1,5 +1,6 @@
 
 <?php include "./include/headerOther.php" ?>
+<link rel="stylesheet" href="/shop/public/css/shop.css">
             <!-- Header Area End Here -->
             <!-- Begin Li's Breadcrumb Area -->
             <div class="breadcrumb-area">
