@@ -53,7 +53,7 @@ function showTableWishList(data) {
     for (var i = 0; i < data.length; i++) {
         result += `
         <tr>
-            <td class="li-product-remove"><a href="#"><i class="fa fa-times"></i></a></td>
+            <td class="li-product-remove"><a onClick="deleteItemWishList(${data[i].MaSP})"><i class="fa fa-times"></i></a></td>
             <td class="li-product-thumbnail"><a href="#"><img src="${data[i].HinhAnh}" style="width: 150px; height: 150px" alt=""></a></td>
             <td class="li-product-name"><a href="#">${data[i].TenSP}</a></td>
             <td class="li-product-price"><span class="amount">$${data[i].DonGia}</span></td>
@@ -66,4 +66,31 @@ function showTableWishList(data) {
     </table>`;
 
     document.getElementById("list-wishlist").innerHTML = result;
+}
+
+function deleteItemWishList(id) {
+    setCookieWishList("wishlist" + id, "", -1);
+    loadWishList();
+    updateWishList1();
+}
+
+function setCookieWishList(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+function updateWishList1() {
+    var ca = document.cookie.split(';');
+    var dem = 0;
+    for (var i = 0; i < ca.length; i++) {
+        if (ca[i].split('=')[0].includes("wishlist")) {
+            dem++;
+        }
+    }
+    document.getElementById("numberWishList").innerText = dem;
 }

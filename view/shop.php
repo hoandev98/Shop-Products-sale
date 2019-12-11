@@ -37,14 +37,12 @@
                                 <div class="product-select-box">
                                     <div class="product-short">
                                         <p>Sort By:</p>
-                                        <select class="nice-select">
-                                            <option value="trending">Relevance</option>
-                                            <option value="sales">Name (A - Z)</option>
-                                            <option value="sales">Name (Z - A)</option>
-                                            <option value="rating">Price (Low &gt; High)</option>
-                                            <option value="date">Rating (Lowest)</option>
-                                            <option value="price-asc">Model (A - Z)</option>
-                                            <option value="price-asc">Model (Z - A)</option>
+                                        <select class="nice-select" onChange="filterShop(this.value)">
+                                            <option value="0">Relevance</option>
+                                            <option value="1">Name (A - Z)</option>
+                                            <option value="2">Name (Z - A)</option>
+                                            <option value="3">Price (Low &gt; High)</option>
+                                            <option value="4">Price (High &gt; Low)</option>
                                         </select>
                                     </div>
                                 </div>

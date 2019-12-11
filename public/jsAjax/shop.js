@@ -47,7 +47,7 @@ function showListProducts(data) {
                         <div class="product_desc_info">
                             <div class="product-review">
                                 <h5 class="manufacturer">
-                                    <a href="product-details.php">Graphic Corner</a>
+                                    <a href="#">Graphic Corner</a>
                                 </h5>
                                 <div class="rating-box">
                                     <ul class="rating">
@@ -63,7 +63,7 @@ function showListProducts(data) {
                         <div class="add-actions" style="z-index: 10;">
                             <ul class="add-actions-link">
                                 <li style="cursor: pointer" class="add-cart active"><a onClick="addToCard(${id})">Add to cart</a></li>
-                                <li><a class="links-details" onClick="addToWishList(${id})"><i class="fa fa-heart-o"></i></a></li>
+                                <li style="margin-left: 20px"><a class="links-details" onClick="addToWishList(${id})"><i class="fa fa-heart-o"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -201,4 +201,75 @@ function updateWishList() {
         }
     }
     document.getElementById("numberWishList").innerText = dem;
+}
+
+function filterShop(value) {
+    showFilter(value);
+}
+
+function showFilter(value) {
+    $.ajax({
+        type: "POST",
+        url: "/shop/controller/xulysanpham.php",
+        dataType: "json",
+        timeout: 1500,
+        data: {
+            request: "getall"
+        },
+        success: function (data) {
+            switch (value) {
+                // name a->z
+                case "1":
+                    data.sort(function (a, b) {
+                        var nameA = a.TenSP.toUpperCase();
+                        var nameB = b.TenSP.toUpperCase();
+                        if (nameA > nameB) {
+                            return 1;
+                        }
+                        if (nameA < nameB) {
+                            return -1;
+                        }
+                        return 0;
+                    });
+                    showListProducts(data);
+                    break;
+                // name z->a
+                case "2":
+                    data.sort(function (a, b) {
+                        var nameA = a.TenSP.toUpperCase();
+                        var nameB = b.TenSP.toUpperCase();
+                        if (nameA > nameB) {
+                            return -1;
+                        }
+                        if (nameA < nameB) {
+                            return 1;
+                        }
+                        return 0;
+                    });
+                    showListProducts(data);
+                    break;
+                // price low->high
+                case "3":
+                    data.sort(function (a, b) {
+                        return parseFloat(a.DonGia) - parseFloat(b.DonGia);
+                    });
+                    showListProducts(data);
+                    break;
+                // price high->low
+                case "4":
+                    data.sort(function (a, b) {
+                        return -parseFloat(a.DonGia) + parseFloat(b.DonGia);
+                    });
+                    showListProducts(data);
+                    break;
+                default:
+                    showListProducts(data);
+                    break;
+            }
+        },
+        error: function (e) {
+            console.log("Fail");
+            showListProducts([]);
+        }
+    })
 }
