@@ -71,11 +71,15 @@
                                         </div>
                                         <div class="col-md-12 mb-20">
                                             <label>User Name</label>
-                                            <input   name="newUser" id="newUser" class="mb-0" type="text" placeholder="User Name">
+                                            <input  name="newUser" id="newUser" class="mb-0" type="text" placeholder="User Name">
                                         </div>
-                                        <div class="col-md-12 mb-20">
+                                        <div class="col-md-6 mb-20">
                                             <label>Password</label>
                                             <input name="newPass" id="newPass" class="mb-0" type="password" placeholder="Password">
+                                        </div>
+                                        <div class="col-md-6 mb-20">
+                                            <label>Confirm Password</label>
+                                            <input name="confNewPass" id="confNewPass" class="mb-0" type="password" placeholder="Confirm Password">
                                         </div>
                                     
                                         <div class="col-12">

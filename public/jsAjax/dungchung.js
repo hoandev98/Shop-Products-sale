@@ -1,10 +1,3 @@
-// Hàm khởi tạo, tất cả các trang đều cần
-function khoiTao() {
-    // setupEventTaiKhoan();
-    // capNhatThongTinUser();
-
-    document.getElementsByClassName('cart-number')[0].innerHTML = getSoLuongGioHang();
-}
 
 // ========= Các hàm liên quan tới danh sách sản phẩm =========
 // copy 1 object, do trong js ko có tham biến , tham trị rõ ràng
@@ -13,101 +6,7 @@ function copyObject(o) {
     return JSON.parse(JSON.stringify(o));
 }
 
-// ================ Cart Number + Thêm vào Giỏ hàng ======================
-function getListGioHang() {
-    return JSON.parse(localStorage.getItem('giohang')); 
-}
 
-function setListGioHang(list) {
-    localStorage.setItem('giohang', JSON.stringify(list));
-}
-
-function addToGioHang(masp) {
-    var currentList = getListGioHang();
-
-    if(!currentList) {
-        currentList = [];
-    }
-
-    var daCo = false;
-    for(var sp of currentList) {
-        if(sp.masp == masp) {
-            sp.soLuong++;
-            daCo = true;
-        }
-    }
-
-    if(!daCo) {
-        currentList.push({
-            masp: masp,
-            soLuong: 1
-        })
-    }
-
-    setListGioHang(currentList);
-}
-
-function getSoLuongGioHang() {
-    var currentList = getListGioHang();
-
-    var soLuong = 0;
-    if(currentList != null) {
-        for(var sp of currentList) {
-            soLuong += sp.soLuong;
-        }
-    }
-
-    return soLuong;
-}
-
-function animateCartNumber() {
-    // Hiệu ứng cho icon giỏ hàng
-    var cn = document.getElementsByClassName('cart-number')[0];
-    cn.style.transform = 'scale(2)';
-    cn.style.backgroundColor = 'rgba(255, 0, 0, 0.8)';
-    cn.style.color = 'white';
-    cn.innerHTML = getSoLuongGioHang();
-    setTimeout(function() {
-        cn.style.transform = 'scale(1)';
-        cn.style.backgroundColor = 'transparent';
-        cn.style.color = 'red';
-    }, 1200);
-}
-
-function themVaoGioHang(masp, tensp) {
-    getCurrentUser((user) => {
-        if(user && user.TrangThai == 0) {
-            Swal.fire({
-                title: 'Tài Khoản Bị Khóa!',
-                text: 'Tài khoản của bạn hiện đang bị khóa nên không thể thêm hàng!',
-                type: 'error',
-                grow: 'row',
-                confirmButtonText: 'Trở về',
-                footer: '<a href>Liên hệ với Admin</a>'
-            });
-
-            return;
-
-        } else {
-            addToGioHang(masp);
-            animateCartNumber();
-            Swal.fire({
-                toast: true,
-                position: 'bottom-end',
-                type: 'success',
-                html: ' Đã thêm <strong>' + tensp + '</strong> vào giỏ.',
-                showConfirmButton: true,
-                timer: 5000
-            })
-        }
-
-
-    }, (error) => {
-       console.log(error.responseText)
-    })
-
-    return false;
-}
 
 function promoToWeb(name, value) { // khuyen mai
     if (!name || name == "Nothing") return "";
@@ -263,28 +162,6 @@ function autocomplete(inp, arr) {
 }
 
 // Thêm từ khóa tìm kiếm
-function addTags(nameTag, link) {
-    var new_tag = `<option class="option-header" value=` + link + `>` + nameTag + `</option>`;
-    // var khung_tags = document.getElementById('tags');
-    $( "#tags" ).append( new_tag);
-    // khung_tags.innerHtml +=new_tag;
-}
-
-function smallmenu(number) {
-    if (number == 1) {
-        document.getElementById("openmenu").style.display = "none";
-        document.getElementById("closemenu").style.display = "block";
-        document.getElementsByClassName("content")[0].style.maxHeight = document.getElementsByClassName("content")[0].scrollHeight + "px";
-        document.getElementsByClassName("content")[0].style.overflow = "unset";
-
-    } else if (number == 0) {
-        document.getElementById("openmenu").style.display = "block";
-        document.getElementById("closemenu").style.display = "none";
-        document.getElementsByClassName("content")[0].style.maxHeight = null;
-        document.getElementsByClassName("content")[0].style.overflow = "hidden";
-    }
-}
-
 function checklocalStorage() {
     if (typeof(Storage) == "undefined") {
         alert('Máy tính không hỗ trợ localStorage. Không thể lưu thông tin sản phẩm, khách hàng!!');
@@ -294,35 +171,6 @@ function checklocalStorage() {
 }
 
 // Di chuyển lên đầu trang
-function gotoTop() {
-    if (window.jQuery) {
-        jQuery('html,body').animate({
-            scrollTop: 0
-        }, 1000);
-    } else {
-        document.getElementsByClassName('top-nav')[0].scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    }
-}
-
-function gotoBot() {
-    if (window.jQuery) {
-        jQuery('html,body').animate({
-            scrollTop: $(document).height()
-        }, 1000);
-    } else {
-        document.getElementsByClassName('footer')[0].scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    }
-}
 
 Date.prototype.toShortFormat = function() {
     // var month_names = ["Jan", "Feb", "Mar",
