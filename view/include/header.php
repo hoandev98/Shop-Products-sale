@@ -48,10 +48,11 @@
                             <div class="col-lg-9 pl-0 ml-sm-15 ml-xs-15">
                                 <!-- Begin Header Middle Searchbox Area -->
                                 <form method="get" action="index.php" class="hm-searchbox">
-                                    <select id="tags" class="nice-select select-search-category" onchange="location = this.value;">
-                                        <option value="0">All</option>  
+                                    <select id="tags"  onchange="window.location = this.value;">
+                                        <option class="all-first">All</option>  
                                                             
                                     </select>
+                                   
                                     <input name="search" type="text" placeholder="Enter your search key ...">
                                     <button class="li-btn" type="submit"><i class="fa fa-search"></i></button>
                                 </form>

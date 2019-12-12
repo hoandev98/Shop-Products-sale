@@ -43,7 +43,7 @@ session_start(); ?>
         <link rel="stylesheet" href="public/css/responsive.css">
         <!-- Modernizr js -->
         <link rel="stylesheet" href="public/css/index.css">
-        <link rel="stylesheet" href="/shop/public/css/user.css">
+        <link rel="stylesheet" href="public/css/user.css">
         <script src="public/js/vendor/modernizr-2.8.3.min.js"></script>
         <link rel="stylesheet" href="public/lib/ion.rangeSlider-2.2.0/css/ion.rangeSlider.css">
         <link rel="stylesheet" href="public/lib/ion.rangeSlider-2.2.0/css/ion.rangeSlider.skinHTML5.css">
@@ -51,6 +51,7 @@ session_start(); ?>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 	    <script src="public/lib/ion.rangeSlider-2.2.0/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>
         <script src="public/jsAjax/ajaxHome.js"></script>
+        <script src="public/jsAjax/searchHeader.js"></script>
         <script type="text/javascript" src="public/jsAjax/dungchung.js"></script>
         <script type="text/javascript" src="public/jsAjax/header.js?1500"></script>
         <script src="public/jsAjax/productDetail.js"></script>

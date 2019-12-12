@@ -46,7 +46,7 @@ function getCurrentUser(onSuccess, onFail) {
 function showTaiKhoan(show) {
     var value = (show ? "block" : "none");
     var div = document.getElementsByClassName('containTaikhoan')[0];
-    // div.style.display = value;
+    div.style.display = value;
 }
 
 // Check xem có ai đăng nhập hay chưa (CurrentUser có hay chưa)

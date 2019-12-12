@@ -10,12 +10,8 @@ if (document.readyState == 'loading') {
 }
 
 function loadAjaxHome() {
-    khoiTao();
-    var tags = ["Samsung", "iPhone", "Coolpad", "Oppo", "Mobi"];
-    for (var t of tags) addTags(t, "index.php?search=" + t);
-
     setupCompany();
-
+    if(jQuery("#demoSlider").length>0){
     // slider chọn khoảng giá
     $("#demoSlider").ionRangeSlider({
         type: "double",
@@ -34,6 +30,7 @@ function loadAjaxHome() {
             filtersAjax(createFilters('price', data.from * 1E6 + "-" + data.to * 1E6));
         },
     });
+};
     // Thêm sản phẩm vào trang
     var filters = getFilterFromURL();
     if (filters.length) { // có filter
@@ -75,7 +72,6 @@ function loadAjaxHome() {
     addSortFilter('asc', 'TenSP', 'Tên A-Z');
     addSortFilter('des', 'TenSP', 'Tên Z-A');
 };
-
 // ============================== web2 ===========================
 function hienThiKhungSanPhamMacDinh() {
 

@@ -12,9 +12,13 @@
         height: 89px;
         text-align: right;
     }
-    /* header */
     #tags{
-        /* background-color: #288ad6; */
+        width: 30%;
+        background: #fff;
+    }
+    /* header */
+    #tags .all-first{
+        background-color: #fff;
     }
     #tags .option-header{
         border: 2px solid black !important;
