@@ -43,7 +43,7 @@
                                                 <li>Subtotal <span class="sub-total-amount">$0.00</span></li>
                                                 <li>Total <span class="total-amount">$0.00</span></li>
                                             </ul>
-                                            <a href="checkout.php">Proceed to checkout</a>
+                                            <a href="#" onClick="eventCheckOut()">Proceed to checkout</a>
                                         </div>
                                     </div>
                                 </div>

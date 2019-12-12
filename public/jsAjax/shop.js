@@ -75,7 +75,7 @@ function showListProducts(data) {
                             </div>
                             <h4><a class="product_name" id="${id}" href="single-product-sale.php?id=${id}">${name}</a></h4>
                             <div class="price-box">
-                                <span class="new-price">$${price}</span>
+                                <span class="new-price">${price}đ</span>
                             </div>
                         </div>
                         <div class="add-actions" style="z-index: 10;">
@@ -109,10 +109,16 @@ function convertToRate(num) {
 
 function addToCard(id) {
     if (setCookie("name" + id, "1", 0)) {
-        alert("Đặt hàng thành công!");
+        Swal.fire({
+            type: "success",
+            title: "Đặt hàng thành công"
+        });
         loadMiniCard();
     } else {
-        alert("Sản phầm đã tồn tại trong giỏ hàng!");
+        Swal.fire({
+            type: "error",
+            title: "Sản phẩm đã tồn tại trong giỏ hàng!"
+        });
     }
 }
 
@@ -174,7 +180,7 @@ function showMiniCard(data, listQuantity) {
             </a>
             <div class="minicart-product-details">
                 <h6><a href="single-product-sale.php">${data[i].TenSP}</a></h6>
-                <span>$${data[i].DonGia}</span>
+                <span>${data[i].DonGia}đ</span>
             </div>
             <button class="close" title="Remove">
                 <i class="fa fa-close"></i>
@@ -189,14 +195,17 @@ function showMiniCard(data, listQuantity) {
     result += `</ul>`;
     document.getElementsByClassName("show-minicard")[0].innerHTML = result;
     document.getElementsByClassName("quantity-minicard")[0].innerText = data.length;
-    document.getElementsByClassName("total-minicard")[0].innerHTML = '$' + total;
-    document.getElementsByClassName("subtotal-minicard")[0].innerHTML = '$' + total;
+    document.getElementsByClassName("total-minicard")[0].innerHTML = total + 'đ';
+    document.getElementsByClassName("subtotal-minicard")[0].innerHTML = total + 'đ';
 }
 
 function addToWishList(id) {
     var idWishList = "wishlist" + id;
     setCookieWishList(idWishList, "", 0);
-    alert("Thêm vào danh sách yêu thích thành công!");
+    Swal.fire({
+        type: "success",
+        title: "Thêm vào danh sách yêu thích thành công"
+    });
     updateWishList();
 }
 

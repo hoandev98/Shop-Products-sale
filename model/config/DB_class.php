@@ -96,6 +96,16 @@ class HoaDonBUS extends DB_business
         $sql = "SELECT * FROM hoadon WHERE MaND=$mand";
         $dsdh = (new HoaDonBUS())->get_list($sql);
     }
+
+    function getHoaDonTheoNgay($day) {
+        $sql = "SELECT MaHD FROM hoadon WHERE NgayLap='$day'";
+        $hd = (new HoaDonBUS())->get_row($sql);
+        return $hd;
+    }
+
+    function add_new($data) {
+        parent::add_new($data);
+    }
 }
 
 // Lớp tài khoản
@@ -166,6 +176,11 @@ class ChiTietHoaDonBUS extends DB_business
     {
         $sql = "select * from " . $this->_table_name . " where " . $this->_key . " ='" . $id . "'";
         return $this->get_list($sql);
+    }
+
+    // hàm insert hóa đơn
+    function add_new($data) {
+        parent::add_new($data);
     }
 }
 

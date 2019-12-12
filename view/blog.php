@@ -22,7 +22,7 @@
                                 <div class="col-lg-4 col-md-6">
                                     <div class="li-blog-single-item pb-25">
                                         <div class="li-blog-banner">
-                                            <a href=""><img class="img-full" src="images/blog-banner/2.jpg" alt=""></a>
+                                            <a href=""><img class="img-full" src="/shop/public/images/blog-banner/2.jpg" alt=""></a>
                                         </div>
                                         <div class="li-blog-content">
                                             <div class="li-blog-details">

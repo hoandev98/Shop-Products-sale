@@ -4,6 +4,9 @@ if (document.readyState == 'loading') {
     ready()
 }
 
+var listProduct = [];
+var tongtien = 0;
+
 // Hien thi card
 function ready() {
     // key la maSP value la so luong
@@ -11,14 +14,27 @@ function ready() {
     var listID = [];
     var listQuantity = [];
     var dem = 0;
+    var listTemp = [];
     for (var i = 0; i < ca.length; i++) {
         if (ca[i].split('=')[0].includes("name")){
-            listID.push(ca[i].split('=')[0].replace("name",""));
-            listQuantity.push(ca[i].split('=')[1]);
+            var temp = {
+                id: parseInt(ca[i].split('=')[0].replace("name","")),
+                quantity: ca[i].split('=')[1]
+            }
+            listTemp.push(temp);
         } else if (ca[i].split('=')[0].includes("wishlist")) {
             dem++;
         }
     }
+
+    listTemp.sort(function (a, b) {
+        return a.id - b.id;
+    })
+    listTemp.forEach(item => {
+        listID.push(item.id);
+        listQuantity.push(item.quantity);
+    });
+
     // gán wishlist
     document.getElementById("numberWishList").innerText = dem;
     $.ajax({
@@ -31,6 +47,8 @@ function ready() {
             listID: listID
         },
         success: function (data) {
+            listIdProduct = listID;
+            listQuantityProduct = listQuantity; 
             showTableCard(data, listQuantity);
         },
         error: function (e) {
@@ -65,18 +83,25 @@ function showTableCard(data, listQuantity) {
     result += "</thead>";
     result += "<tbody>";
     for (var i = 0; i < data.length; i++) {
+        var product = {
+            id: data[i].MaSP,
+            name: data[i].TenSP,
+            price: data[i].DonGia,
+            quantity: listQuantity[i]
+        };
+        listProduct.push(product);
         result += "<tr>";
         result += "<td class=\"li-product-remove\"><a onClick='deleteItemCard(" + data[i].MaSP + ")' style='cursor: pointer'><i class=\"fa fa-times\"></i></a></td>";
         result += "<td class=\"li-product-thumbnail\"><a href=\"#\"><img style='width: 150px; height: 150px' src=" + data[i].HinhAnh + " alt=\"Li's Product Image\"></a></td>";
         result += "<td class=\"li-product-name\"><a href=\"#\">" + data[i].TenSP + "</a></td>";
-        result += "<td class=\"li-product-price\"><span class=\"amount item-price\">$" + data[i].DonGia + "</span></td>";
+        result += "<td class=\"li-product-price\"><span class=\"amount item-price\">" + data[i].DonGia + "đ</span></td>";
         result += "<td class=\"quantity\">";
         result += "<label>Quantity</label>";
         result += "<div>";
-        result += "<input onChange='changeQuatity(this," + data[i].SoLuong + ")' class=\"input-product-quantity\" value=" + listQuantity[i] + " type=\"number\">";
+        result += "<input onChange='changeQuatity(this," + data[i].SoLuong + "," + i + ")' class=\"input-product-quantity\" value=" + listQuantity[i] + " type=\"number\">";
         result += "</div>";
         result += "</td>";
-        result += "<td class=\"product-subtotal\"><span class=\"amount item-total\">$" + data[i].DonGia*listQuantity[i] + "</span></td>";
+        result += "<td class=\"product-subtotal\"><span class=\"amount item-total\">" + data[i].DonGia*listQuantity[i] + "đ</span></td>";
         result += "</tr>";
     }
     result += "</tbody>";
@@ -86,8 +111,6 @@ function showTableCard(data, listQuantity) {
     showMini(data, listQuantity);
     // end show
 
-    var tableContain = document.getElementById("listcard");
-    var item = tableContain.getElementsByClassName("input-product-quantity");
     
     // for (var i = 0; i < item.length; i++) {
     //     item[i].addEventListener('change', quantityChanged);
@@ -96,24 +119,22 @@ function showTableCard(data, listQuantity) {
     updateTotal();
 }
 
-function changeQuatity(input, soluong) {
+function changeQuatity(input, soluong, i) {
     if (input.value <= 0) {
         input.value = 1;
     } else if (input.value > soluong) {
         input.value = soluong;
         /// san pham vuot qua ton kho
-        alert("Số lượng sản phẩm vượt quá tồn kho!");
+        Swal.fire({
+            type: "error",
+            title: "Số lượng sản phẩm đã vượt quá kho!"
+        });
     }
+
+    setCookie("name"+listProduct[i].id, input.value, 0);
+    listProduct[i].quantity = input.value;
     updateTotal();
 }
-
-// function quantityChanged(event) {
-//     var input = event.target
-//     if (isNaN(input.value) || input.value <= 0) {
-//         input.value = 1
-//     }
-//     updateTotal();
-// }
 
 function updateTotal() {
     var tableContain = document.getElementById("listcard");
@@ -122,27 +143,34 @@ function updateTotal() {
     var itemQuantity = tableContain.getElementsByClassName("input-product-quantity");
     var total = 0;
     for (var i = 0; i < itemPrice.length; i++){
-        var price = parseFloat(itemPrice[i].innerText.replace('$', ''));
+        var price = parseFloat(itemPrice[i].innerText.replace('đ', ''));
         var quantity = itemQuantity[i].value;
+        listQuantityProduct[i] = quantity;
         var s = (price * quantity);
         s = Math.round(s * 100) / 100;
-        itemTotal[i].innerText = '$' + s;
+        itemTotal[i].innerText = s + 'đ';
         total += s;
     }
     total = Math.round(total * 100) / 100;
-    document.getElementsByClassName('sub-total-amount')[0].innerText = '$' + total;
-    document.getElementsByClassName('total-amount')[0].innerText = '$' + total;
+    document.getElementsByClassName('sub-total-amount')[0].innerText = total + 'đ';
+    document.getElementsByClassName('total-amount')[0].innerText = total + 'đ';
     // Gan minicard
     document.getElementsByClassName("quantity-minicard")[0].innerText = itemPrice.length;
-    document.getElementsByClassName("total-minicard")[0].innerHTML = '$' + total;
-    document.getElementsByClassName("subtotal-minicard")[0].innerHTML = '$' + total;
+    document.getElementsByClassName("total-minicard")[0].innerHTML = total + 'đ';
+    document.getElementsByClassName("subtotal-minicard")[0].innerHTML = total + 'đ';
+    tongtien = total;
 }
 
 function deleteItemCard(id) {
     setCookie("name" + id, "", -1);
-    alert("Delete Success!")
-    // cap nhat lai
-    ready();
+    Swal.fire({
+        type: "success",
+        title: "Xóa thành công"
+    }).then((result) => {
+        // cap nhat lai
+        window.location.replace("shopping-cart.php");
+    });
+    
 }
 
 function showMini(data, listQuantity) {
@@ -156,7 +184,7 @@ function showMini(data, listQuantity) {
             </a>
             <div class="minicart-product-details">
                 <h6><a href="single-product.php">${data[i].TenSP}</a></h6>
-                <span>$${data[i].DonGia}</span>
+                <span>${data[i].DonGia}đ</span>
             </div>
             <button class="close" title="Remove">
                 <i class="fa fa-close"></i>
@@ -166,4 +194,14 @@ function showMini(data, listQuantity) {
     }
     result += `</ul>`;
     document.getElementsByClassName("show-minicard")[0].innerHTML = result;
+}
+
+function eventCheckOut() {
+    var donhang = {
+        products: listProduct,
+        total: tongtien
+    }
+
+    localStorage.setItem('donhang', JSON.stringify(donhang));
+    window.location.replace("checkout.php");
 }
