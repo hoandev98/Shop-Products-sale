@@ -55,7 +55,7 @@ function showTableWishList(data) {
             <td class="li-product-remove"><a onClick="deleteItemWishList(${data[i].MaSP})"><i class="fa fa-times"></i></a></td>
             <td class="li-product-thumbnail"><a href="single-product-sale.php?id=${data[i].MaSP}"><img src="${data[i].HinhAnh}" style="width: 150px; height: 150px" alt=""></a></td>
             <td class="li-product-name"><a href="single-product-sale.php?id=${data[i].MaSP}">${data[i].TenSP}</a></td>
-            <td class="li-product-price"><span class="amount">$${data[i].DonGia}</span></td>
+            <td class="li-product-price"><span class="amount">${data[i].DonGia}đ</span></td>
             <td class="li-product-stock-status"><span class="in-stock">in stock</span></td>
             <td class="li-product-add-cart"><a style="cursor: pointer" onClick="addToCardWishList(${data[i].MaSP})">add to cart</a></td>
         </tr>

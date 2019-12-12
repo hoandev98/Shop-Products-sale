@@ -87,9 +87,6 @@
                                                     <a href="/shop/view/shopping-cart.php" class="li-button li-button-fullwidth li-button-dark">
                                                         <span>View Full Cart</span>
                                                     </a>
-                                                    <a href="/shop/view/checkout.php" class="li-button li-button-fullwidth">
-                                                        <span>Checkout</span>
-                                                    </a>
                                                 </div>
                                             </div>
                                         </li>

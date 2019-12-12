@@ -10,14 +10,29 @@ function loadMiniCard() {
     var listID = [];
     var listQuantity = [];
     var dem = 0;
+    var listTemp = [];
     for (var i = 0; i < ca.length; i++) {
         if (ca[i].split('=')[0].includes("name")){
-            listID.push(ca[i].split('=')[0].replace("name",""));
-            listQuantity.push(ca[i].split('=')[1]);
+            // listID.push(ca[i].split('=')[0].replace("name",""));
+            // listQuantity.push(ca[i].split('=')[1]);
+            var temp = {
+                id: parseInt(ca[i].split('=')[0].replace("name","")),
+                quantity: ca[i].split('=')[1]
+            }
+            listTemp.push(temp);
         } else if (ca[i].split('=')[0].includes("wishlist")) {
             dem++;
         }
     }
+
+    listTemp.sort(function (a, b) {
+        return a.id - b.id;
+    })
+    listTemp.forEach(item => {
+        listID.push(item.id);
+        listQuantity.push(item.quantity);
+    });
+
     // wishlist header
     document.getElementById("numberWishList").innerText = dem;
     $.ajax({
@@ -51,7 +66,7 @@ function showMiniCard(data, listQuantity) {
             </a>
             <div class="minicart-product-details">
                 <h6><a href="single-product.php">${data[i].TenSP}</a></h6>
-                <span>$${data[i].DonGia}</span>
+                <span>${data[i].DonGia}đ</span>
             </div>
             <button onClick="deleteItemMiniCard(${data[i].MaSP})" class="close" title="Remove">
                 <i class="fa fa-close"></i>
@@ -66,8 +81,8 @@ function showMiniCard(data, listQuantity) {
     result += `</ul>`;
     document.getElementsByClassName("show-minicard")[0].innerHTML = result;
     document.getElementsByClassName("quantity-minicard")[0].innerText = data.length;
-    document.getElementsByClassName("total-minicard")[0].innerHTML = '$' + total;
-    document.getElementsByClassName("subtotal-minicard")[0].innerHTML = '$' + total;
+    document.getElementsByClassName("total-minicard")[0].innerHTML = total + 'đ';
+    document.getElementsByClassName("subtotal-minicard")[0].innerHTML = total + 'đ';
 }
 
 function deleteItemMiniCard(id) {

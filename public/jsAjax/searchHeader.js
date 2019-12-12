@@ -10,7 +10,7 @@ function loadAjaxSearch(){
 
 }
 function addTags(nameTag, link) {
-    var new_tag = `<option class="option-header" value=http://localhost:88/shop/` + link + `>` + nameTag + `</option>`;
+    var new_tag = `<option class="option-header" value=/shop/` + link + `>` + nameTag + `</option>`;
     // var khung_tags = document.getElementById('tags');
     $( "#tags" ).append(new_tag);
     // khung_tags.innerHtml +=new_tag;

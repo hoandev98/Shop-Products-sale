@@ -82,7 +82,10 @@ function addToCard() {
     var url = new URL(url_string);
     var id = url.searchParams.get("id");
     setCookieSingleProduct("name" + id, "1", 0);
-    window.location.replace("shopping-cart.php");
+    Swal.fire({
+        type: "success",
+        title: "Thêm vào giỏ hàng thành công"
+    });
 }
 
 function addToWishList() {
@@ -90,7 +93,10 @@ function addToWishList() {
     var url = new URL(url_string);
     var id = url.searchParams.get("id");
     setCookieSingleProduct("wishlist" + id, "", 0);
-    window.location.replace("wishlist.php");
+    Swal.fire({
+        type: "success",
+        title: "Thêm vào danh sách yêu thích thành công"
+    });
 }
 
 function setCookieSingleProduct(name, value, days) {
@@ -162,7 +168,7 @@ function writeReview() {
             if (data) {
                 console.log(data);
             } else {
-                alert("Bạn chưa đănh nhập mời bạn đăng nhập!");
+                alert("Bạn chưa đăng nhập mời bạn đăng nhập!");
                 window.location.replace("login-register.php");
             }
         },
