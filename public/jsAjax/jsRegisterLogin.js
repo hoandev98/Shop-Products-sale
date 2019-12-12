@@ -109,48 +109,47 @@ function checkDangKy() {
             alert("Please validate password again");
             return false;
         }else {
+            $.ajax({
+                url: "/shop/controller/xulytaikhoan.php",
+                type: "post",
+                dataType: "json",
+                timeout: 1500,
+                data: {
+                    request: 'dangky',
+                    data_ho: ho,
+                    data_ten: ten,
+                    data_sdt: sdt,
+                    data_email: email,
+                    data_newUser: username,
+                    data_newPass: pass
+                },
+                success: function(kq) {
+                    console.log(kq);
+                    if(kq != null) {
+                        Swal.fire({
+                            type: 'success',
+                            title: 'Đăng kí thành công ' + kq.TaiKhoan,
+                            text: 'Bạn sẽ được đăng nhập tự động',
+                            confirmButtonText: 'Tuyệt'
 
-    $.ajax({
-        url: "/shop/controller/xulytaikhoan.php",
-        type: "post",
-        dataType: "json",
-        timeout: 1500,
-        data: {
-            request: 'dangky',
-            data_ho: ho,
-            data_ten: ten,
-            data_sdt: sdt,
-            data_email: email,
-            data_newUser: username,
-            data_newPass: pass
-        },
-        success: function(kq) {
-            console.log(kq);
-            if(kq != null) {
-                Swal.fire({
-                    type: 'success',
-                    title: 'Đăng kí thành công ' + kq.TaiKhoan,
-                    text: 'Bạn sẽ được đăng nhập tự động',
-                    confirmButtonText: 'Tuyệt'
-
-                }).then((result) => {
-                    capNhatThongTinUser();
-                    showTaiKhoan(false);
-                });
-            }
-        },
-        error: function(e) {
-            Swal.fire({
-                type: "error",
-                title: "Lỗi",
-                // html: e.responseText
+                        }).then((result) => {
+                            capNhatThongTinUser();
+                            showTaiKhoan(false);
+                        });
+                    }
+                },
+                error: function(e) {
+                    Swal.fire({
+                        type: "error",
+                        title: "Lỗi",
+                        // html: e.responseText
+                    });
+                    console.log(e.responseText)
+                }
             });
-            console.log(e.responseText)
-        }
-    });
 
-    return false;
-}
+        return false;
+        }
 }
 
 function checkDangNhap() {
