@@ -294,13 +294,14 @@ function addToWeb(p, ele, returnString) {
                 ` + rating + `
             ` + (promoToWeb(p.KM.LoaiKM, giaTrikhuyenMai)) + `
             </div>
+        </a>
             <div class="divAddtoCart">
-                <button class="themvaogio" onclick="return themVaoGioHang('` + p.MaSP + `', '` + p.TenSP + `');">
+                <button class="themvaogio" onClick="themVaoGioHang('` + p.MaSP + `');">
                    <strong class="text-addto">ADD TO CART</strong>
                 </button>
-                <a class="add-wishlist" href="wishlist.php"><i class="fa fa-heart-o"></i></a>
+                <a class="add-wishlist" href="#" onClick="themVaoYeuThich('` + p.MaSP + `');"><i class="fa fa-heart-o"></i></a>
             </div>
-        </a>
+        
     </li>`;
 
     if (returnString) return newLi;
@@ -308,6 +309,36 @@ function addToWeb(p, ele, returnString) {
     // Thêm tag <li> vừa tạo vào <ul> homeproduct (mặc định) , hoặc tag ele truyền vào
     var products = ele || document.getElementById('products');
     products.innerHTML += newLi;
+}
+
+/// themVaoGioHang
+function themVaoGioHang(ma) {
+    setCookieHome("name"+ma, '1', 0);
+    Swal.fire({
+        type: "success",
+        title: "Thêm vào giỏ hàng thành công"
+    }).then((result) => {
+        window.location.replace("index.php");
+    });
+}
+function themVaoYeuThich(ma) {
+    setCookieHome("wishlist"+ma, '1', 0);
+    Swal.fire({
+        type: "success",
+        title: "Thêm vào yêu thích thành công"
+    }).then((result) => {
+        window.location.replace("index.php");
+    });
+}
+
+function setCookieHome(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }
 
 // =========== Đọc dữ liệu từ url ============
