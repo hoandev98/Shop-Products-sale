@@ -1,7 +1,9 @@
 /* .listDonHang {
     display: none;
 } */
-
+#showImageLarge{
+    padding: 55px 0;
+}
 .infoUser table {
     border-collapse: collapse;
     margin: 0 auto;
@@ -87,8 +89,11 @@
 /* member  */
 .member {
     position: relative;
-    display: inline-block;
+    /* display: inline-block; */
 	float: right;
+}
+.member a{
+    color: #393939;
 }
 .member:hover > .menuMember{
     z-index: 20;
@@ -96,6 +101,7 @@
 }
 .member .menuMember {
     position: absolute;
+    /* top:32px; */
     left: 0;
     text-align: center;
     border-radius: 5px;
@@ -109,8 +115,8 @@
     padding: 10px 0;
 }
 .member .menuMember a:hover {
-    background-color: #888;
-    color: #eee;
+    background-color: #fed700;
+    color: #000;
 }
 .member .hide {
     display: none;

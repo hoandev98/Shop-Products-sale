@@ -46,7 +46,7 @@ function getCurrentUser(onSuccess, onFail) {
 function showTaiKhoan(show) {
     var value = (show ? "block" : "none");
     var div = document.getElementsByClassName('containTaikhoan')[0];
-    // div.style.display = value;
+    div.style.display = value;
 }
 
 // Check xem có ai đăng nhập hay chưa (CurrentUser có hay chưa)
@@ -64,13 +64,51 @@ function checkTaiKhoan() {
 
 //  ================================ WEB 2 =================================
 function checkDangKy() {
-    var ho = document.getElementById('ho').value;
-    var ten = document.getElementById('ten').value;
-    var sdt = document.getElementById('sdt').value;
-    var email = document.getElementById('email').value;
+    // var ho = document.getElementById('ho').value;
+    // var ten = document.getElementById('ten').value;
+    // var sdt = document.getElementById('sdt').value;
+    // var email = document.getElementById('email').value;
     // var diachi = document.getElementById('diachi').value;
-    var username = document.getElementById('newUser').value;
-    var pass = document.getElementById('newPass').value;
+    // var username = document.getElementById('newUser').value;
+    // var pass = document.getElementById('newPass').value;
+    // function validateForm() {
+        var ten = document.forms["formDangKy"]["ten"].value;
+        var ho = document.forms["formDangKy"]["ho"].value;
+        var email = document.forms["formDangKy"]["email"].value;
+        var sdt = document.forms["formDangKy"]["sdt"].value;
+        var username = document.forms["formDangKy"]["newUser"].value;
+        var atposition = email.indexOf("@");
+        var dotposition = email.lastIndexOf(".");
+        var pass = document.forms["formDangKy"]["newPass"].value;
+        var confpassword = document.forms["formDangKy"]["confNewPass"].value;
+        
+        if (ten.length < 2 || ten.length > 30) {
+            alert(" Please enter firstname must be lenght 2 to 30 characters");
+            return false;
+        } else if (ho.length < 2 || ho.length > 30) {
+            alert("Please enter lastname must be lenght 2 to 30 characters");
+            return false;
+    
+        } else if (username.length < 2 || username.length > 30) {
+            alert("Please enter userName must be lenght 2 to 30 characters");
+            return false;
+    
+        } else if (sdt.length < 5 || sdt.length > 30) {
+            alert("Please enter SDT must be lenght 5 to 30 characters");
+            return false;
+    
+        }else if (atposition < 1 || dotposition < 1 ||
+            (dotposition + 1) >= email.length) {
+            alert("Please enter a valid e-mail address.");
+            return false;
+        } else if (pass == '' || pass.length < 2 || pass.length > 30) {
+            alert("Please enter password must be lenght 2 to 30 characters");
+            return false;
+        } 
+        else if (pass != confpassword) {
+            alert("Please validate password again");
+            return false;
+        }else {
 
     $.ajax({
         url: "/shop/controller/xulytaikhoan.php",
@@ -112,6 +150,7 @@ function checkDangKy() {
     });
 
     return false;
+}
 }
 
 function checkDangNhap() {
@@ -220,7 +259,7 @@ function checkDangXuat(onSuccess) {
 function capNhatThongTinUser() {
     getCurrentUser((data) => {
         if(!data) {
-            document.getElementById("btnTaiKhoan").innerHTML = '<i class="fa fa-user"></i> _My Account';
+            document.getElementById("btnTaiKhoan").innerHTML = '<i class="fa fa-user"></i> _Tài khoản của bạn';
             document.getElementsByClassName("menuMember")[0].classList.add('hide');
 
         } else {
