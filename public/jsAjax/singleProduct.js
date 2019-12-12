@@ -220,11 +220,10 @@ function saveReview(idSp, idNd, numStar, feedback) {
 
     $.ajax({
         type: "POST",
-        url: "/shop/controller/xulydanhgia.php",
+        url: "/shop/controller/xulysanpham.php",
         dataType: "json",
-        timeout: 1500, // sau 1.5 giây mà không phản hồi thì dừng => hiện lỗi
         data: {
-            request: "save",
+            request: "themdanhgia",
             masp: idSp,
             mand: idNd,
             sosao: numStar,

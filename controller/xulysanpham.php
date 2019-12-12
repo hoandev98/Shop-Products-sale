@@ -95,6 +95,10 @@
             $trangthai = $_POST["trangthai"];
             die (json_encode((new SanPhamBUS())->capNhapTrangThai($trangthai, $id)));
             break;
+
+        case 'themdanhgia':
+            themdanhgia();
+            break;
     	
     	default:
     		# code...
@@ -216,5 +220,23 @@
         ); 
         
         die (json_encode($spBUS->add_new($sanphamArr)));
+    }
+
+    function themdanhgia() {
+        $masp=$_POST['masp'];
+        $mand=$_POST['mand'];
+		$sosao=$_POST['sosao'];
+		$binhluan=$_POST['binhluan'];
+        $ngay=$_POST['ngay'];
+        $status = (new DanhGiaBUS())->add_new(array(
+            "MaSP" => $masp,
+			"MaND" => $mand,
+            "SoSao" => $sosao,
+            "BinhLuan" => $binhluan,
+			"NgayLap" => $ngay
+        ));
+        $sp = (new SanPhamBUS())->themDanhGia($masp);
+
+        die (json_encode("Success"));
     }
 ?>

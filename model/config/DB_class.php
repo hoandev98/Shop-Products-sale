@@ -33,7 +33,7 @@ class SanPhamBUS extends DB_business
     function themDanhGia($id) {
         // cập nhật số lượt đánh giá
         $sanpham = $this->select_by_id("*", $id);
-        $sanpham["SoDanhGia"] = $sanpham["SoDanhGia"] + 1;
+        // $sanpham["SoDanhGia"] = $sanpham["SoDanhGia"] + 1;
 
         // cập nhật số sao trung bình
         $dsbl = (new DB_driver())->get_list("SELECT * FROM danhgia WHERE MaSP=$id");
@@ -41,6 +41,7 @@ class SanPhamBUS extends DB_business
         for($i = 0; $i < sizeof($dsbl); $i++) {
             $tongSoSao += $dsbl[$i]["SoSao"];
         }
+        $sanpham["SoDanhGia"] = sizeof($dsbl);
         $sanpham["SoSao"] = $tongSoSao / sizeof($dsbl);
 
         return $this->update_by_id($sanpham, $id);
