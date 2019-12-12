@@ -51,6 +51,7 @@ session_start(); ?>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 	    <script src="public/lib/ion.rangeSlider-2.2.0/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>
         <script src="public/jsAjax/ajaxHome.js"></script>
+        <script src="public/jsAjax/jsRegisterLogin.js"></script>
         <script src="public/jsAjax/searchHeader.js"></script>
         <script type="text/javascript" src="public/jsAjax/dungchung.js"></script>
         <script type="text/javascript" src="public/jsAjax/header.js?1500"></script>
