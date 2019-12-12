@@ -121,6 +121,9 @@
         }
     /* ============== End From W3 ============== */
     #divSoLuongSanPham {
+        width: 50%;
+        border-radius: 5px;
+        float: left;
         margin: 5px 0;
         padding: 5px;
         color: #999;
@@ -136,14 +139,17 @@
     
     /* Filter by Name */
     .filterName {
+        padding-left: 20px;
         margin: 15px auto;
         text-align: center;
         /* width: 195px; */
     }
     .filterName input {
+        width: 45%;
+        height: 36px;
+        margin-top: 5px;
         padding: 0 15px;
         /* width: calc(100% - 30px); 15px la padding left cua input */
-        height: 30px;
         border: 2px solid #bbb;
         border-radius: 10px;
         font-size: 15px;
@@ -156,11 +162,15 @@
     } 
     
     /* Choosed filter */
-    .choosedFilter { margin: 10px auto; }
+    .choosedFilter { margin: 10px auto;
+        max-height: 50px;
+        width: 100%;
+        text-align: center; }
     .choosedFilter i { transition-duration: .3s; }
     .choosedFilter a:hover > h3 > i { color: red; }
     /* .choosedFilter a:hover > h3 { text-decoration: line-through; } */
     .choosedFilter a {
+        display: inline-block;
         font-size: 12px;
         padding: 6px;
         color: #fff;
@@ -169,13 +179,18 @@
         margin-right: 5px;
         cursor: pointer;
     }
-    
+    .choosedFilter .result-search{
+        font-size: 12px;
+        margin-bottom: 0;
+    }
     /* Các khung sản phẩm */
     .contain-khungSanPham {
         width: 100%;
         
     }
-    
+    .contain-products{
+        width: 100%;
+    }
     .khungSanPham {
         width: 100%;
         margin: 50px 0;
@@ -215,8 +230,42 @@
         background-color: #ccc;
         color: #000;
     }
+    /* //phan trang */
+
+    .pagination {
+        display: block;
+        clear: both;
+        position: relative;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
     
+    .pagination a {
+        display: inline-block;
+        margin: 10px 0;
+        padding: 10px 15px;
+        border-radius: 5px;
+        color: #555;
+        cursor: pointer;
+    }
+    
+    .pagination a:hover:not(.current) {
+        background-color: #ccc;
+    }
+    
+    .pagination .current {
+        color: white;
+        background: #0950E8;
+    }
+
+
+
+
     @media only screen and (max-width: 768px){
+        .khungSanPham h3.tenKhung {
+            max-width: 50%;
+        }
         .companyMenu
         {
             max-height: 0;
@@ -258,7 +307,10 @@
         }
     }
     /* sanpham */
+  
     #khongCoSanPham {
+        text-align: center;
+        max-height: 150px;
         opacity: 0;
         width: 0;
         color: red;
@@ -268,6 +320,9 @@
     }
     /* Home Product */
         .homeproduct {
+            padding: 0 20px;
+            margin-top:40px;
+            clear: both;
             list-style-type: none;  
         }
     
@@ -540,8 +595,11 @@
                     left: 79% !important;
                 }
                 .sanPham{
-                    height: 400px;
+                    height: 450px;
                     width: 95%;
+                }
+                .sanPham a .price {
+                    height: 30px;
                 }
                 .sanPham a img{
                     height: 200px;
@@ -551,9 +609,22 @@
                     opacity: 1;
                 }
                 .themvaogio{
-                    background: #e8ff4a;
-                    margin-left: 40px;
+                    background: #fad20a;
+                    margin-right: 20px;
                 }
+                #divSoLuongSanPham {
+                    width: 100%;
+                }
+                .filterName input {
+                    width: 100%;
             }
+            .filterName {
+                padding: 0 20px;
+            }
+            .khungSanPham .tenKhung {
+                max-width: 100% !important;
+                font-size: 23px !important;
+            }
+        }
         /* ===== End Them Vao Gio Hang ==== */
     /* ====== End Home Product ======= */

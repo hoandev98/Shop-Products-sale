@@ -1,5 +1,5 @@
-var SoLuongTrangHienThi = 4;
-var ProductsPerPage = 4;
+var SoLuongTrangHienThi = 8;
+var ProductsPerPage = 8;
 var DanhSachSanPham = [];
 var DataCompany = [];
 var CurrentFilters = [];
@@ -81,7 +81,7 @@ function hienThiKhungSanPhamMacDinh() {
 
     $('.contain-khungSanPham').html('');
 
-    var soLuong = (window.innerWidth < 1200 ? 3 : 8); // màn hình nhỏ thì hiển thị 4 sp, to thì hiển thị 5
+    var soLuong = (window.innerWidth < 1200 ? 4 : 8); // màn hình nhỏ thì hiển thị 4 sp, to thì hiển thị 5
 
     // Các màu
     var yellow_red = ['#ff9c00', '#ec1f1f'];
@@ -343,7 +343,7 @@ function addKhungSanPham(tenKhung, color, filters, len) {
                 </div>
                 <a class="xemTatCa" onclick='filtersAjax(`+JSON.stringify(filters)+`)' style="` + borderA + `" data-tenkhung="` + tenKhung + `">
                 </a>
-              </div> <hr>`;
+              </div> <hr class="space-insearch">`;
 
 
     // thêm khung vào contain-khung
@@ -471,14 +471,14 @@ function removeAllFilters() {
 function addChoosedFilter(type, textInside) {
     var divChoosedFilter = document.getElementsByClassName('choosedFilter')[0];
     divChoosedFilter.innerHTML += (`<a onclick="filtersAjax(craeteRemoveFilters('`+type+`'))">
-        <h3>` + textInside + ` <i class="fa fa-close"></i></h3>
+        <h3 class="result-search">` + textInside + ` <i class="fa fa-close"></i></h3>
         </a>`);
 }
 
 // Thêm nhiều bộ lọc cùng lúc 
 function addAllChoosedFilter(filters) {
     // xóa tất cả bộ lọc cũ
-    $(".choosedFilter").html(`<a onclick="removeAllFilters()"><h3>Xóa bộ lọc <i class="fa fa-close"></i></h3></a>`);
+    $(".choosedFilter").html(`<a onclick="removeAllFilters()"><h3 class="result-search">Xóa bộ lọc <i class="fa fa-close"></i></h3></a>`);
     $(".choosedFilter").css("display", "");
 
     // Lưu bộ lọc mới
@@ -539,7 +539,7 @@ function alertNotHaveProduct(coSanPham) {
         thongbao.style.transitionDuration = "1s"; // hiện ra từ từ
 
     } else {
-        thongbao.style.width = "0";
+        thongbao.style.display = "none";
         thongbao.style.opacity = "0";
         thongbao.style.margin = "0";
         thongbao.style.transitionDuration = "0s"; // Ngay lâp tức biến mất

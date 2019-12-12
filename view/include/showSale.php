@@ -59,7 +59,7 @@ function showSaleProducts()
                                 </div> <!-- End khung chọn bộ lọc -->
                             
                                 <div class="choosedFilter flexContain"></div> <!-- Những bộ lọc đã chọn -->
-                                <hr>
+                              
                             
                                 <!-- Mặc định mới vào trang sẽ ẩn đi, nế có filter thì mới hiện lên -->
                                 <div class="contain-products" style="display:none">

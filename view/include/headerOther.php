@@ -44,6 +44,7 @@
         <link rel="stylesheet" href="/shop/public/css/user.css">
         <script src="/shop/public/js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="/shop/public/jsAjax/jsRegisterLogin.js"></script>
+        <script src="/shop/public/jsAjax/ajaxHome.js"></script>
         <link rel='stylesheet' href='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css'>
 <!-- <script src='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js'></script> -->
         <script src="/shop/public/lib/Jquery/Jquery.min.js"></script>
@@ -100,15 +101,15 @@
                             <!-- Begin Header Middle Right Area -->
                             <div class="col-lg-9 pl-0 ml-sm-15 ml-xs-15">
                                 <!-- Begin Header Middle Searchbox Area -->
-                                <form action="#" class="hm-searchbox">
+                                <form method="get" action="index.php" class="hm-searchbox">
                                     <select id="tags" class="nice-select select-search-category" onchange="location = this.value;">
                                         <option value="0">All</option>  
-                                                               
-                                        
+                                                            
                                     </select>
-                                    <input type="text" placeholder="Enter your search key ...">
+                                    <input name="search" type="text" placeholder="Enter your search key ...">
                                     <button class="li-btn" type="submit"><i class="fa fa-search"></i></button>
                                 </form>
+                            
                             
                                 <!-- Header Middle Searchbox Area End Here -->
                                 <!-- Begin Header Middle Right Area -->

@@ -1,7 +1,9 @@
 /* .listDonHang {
     display: none;
 } */
-
+#showImageLarge{
+    padding: 55px 0;
+}
 .infoUser table {
     border-collapse: collapse;
     margin: 0 auto;
@@ -87,8 +89,11 @@
 /* member  */
 .member {
     position: relative;
-    display: inline-block;
+    /* display: inline-block; */
 	float: right;
+}
+.member a{
+    color: #393939;
 }
 .member:hover > .menuMember{
     z-index: 20;

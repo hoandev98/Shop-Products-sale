@@ -16,7 +16,14 @@
                             <!-- Begin Header Top Right Area -->
                             <div class="col-lg-9 col-md-8">
                                 <div class="header-top-right">
-                                   <a  style="color: black; float: right;" class="my-account" href="/shop/view/login-register.php">My Account</a>
+                                <div class="member">
+                                <a onclick="checkTaiKhoan()" id="btnTaiKhoan"  href="/shop/view/login-register.php"><i class="fa fa-user"></i>_My Account </a>
+      
+                                <div class="menuMember hide">
+                                <a href="/shop/view/user.php">Trang người dùng</a>
+                                <a onclick="checkDangXuat();">Đăng xuất</a>
+                                </div> 
+                                </div>
                                 </div>
                             </div>
                             <!-- Header Top Right Area End Here -->
@@ -40,13 +47,12 @@
                             <!-- Begin Header Middle Right Area -->
                             <div class="col-lg-9 pl-0 ml-sm-15 ml-xs-15">
                                 <!-- Begin Header Middle Searchbox Area -->
-                                <form action="#" class="hm-searchbox">
+                                <form method="get" action="index.php" class="hm-searchbox">
                                     <select id="tags" class="nice-select select-search-category" onchange="location = this.value;">
                                         <option value="0">All</option>  
-                                                               
-                                        
+                                                            
                                     </select>
-                                    <input type="text" placeholder="Enter your search key ...">
+                                    <input name="search" type="text" placeholder="Enter your search key ...">
                                     <button class="li-btn" type="submit"><i class="fa fa-search"></i></button>
                                 </form>
                             
