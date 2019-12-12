@@ -33,29 +33,47 @@ function showListProducts(data) {
         var price = data[i].DonGia;
         var rate = parseFloat(data[i].SoSao);
         var img = data[i].HinhAnh;
-        
+        var classGiamgia = "";
+        switch (data[i].KM.LoaiKM) {
+            case "GiamGia":
+                classGiamgia = "giamgia";
+                break;
+            case "GiaReOnline":
+                classGiamgia = "giare";
+                break;
+            case "TraGop":
+                classGiamgia = "tragop";
+                break;
+            case "MoiRaMat":
+                classGiamgia = "moiramat";
+                break;
+            default:
+                break;
+        }
         var product = `
             <div class="col-lg-4 col-md-4 col-sm-6 mt-40">
                 <div class="single-product-wrap">
+                    
                     <div class="product-image">
-                        <a href="single-product.php">
+                        <a href="single-product-sale.php?id=${id}">
                             <img src="${img}" alt="Li's Product Image">
                         </a>
-                        <span class="sticker">New</span>
                     </div>
                     <div class="product_desc">
                         <div class="product_desc_info">
+                        <label class="${classGiamgia}">${data[i].KM.TenKM}</label>
                             <div class="product-review">
-                                <h5 class="manufacturer">
+                                <h5 class="manufacturer" style="visibility: hidden;">
                                     <a href="#">Graphic Corner</a>
                                 </h5>
                                 <div class="rating-box">
                                     <ul class="rating">
-                                        ${convertToRate(rate)}
+                                        ${convertToRate(rate)} 
+                                        <span class="sodanhgia">(${data[i].SoDanhGia})</span>
                                     </ul>
                                 </div>
                             </div>
-                            <h4><a class="product_name" href="single-product.php">${name}</a></h4>
+                            <h4><a class="product_name" id="${id}" href="single-product-sale.php?id=${id}">${name}</a></h4>
                             <div class="price-box">
                                 <span class="new-price">$${price}</span>
                             </div>

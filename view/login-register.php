@@ -1,4 +1,5 @@
 <?php include "./include/headerOther.php" ?>
+
             <!-- Header Area End Here -->
             <!-- Begin Li's Breadcrumb Area -->
             <div class="breadcrumb-area">
@@ -13,22 +14,23 @@
             </div>
             <!-- Li's Breadcrumb Area End Here -->
             <!-- Begin Login Content Area -->
+            <div class="containTaikhoan">
             <div class="page-section mb-60">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 col-md-12 col-xs-12 col-lg-6 mb-30">
                             <!-- Login Form s-->
-                            <form action="#" >
+                            <form action=""  method="post" name="formDangNhap" onsubmit="return checkDangNhap();" >
                                 <div class="login-form">
                                     <h4 class="login-title">Login</h4>
                                     <div class="row">
                                         <div class="col-md-12 col-12 mb-20">
-                                            <label>Email Address*</label>
-                                            <input class="mb-0" type="email" placeholder="Email Address">
+                                            <label>User Name*</label>
+                                            <input name="username" id="username" class="mb-0" type="text" placeholder="User Name">
                                         </div>
                                         <div class="col-12 mb-20">
                                             <label>Password</label>
-                                            <input class="mb-0" type="password" placeholder="Password">
+                                            <input  name="pass" id="pass" class="mb-0" type="password" placeholder="Password">
                                         </div>
                                         <div class="col-md-8">
                                             <div class="check-box d-inline-block ml-0 ml-md-2 mt-10">
@@ -47,32 +49,37 @@
                             </form>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-6 col-xs-12">
-                            <form action="#">
+                            <form action="" method="post" name="formDangKy" onsubmit="return checkDangKy();">
                                 <div class="login-form">
                                     <h4 class="login-title">Register</h4>
                                     <div class="row">
                                         <div class="col-md-6 col-12 mb-20">
                                             <label>First Name</label>
-                                            <input class="mb-0" type="text" placeholder="First Name">
+                                            <input name="ten" id="ten" required  class="mb-0" type="text" placeholder="First Name">
                                         </div>
                                         <div class="col-md-6 col-12 mb-20">
                                             <label>Last Name</label>
-                                            <input class="mb-0" type="text" placeholder="Last Name">
+                                            <input name="ho" id="ho" required class="mb-0" type="text" placeholder="Last Name">
+                                        </div>
+                                        <div class="col-md-12 mb-20">
+                                            <label>Phone*</label>
+                                            <input name="sdt" id="sdt" class="mb-0" type="number" placeholder="Phone">
                                         </div>
                                         <div class="col-md-12 mb-20">
                                             <label>Email Address*</label>
-                                            <input class="mb-0" type="email" placeholder="Email Address">
+                                            <input  name="email" id="email" class="mb-0" type="email" placeholder="Email Address">
                                         </div>
-                                        <div class="col-md-6 mb-20">
+                                        <div class="col-md-12 mb-20">
+                                            <label>User Name</label>
+                                            <input   name="newUser" id="newUser" class="mb-0" type="text" placeholder="User Name">
+                                        </div>
+                                        <div class="col-md-12 mb-20">
                                             <label>Password</label>
-                                            <input class="mb-0" type="password" placeholder="Password">
+                                            <input name="newPass" id="newPass" class="mb-0" type="password" placeholder="Password">
                                         </div>
-                                        <div class="col-md-6 mb-20">
-                                            <label>Confirm Password</label>
-                                            <input class="mb-0" type="password" placeholder="Confirm Password">
-                                        </div>
+                                    
                                         <div class="col-12">
-                                            <button class="register-button mt-0">Register</button>
+                                            <button type="submit" class="register-button mt-0">Register</button>
                                         </div>
                                     </div>
                                 </div>
@@ -80,6 +87,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
             <!-- Login Content Area End Here -->
             <!-- Begin Footer Area -->

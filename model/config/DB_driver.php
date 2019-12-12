@@ -30,7 +30,7 @@ class DB_driver
     }
 
     // Hàm Insert
-    function insert($table, $data)
+    function insert($tablgite, $data)
     {
         $this->connect();
         $value_list = '';

@@ -41,8 +41,13 @@
         <!-- Responsive CSS -->
         <link rel="stylesheet" href="/shop/public/css/responsive.css">
         <!-- Modernizr js -->
+        <link rel="stylesheet" href="/shop/public/css/user.css">
         <script src="/shop/public/js/vendor/modernizr-2.8.3.min.js"></script>
-
+        <script src="/shop/public/jsAjax/jsRegisterLogin.js"></script>
+        <link rel='stylesheet' href='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css'>
+<!-- <script src='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js'></script> -->
+        <script src="/shop/public/lib/Jquery/Jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
         <link rel="stylesheet" type="text/css" href="/shop/public/css/shopping-cart.css">
     </head>
             
@@ -63,7 +68,15 @@
                             <!-- Begin Header Top Right Area -->
                             <div class="col-lg-9 col-md-8">
                                 <div class="header-top-right">
-                                   <a  style="color: black; float: right;" class="my-account" href="/shop/view/login-register.php">My Account</a>
+                                <div class="member">
+                                <a onclick="checkTaiKhoan()" id="btnTaiKhoan"  href="/shop/view/login-register.php"><i class="fa fa-user"></i>_My Account </a>
+      
+                                <div class="menuMember hide">
+                                <a href="/shop/view/user.php">Trang người dùng</a>
+                                <a onclick="checkDangXuat();">Đăng xuất</a>
+                                </div> 
+                                </div>
+                                <!-- <a  style="color: black; float: right;" class="my-account" href="/shop/view/login-register.php">My Account</a> -->
                                 </div>
                             </div>
                             <!-- Header Top Right Area End Here -->

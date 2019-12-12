@@ -10,12 +10,17 @@ function ready() {
     var ca = document.cookie.split(';');
     var listID = [];
     var listQuantity = [];
+    var dem = 0;
     for (var i = 0; i < ca.length; i++) {
         if (ca[i].split('=')[0].includes("name")){
             listID.push(ca[i].split('=')[0].replace("name",""));
             listQuantity.push(ca[i].split('=')[1]);
+        } else if (ca[i].split('=')[0].includes("wishlist")) {
+            dem++;
         }
     }
+    // gán wishlist
+    document.getElementById("numberWishList").innerText = dem;
     $.ajax({
         type: "POST",
         url: "/shop/controller/xulysanpham.php",
@@ -68,7 +73,7 @@ function showTableCard(data, listQuantity) {
         result += "<td class=\"quantity\">";
         result += "<label>Quantity</label>";
         result += "<div>";
-        result += "<input class=\"input-product-quantity\" value=" + listQuantity[i] + " type=\"number\">";
+        result += "<input onChange='changeQuatity(this," + data[i].SoLuong + ")' class=\"input-product-quantity\" value=" + listQuantity[i] + " type=\"number\">";
         result += "</div>";
         result += "</td>";
         result += "<td class=\"product-subtotal\"><span class=\"amount item-total\">$" + data[i].DonGia*listQuantity[i] + "</span></td>";
@@ -84,20 +89,31 @@ function showTableCard(data, listQuantity) {
     var tableContain = document.getElementById("listcard");
     var item = tableContain.getElementsByClassName("input-product-quantity");
     
-    for (var i = 0; i < item.length; i++) {
-        item[i].addEventListener('change', quantityChanged);
-    }
+    // for (var i = 0; i < item.length; i++) {
+    //     item[i].addEventListener('change', quantityChanged);
+    // }
 
     updateTotal();
 }
 
-function quantityChanged(event) {
-    var input = event.target
-    if (isNaN(input.value) || input.value <= 0) {
-        input.value = 1
+function changeQuatity(input, soluong) {
+    if (input.value <= 0) {
+        input.value = 1;
+    } else if (input.value > soluong) {
+        input.value = soluong;
+        /// san pham vuot qua ton kho
+        alert("Số lượng sản phẩm vượt quá tồn kho!");
     }
     updateTotal();
 }
+
+// function quantityChanged(event) {
+//     var input = event.target
+//     if (isNaN(input.value) || input.value <= 0) {
+//         input.value = 1
+//     }
+//     updateTotal();
+// }
 
 function updateTotal() {
     var tableContain = document.getElementById("listcard");
