@@ -71,12 +71,11 @@ class NguoiDungBUS extends DB_business
 {
     function __construct()
     {
-        $this->setTable("nguoidung", "MaND");
+        $this->setTable("NguoiDung", "MaND");
     }
 
     function add_new($data)
     {
-
         // check
         // username trung, email trung
         
