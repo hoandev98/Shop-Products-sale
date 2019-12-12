@@ -27,7 +27,7 @@ function loadJsUser(){
 function getCurrentUser(onSuccess, onFail) {
     $.ajax({
         type: "POST",
-        url: "http://localhost:88/shop/controller/xulytaikhoan.php",
+        url: "/shop/controller/xulytaikhoan.php",
         dataType: "json",
         timeout: 1500, // sau 1.5 giây mà không phản hồi thì dừng => hiện lỗi
         data: {
@@ -46,7 +46,7 @@ function getCurrentUser(onSuccess, onFail) {
 function showTaiKhoan(show) {
     var value = (show ? "block" : "none");
     var div = document.getElementsByClassName('containTaikhoan')[0];
-    div.style.display = value;
+    // div.style.display = value;
 }
 
 // Check xem có ai đăng nhập hay chưa (CurrentUser có hay chưa)
@@ -73,7 +73,7 @@ function checkDangKy() {
     var pass = document.getElementById('newPass').value;
 
     $.ajax({
-        url: "http://localhost:88/shop/controller/xulytaikhoan.php",
+        url: "/shop/controller/xulytaikhoan.php",
         type: "post",
         dataType: "json",
         timeout: 1500,
@@ -119,7 +119,7 @@ function checkDangNhap() {
     var passWord = document.getElementById('pass').value;
 
     $.ajax({
-        url: "http://localhost:88/shop/controller/xulytaikhoan.php",
+        url: "/shop/controller/xulytaikhoan.php",
         type: "post",
         dataType: "json",
         timeout: 1500,
@@ -139,7 +139,7 @@ function checkDangNhap() {
                 })
                 .then((result) => {
                     capNhatThongTinUser();
-                    window.location.replace("http://localhost:88/shop/index.php");
+                    window.location.replace("/shop/index.php");
                     // // showTaiKhoan(false);
                     // console.log(1800);
                 });
@@ -176,7 +176,7 @@ function checkDangXuat(onSuccess) {
         if (result.value) {
             $.ajax({
                 type: "POST",
-                url: "http://localhost:88/shop/controller/xulytaikhoan.php",
+                url: "/shop/controller/xulytaikhoan.php",
                 dataType: "text",
                 timeout: 1500,
                 data: {

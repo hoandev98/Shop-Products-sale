@@ -21,7 +21,7 @@
 
 //     $.ajax({
 //         type: "POST",
-//         url: "http://localhost:88/shop/controller/xulysanpham.php",
+//         url: "/shop/controller/xulysanpham.php",
 //         dataType: "json",
 //         timeout: 3500, // sau 1.5 giây mà không phản hồi thì dừng => hiện lỗi
 //         data: {
@@ -48,7 +48,7 @@
 //     var divChiTiet = document.getElementById('contentProductDetail');
 //     document.title = p.TenSP + ' - Lipuma Shop';
 //     document.getElementById("nameProducts").innerHTML += p.TenSP;
-//     document.getElementById("product-details-ref").innerHTML += "reference: " + `<a href='http://localhost:88/shop/index.php?search=` + p.LSP.TenLSP +  `'>`+p.LSP.TenLSP +`</a>` ;
+//     document.getElementById("product-details-ref").innerHTML += "reference: " + `<a href='/shop/index.php?search=` + p.LSP.TenLSP +  `'>`+p.LSP.TenLSP +`</a>` ;
 //     console.log(p.SoSao);
 //     // Cập nhật sao
 //     var rating = "";

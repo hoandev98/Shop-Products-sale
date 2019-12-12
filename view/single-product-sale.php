@@ -1,6 +1,6 @@
 <?php include "./include/headerOther.php" ?>
-<script src="http://localhost:88/shop/public/jsAjax/productDetail.js"></script>
-<script src="http://localhost:88/shop/public/jsAjax/dungchung.js"></script>
+<script src="/shop/public/jsAjax/productDetail.js"></script>
+<script src="/shop/public/jsAjax/dungchung.js"></script>
             <!-- Header Area End Here -->
             <!-- Begin Li's Breadcrumb Area -->
             <div class="breadcrumb-area">
