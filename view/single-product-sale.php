@@ -54,7 +54,7 @@
                                         </ul>
                                     </div>
                                     <div id="area_price" class="price-box pt-20">
-                                        <!-- <span id="newPrince" class="new-price new-price-2">$2000.98</span> -->
+                                        <span id="newPrince" class="new-price new-price-2">$2000.98</span> -->
                                     </div>
                                     <div class="countersection">
                                         <div class="li-countdown product-sale-countdown"></div>
@@ -66,7 +66,7 @@ IPhone 11 64GB version 1 High-end smartphone Sim, beautiful appearance and stron
 
 <br>IPhone 11 64GB is warranted for 12 months at Vietnam Mobile. The system also offers special warranty packages such as falls, water drops at extremely affordable costs. Especially, there is the Trade - In old collection, which is renewed and renewed without compensation, customers will feel secure and satisfied when shopping at Mobile Vietnam.</span>
                                         </p>
-                                    </div> -->
+                                    </div>
                                     <!-- <div class="product-variants">
                                         <div class="produt-variants-size">
                                             <label>Dimension</label>
@@ -150,7 +150,7 @@ IPhone 11 64GB version 1 High-end smartphone Sim, beautiful appearance and stron
                                     <div id="commentProduct"></div>
 
                                     <div class="review-btn">
-                                        <a class="review-links" href="#" data-toggle="modal" data-target="#mymodal">Write Your Review!</a>
+                                        <a class="review-links" onClick="writeReview()" href="#" data-toggle="modal" data-target="#mymodal">Write Your Review!</a>
                                     </div>
                                     <!-- Begin Quick View | Modal Area -->
                                     <div class="modal fade modal-wrapper" id="mymodal" >
@@ -169,7 +169,7 @@ IPhone 11 64GB version 1 High-end smartphone Sim, beautiful appearance and stron
                                                                             <p class="your-opinion">
                                                                                 <label>Your Rating</label>
                                                                                 <span>
-                                                                                    <select class="star-rating">
+                                                                                    <select id="starFeedback" class="star-rating">
                                                                                       <option value="1">1</option>
                                                                                       <option value="2">2</option>
                                                                                       <option value="3">3</option>
@@ -183,19 +183,9 @@ IPhone 11 64GB version 1 High-end smartphone Sim, beautiful appearance and stron
                                                                                 <textarea id="feedback" name="comment" cols="45" rows="8" aria-required="true"></textarea>
                                                                             </p>
                                                                             <div class="feedback-input">
-                                                                                <p class="feedback-form-author">
-                                                                                    <label for="author">Name<span class="required">*</span>
-                                                                                    </label>
-                                                                                    <input id="author" name="author" value="" size="30" aria-required="true" type="text">
-                                                                                </p>
-                                                                                <p class="feedback-form-author feedback-form-email">
-                                                                                    <label for="email">Email<span class="required">*</span>
-                                                                                    </label>
-                                                                                    <input id="email" name="email" value="" size="30" aria-required="true" type="text">
-                                                                                </p>
                                                                                 <div class="feedback-btn pb-15">
-                                                                                    <a href="#" class="close" data-dismiss="modal" aria-label="Close">Close</a>
-                                                                                    <a href="#">Submit</a>
+                                                                                    <a style="cursor: pointer;" href="#" class="close" data-dismiss="modal" aria-label="Close">Close</a>
+                                                                                    <a style="cursor: pointer;" data-dismiss="modal" onClick="postReview()">Submit</a>
                                                                                 </div>
                                                                             </div>
                                                                         </form>

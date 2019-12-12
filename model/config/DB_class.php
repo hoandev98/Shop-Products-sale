@@ -181,4 +181,9 @@ class DanhGiaBUS extends DB_business
         $dsdg = (new DanhGiaBUS())->get_list($sql);
         return $dsdg;
     }
+
+    function add_new($data)
+    {
+        parent::add_new($data);
+    }
 }

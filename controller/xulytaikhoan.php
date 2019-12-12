@@ -65,22 +65,23 @@
 
 		$status = (new NguoiDungBUS())->add_new(array(
             "MaND" => "",
-            "Ten" => $xuli_ten,
 			"Ho" => $xuli_ho,
+            "Ten" => $xuli_ten,
+            "GioiTinh" => '',
 			"SDT" => $xuli_sdt,
 			"Email" => $xuli_email,
-			// "DiaChi" => $xuli_diachi,
+			"DiaChi" => '',
 			"TaiKhoan" => $xuli_newUser,
 			"MatKhau" => $xuli_newPass,
 			"MaQuyen" => 1,
 			"TrangThai" => 1
-		));
+        ));
 
 		// đăng nhập vào ngay
 		$sql = "SELECT * FROM nguoidung WHERE TaiKhoan='$xuli_newUser' AND MatKhau='$xuli_newPass' AND MaQuyen=1 AND TrangThai=1";
 		$result = (new DB_driver())->get_row($sql);
 
-		if($result != false){
+        if($result != false){
 		    $_SESSION['currentUser']=$result;
 		    die (json_encode($result)); 
 		}  

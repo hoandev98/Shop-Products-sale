@@ -139,6 +139,7 @@ function checkDangNhap() {
                 })
                 .then((result) => {
                     capNhatThongTinUser();
+
                     window.location.replace("/shop/index.php");
                     // // showTaiKhoan(false);
                     // console.log(1800);

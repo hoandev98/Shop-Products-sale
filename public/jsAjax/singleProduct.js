@@ -109,22 +109,21 @@ function loadComment(id) {
         type: "POST",
         url: "/shop/controller/xulydanhgia.php",
         dataType: "json",
-        timeout: 1500,
         data: {
-            request: "getbyid",
-            id: id
+            request: 'getbyidsp',
+            idsp: id
         },
         success: function (data) {
+            console.log(data);
             showComment(data);
         },
         error: function (e) {
-            console.log("Fail");
+            console.log("FailComment");
         }
     })
 }
 
 function showComment(data) {
-    console.log(data);
     result = ``;
     for (var i = 0; i < data.length; i++) {
         result += `
@@ -147,4 +146,96 @@ function showComment(data) {
     }
 
     document.getElementById("commentProduct").innerHTML = result;
+}
+
+function writeReview() {
+    $.ajax({
+        type: "POST",
+        url: "/shop/controller/xulytaikhoan.php",
+        dataType: "json",
+        timeout: 1500, // sau 1.5 giây mà không phản hồi thì dừng => hiện lỗi
+        data: {
+            request: "getCurrentUser"
+        },
+        success: function(data, status, xhr) {
+            // if(onSuccess) onSuccess(data);
+            if (data) {
+                console.log(data);
+            } else {
+                alert("Bạn chưa đănh nhập mời bạn đăng nhập!");
+                window.location.replace("login-register.php");
+            }
+        },
+        error: function(e) {
+            // if(onFail) onFail(e);
+            alert("Bạn chưa đănh nhập mời bạn đăng nhập!");
+            window.location.replace("login-register.php");
+        }
+    })
+}
+
+function postReview() {
+    var numStar = document.getElementById("starFeedback").value;
+    var feedback = document.getElementById("feedback").value;
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var idSp = url.searchParams.get("id");
+    var idNd = "";
+    $.ajax({
+        type: "POST",
+        url: "/shop/controller/xulytaikhoan.php",
+        dataType: "json",
+        timeout: 1500, // sau 1.5 giây mà không phản hồi thì dừng => hiện lỗi
+        data: {
+            request: "getCurrentUser"
+        },
+        success: function(data, status, xhr) {
+            // if(onSuccess) onSuccess(data);
+            if (data) {
+                saveReview(idSp, data.MaND, numStar, feedback);
+            } else {
+                alert("Bạn chưa đănh nhập mời bạn đăng nhập!");
+                window.location.replace("login-register.php");
+            }
+        },
+        error: function(e) {
+            // if(onFail) onFail(e);
+            alert("Bạn chưa đănh nhập mời bạn đăng nhập!");
+            window.location.replace("login-register.php");
+        }
+    })
+    
+}
+
+function saveReview(idSp, idNd, numStar, feedback) {
+    var d = new Date();
+
+    var dformat = [d.getFullYear(),
+        d.getMonth()+1,
+        d.getDate()
+        ].join('-')+' '+
+       [d.getHours(),
+        d.getMinutes(),
+        d.getSeconds()].join(':');
+
+    $.ajax({
+        type: "POST",
+        url: "/shop/controller/xulydanhgia.php",
+        dataType: "json",
+        timeout: 1500, // sau 1.5 giây mà không phản hồi thì dừng => hiện lỗi
+        data: {
+            request: "save",
+            masp: idSp,
+            mand: idNd,
+            sosao: numStar,
+            binhluan: feedback,
+            ngay: dformat
+        },
+        success: function(data) {
+            loadSingleProduct();
+        },
+        error: function(e) {
+            console.log("fail");
+        }
+    })
 }
