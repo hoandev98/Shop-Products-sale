@@ -8,7 +8,7 @@
                             <div class="col-lg-3 col-md-4">
                                 <div class="header-top-left">
                                     <ul class="phone-wrap">
-                                        <li><span>Hotline:</span><a href="#">0377.601.559</a></li>
+                                        <li><span>Hỗ trợ:</span><a href="#">0377.601.559</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -16,7 +16,7 @@
                             <!-- Begin Header Top Right Area -->
                             <div class="col-lg-9 col-md-8">
                                 <div class="header-top-right">
-                                   <a  style="color: black; float: right;" class="my-account" href="/shop/view/login-register.php">My Account</a>
+                                   <a  style="color: black; float: right;" class="my-account" href="/shop/view/login-register.php">Tài khoản của tôi</a>
                                 </div>
                             </div>
                             <!-- Header Top Right Area End Here -->
@@ -42,11 +42,11 @@
                                 <!-- Begin Header Middle Searchbox Area -->
                                 <form action="#" class="hm-searchbox">
                                     <select id="tags" class="nice-select select-search-category" onchange="location = this.value;">
-                                        <option value="0">All</option>  
+                                        <option value="0">Tất cả</option>  
                                                                
                                         
                                     </select>
-                                    <input type="text" placeholder="Enter your search key ...">
+                                    <input type="text" placeholder="Nhập từ khóa tìm kiếm ...">
                                     <button class="li-btn" type="submit"><i class="fa fa-search"></i></button>
                                 </form>
                             
@@ -75,13 +75,13 @@
                                             <div class="minicart" style="z-index: 1001">
                                                 <div class="show-minicard"></div>
                                               
-                                                <p class="minicart-total">SUBTOTAL: <span class="subtotal-minicard">$0.00</span></p>
+                                                <p class="minicart-total">Tổng thanh toán: <span class="subtotal-minicard">$0.00</span></p>
                                                 <div class="minicart-button">
                                                     <a href="/shop/view/shopping-cart.php" class="li-button li-button-fullwidth li-button-dark">
-                                                        <span>View Full Cart</span>
+                                                        <span>Xem hết giỏ hàng</span>
                                                     </a>
                                                     <a href="/shop/view/checkout.php" class="li-button li-button-fullwidth">
-                                                        <span>Checkout</span>
+                                                        <span>Kiểm tra</span>
                                                     </a>
                                                 </div>
                                             </div>
@@ -105,18 +105,18 @@
                                 <div class="hb-menu">
                                     <nav>
                                         <ul>
-                                            <li class="homepage"><a href="/shop/index.php">Home</a>
+                                            <li class="homepage " style="font-weight:bold"><a href="/shop/index.php">Trang chủ</a>
                                              
                                             </li>
-                                            <li class="megamenu-holder"><a href="/shop/view/shop.php">Shop</a>
+                                            <li class="megamenu-holder"><a href="/shop/view/shop.php">Cửa hàng</a>
                                     
                                             </li>
                                             <li class="dropdown-holder"><a href="/shop/view/blog.php">Blog</a>
                         
                                             </li>
                     
-                                            <li><a href="/shop/view/about-us.php">About Us</a></li>
-                                            <li style="padding-left:20px ;"><a href="/shop/view/contact.php">Contact</a></li>
+                                            <li><a href="/shop/view/about-us.php">Giới thiệu</a></li>
+                                            <li style="padding-left:20px ;"><a href="/shop/view/contact.php">Liên hệ</a></li>
                                             
                                         </ul>
                                     </nav>

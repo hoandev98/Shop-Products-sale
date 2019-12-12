@@ -10,9 +10,9 @@ function showSaleProducts()
                         <div class="col-lg-12">
                             <div class="li-product-tab">
                                 <ul class="nav li-product-menu">
-                                    <li><a class="active" data-toggle="tab" href="#li-new-product"><span>Flash Sale</span></a></li>
-                                    <li><a data-toggle="tab" href="#li-bestseller-product"><span>Bestseller</span></a></li>
-                                    <li><a data-toggle="tab" href="#li-featured-product"><span>Featured Products</span></a></li>
+                                    <li><a class="active" data-toggle="tab" href="#li-new-product"><span>Giảm Giá Nhanh</span></a></li>
+                                    <li><a data-toggle="tab" href="#li-bestseller-product"><span>Bán Chạy Nhất</span></a></li>
+                                    <li><a data-toggle="tab" href="#li-featured-product"><span>Phân Loại Sản Phẩm</span></a></li>
                                 </ul>               
                             </div>
                           

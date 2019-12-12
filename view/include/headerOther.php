@@ -60,7 +60,7 @@
                             <div class="col-lg-3 col-md-4">
                                 <div class="header-top-left">
                                     <ul class="phone-wrap">
-                                        <li><span>Hotline:</span><a href="#">0377.601.559</a></li>
+                                        <li><span>Liên hệ:</span><a href="#">0377.601.559</a></li>
                                     </ul>
                                 </div>
                             </div>
