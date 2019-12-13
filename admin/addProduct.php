@@ -21,7 +21,11 @@
 
         if ($_FILES['fileToUpload']['error'] > 0)
         {
-            echo 'File Upload Bị Lỗi';
+          $result = mysqli_query($mysqli, "INSERT INTO sanpham (MaLSP,TenSP,DonGia,SoLuong,MaKM,Details,SoSao,SoDanhGia,TrangThai) VALUES('$MaLSP','$TenSP','$DonGia','$SoLuong','$MaKM','$Details','$SoSao','$SoDanhGia','$TrangThai')");
+          //redirectig to the display page.
+          
+          var_dump($result);
+          // header("Location: manageProduct.php");
         }
         else{
           // Upload file

@@ -24,9 +24,10 @@ $sql = "UPDATE nguoidung SET Ho='$Ho',Ten='$Ten',GioiTinh='$GioiTinh',SDT='$SDT'
     
 var_dump($sql);//updating the table
 		$result = mysqli_query($mysqli, $sql);
+var_dump($result);
 	
 		//redirectig to the display page. In our case, it is index.php
-		// header("Location: tables.php");
+		header("Location: tables.php");
 	
 }
 ?>
@@ -37,7 +38,6 @@ $MaND = $_GET['id'];
 
 //selecting data associated with this particular id
 $result = mysqli_query($mysqli, "SELECT * FROM nguoidung WHERE MaND=$MaND");
-
 $res = mysqli_fetch_array($result);
 
 	$Ho = $res['Ho'];
@@ -190,11 +190,13 @@ $res = mysqli_fetch_array($result);
             <?php  
                 switch ($GioiTinh) {
                   case '':
-                    ?><option selected value="">Lựa chọn</option><option value="Nam">Nam</option> <option value="Nữ">Nữ</option><?php
+                    ?><option selected value="">Lựa chọn</option>
+                      <option value="Nam">Nam</option> 
+                      <option value="Nữ">Nữ</option><?php
                     break;
               
                   case 'Nam':
-                    ?><option selected value="Nam"></option> <option selected value="Nữ"></option><?php
+                    ?><option selected value="Nam">Nam</option> <option selected value="Nữ">Nữ</option><?php
                     break;
               
                   case 'Nữ':
@@ -234,7 +236,7 @@ $res = mysqli_fetch_array($result);
 						<label class="form-control-label"> ma quyen</label>
             <select class="browser-default custom-select" name="MaQuyen">
 
-            <option selected value=<?php $MaQuyen?>><?php echo $MQ= ($MaQuyen=="1")?'User':'Admin';?></option>
+            <option selected value=<?php echo $MaQuyen?>><?php echo $MQ= ($MaQuyen=="1")?'User':'Admin';?></option>
               <option value="1">User</option>
               <option value="2">Admin</option>
             </select>

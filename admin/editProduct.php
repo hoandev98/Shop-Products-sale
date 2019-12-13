@@ -8,43 +8,33 @@
     {	
 
     $MaSP = mysqli_real_escape_string($mysqli, $_POST['MaSP']);
-    
-        $MaLSP = mysqli_real_escape_string($mysqli, $_POST['MaLSP']);
-        $TenSP = mysqli_real_escape_string($mysqli, $_POST['TenSP']);
-        $DonGia = mysqli_real_escape_string($mysqli, $_POST['DonGia']);
-        $SoLuong = mysqli_real_escape_string($mysqli, $_POST['SoLuong']);
-        // $HinhAnh = mysqli_real_escape_string($mysqli, $_POST['HinhAnh']);	
-        $MaKM = mysqli_real_escape_string($mysqli, $_POST['MaKM']);	
-        $Details = mysqli_real_escape_string($mysqli, $_POST['Details']);	
-        $SoSao = mysqli_real_escape_string($mysqli, $_POST['SoSao']);	
-        $SoDanhGia = mysqli_real_escape_string($mysqli, $_POST['SoDanhGia']);	
-        $TrangThai = mysqli_real_escape_string($mysqli, $_POST['TrangThai']);	
 
-     
-	// checking empty fields
-	if(empty($TenSP)) {	
-			
-		if(empty($TenSP)) {
-			echo "<font color='red'>Ho field is empty.</font><br/>";
-		}
+    $MaLSP = mysqli_real_escape_string($mysqli, $_POST['MaLSP']);
+    $TenSP = mysqli_real_escape_string($mysqli, $_POST['TenSP']);
+    $DonGia = mysqli_real_escape_string($mysqli, $_POST['DonGia']);
+    $SoLuong = mysqli_real_escape_string($mysqli, $_POST['SoLuong']);
+    $MaKM = mysqli_real_escape_string($mysqli, $_POST['MaKM']);	
+    $Details = mysqli_real_escape_string($mysqli, $_POST['Details']);	
+    $SoSao = mysqli_real_escape_string($mysqli, $_POST['SoSao']);	
+    $SoDanhGia = mysqli_real_escape_string($mysqli, $_POST['SoDanhGia']);	
+    $TrangThai = mysqli_real_escape_string($mysqli, $_POST['TrangThai']);	
 
-	} else {	
+
     if (isset($_FILES['fileToUpload']))
     {
-        // Nếu file upload không bị lỗi,
-        // Tức là thuộc tính error > 0
-        if ($_FILES['fileToUpload']['error'] = 0)
+        //not upload file
+        if ($_FILES['fileToUpload']['error'] > 0)
         {
-          // Upload file
-          $uploadFile=move_uploaded_file($_FILES['fileToUpload']['tmp_name'], '../public/images/product/large-size/'.$_FILES['fileToUpload']['name']);
-          $HinhAnh = '/shop/public/images/product/large-size/'.$_FILES['fileToUpload']['name'];
-          $result = mysqli_query($mysqli, "UPDATE sanpham SET MaLSP='$MaLSP',TenSP='$TenSP',DonGia='$DonGia',SoLuong='$SoLuong',HinhAnh='$HinhAnh',MaKM='$MaKM',Details='$Details',SoSao='$SoSao',SoDanhGia='$SoDanhGia',TrangThai='$TrangThai' WHERE MaSP=$MaSP");
+          echo 'k File Upload ';
+          $result = mysqli_query($mysqli, "UPDATE sanpham SET MaLSP='$MaLSP',TenSP='$TenSP',DonGia='$DonGia',SoLuong='$SoLuong',MaKM='$MaKM',Details='$Details',SoSao='$SoSao',SoDanhGia='$SoDanhGia',TrangThai='$TrangThai' WHERE MaSP=$MaSP");
           //redirectig to the display page. In our case, it is index.php
           header("Location: manageProduct.php");
         }
+        // Upload file
         else{
-          echo 'k File Upload ';
-          $result = mysqli_query($mysqli, "UPDATE sanpham SET MaLSP='$MaLSP',TenSP='$TenSP',DonGia='$DonGia',SoLuong='$SoLuong',MaKM='$MaKM',Details='$Details',SoSao='$SoSao',SoDanhGia='$SoDanhGia',TrangThai='$TrangThai' WHERE MaSP=$MaSP");
+          $uploadFile=move_uploaded_file($_FILES['fileToUpload']['tmp_name'], '../public/images/product/large-size/'.$_FILES['fileToUpload']['name']);
+          $HinhAnh = '/shop/public/images/product/large-size/'.$_FILES['fileToUpload']['name'];
+          $result = mysqli_query($mysqli, "UPDATE sanpham SET MaLSP='$MaLSP',TenSP='$TenSP',DonGia='$DonGia',SoLuong='$SoLuong',HinhAnh='$HinhAnh',MaKM='$MaKM',Details='$Details',SoSao='$SoSao',SoDanhGia='$SoDanhGia',TrangThai='$TrangThai' WHERE MaSP=$MaSP");
           //redirectig to the display page. In our case, it is index.php
           header("Location: manageProduct.php");
         }
@@ -54,7 +44,7 @@
     }  
 		
 	}
-}
+
 ?>
 
 <?php
@@ -198,7 +188,6 @@ while($res = mysqli_fetch_array($result))
 					<h3 class="h4">Basic Form</h3>
 				</div>
 				<div class="card-body">
-					<p>Lorem ipsum dolor sit amet consectetur.</p>
 					<form name="form1" method="post" action="editProduct.php"  enctype="multipart/form-data">
 					<div class="row">
 					<!-- <div class="col-lg-6 form-group">       
@@ -224,7 +213,6 @@ while($res = mysqli_fetch_array($result))
 					</div>
 					<div class="col-lg-6 form-group">       
 						<label class="form-control-label">Hình ảnh</label><br/>
-            <img src="<?php echo $HinhAnh?>">
             <input type="file" name="fileToUpload" id="fileToUpload" class="form-control" value="<?php echo $HinhAnh?>">
 					</div>
 					<div class="col-lg-6 form-group">       

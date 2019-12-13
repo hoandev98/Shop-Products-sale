@@ -1,7 +1,11 @@
 <?php
   include "config.php";
+$result = mysqli_query($mysqli, 'select count(MaND) as total from nguoidung');
+// Có limit và start rồi thì truy vấn CSDL lấy danh sách tin tức
+  include "config-page.php";
+$result = mysqli_query($mysqli, "SELECT * FROM nguoidung ORDER BY MaND DESC LIMIT $start, $limit");
 
-$result = mysqli_query($mysqli, "SELECT * FROM nguoidung ORDER BY MaND DESC"); 
+// $result = mysqli_query($mysqli, "SELECT * FROM nguoidung ORDER BY MaND DESC"); 
 
 
 ?>
@@ -117,8 +121,8 @@ $result = mysqli_query($mysqli, "SELECT * FROM nguoidung ORDER BY MaND DESC");
                       <h3 class="h4">Quan ly nguoi dung</h3>
                     </div>
                     <div class="card-body">
-                      <div class="table-responsive" id="user_data">
-                
+                    <div class="table-responsive" id="user_data">
+
                       <table class="table">
                           <thead>
                             <tr>
@@ -138,12 +142,15 @@ $result = mysqli_query($mysqli, "SELECT * FROM nguoidung ORDER BY MaND DESC");
                           </thead>
                           <tbody>
                           <?php 
-                            
-                            if(isset($_POST['delete'])) { 
-                              $MaND = $_POST["mand"];
-                              $delete = mysqli_query($mysqli, "UPDATE nguoidung SET TrangThai='0' WHERE MaND=$MaND");
-                              echo("<meta http-equiv='refresh' content='0'>");
-                            } 
+                           
+  
+                          
+                          if(isset($_POST['delete'])) { 
+                            $MaND = $_POST["mand"];
+                            $delete = mysqli_query($mysqli, "UPDATE nguoidung SET TrangThai='0' WHERE MaND=$MaND");
+                            echo("<meta http-equiv='refresh' content='0'>");
+                          } 
+
                             while($res = mysqli_fetch_array($result)) { 		
                               echo'
                               <tr>
@@ -172,6 +179,31 @@ $result = mysqli_query($mysqli, "SELECT * FROM nguoidung ORDER BY MaND DESC");
 
                             }
                             echo'</table> ';
+                            if ($current_page > 1 && $total_page > 1){
+                              echo '<ul class="pagination-box pt-xs-20 pb-xs-15">
+                              <li> <a href="tables.php?page='.($current_page-1).'" class="Previous"><i class="fa fa-chevron-left"></i>Prev</a> | ';
+                          }
+               
+                          // Lặp khoảng giữa
+                          for ($i = 1; $i <= $total_page; $i++){
+                              // Nếu là trang hiện tại thì hiển thị thẻ span
+                              // ngược lại hiển thị thẻ a
+                              if ($i == $current_page){
+                                  echo '<li class="active"><a href="tables.php?page='.$current_page.'">'.$i.'</a></li>';
+                              }
+                              else{
+                                  echo '<li><a href="tables.php?page='.$i.'">'.$i.'</a> </li>';
+                              }
+                          }
+               
+                          // nếu current_page < $total_page và total_page > 1 mới hiển thị nút prev
+                          if ($current_page < $total_page && $total_page > 1){
+                              echo '<li>
+                              <a href="tables.php?page='.($current_page+1).'" class="Next">Next<i class="fa fa-chevron-right"></i></a> 
+                              </li> 
+                              </ul>';
+                          }
+
                             ?>
                           </tbody>
                         </table>
