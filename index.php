@@ -109,7 +109,7 @@ session_start(); ?>
         <!-- Venobox -->
         <script src="public/js/venobox.min.js"></script>
         <!-- Nice Select js -->
-        <script src="js/jquery.nice-select.min.js"></script>
+        <script src="public/js/jquery.nice-select.min.js"></script>
         <!-- ScrollUp js -->
         <script src="public/js/scrollUp.min.js"></script>
         <!-- Main/Activator js -->

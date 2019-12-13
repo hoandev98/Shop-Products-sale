@@ -20,7 +20,7 @@ function topBannerHome()
                                     <!-- Begin Single Slide Area -->
                                     
                                     <!-- Single Slide Area End Here -->
-                                <div class="owl-stage-outer owl-height" style="height: 475px;"><div class="owl-stage" style="transform: translate3d(-3080px, 0px, 0px); transition: all 0.25s ease 0s; width: 5390px;"><div class="owl-item cloned" style="width: 770px;"><div class="single-slide align-center-left animation-style-02 bg-2">
+                                <div class="owl-stage-outer owl-height" style="height: 475px;"><div class="owl-stage" ><div class="owl-item cloned" style="width: 770px;"><div class="single-slide align-center-left animation-style-02 bg-2">
                                         <div class="slider-progress"></div>
                                         <div class="slider-content">
                                             <h5>Sale Offer <span>Black Friday</span> This Week</h5>
