@@ -180,23 +180,23 @@ $result = mysqli_query($mysqli, "SELECT * FROM nguoidung ORDER BY MaND DESC LIMI
                             }
                             echo'</table> ';
                               echo '<ul class="pagination-box pt-xs-20 pb-xs-15">
-                              <li> <a href="tables.php?page='.($current_page-1).'" class="Previous"><i class="fa fa-chevron-left"></i>Prev</a>';
+                              <li class="li-menu"> <a href="tables.php?page='.($current_page-1).'" class="Previous"><i class="fa fa-chevron-left"></i>Prev</a>';
                
                           // Lặp khoảng giữa
                           for ($i = 1; $i <= $total_page; $i++){
                               // Nếu là trang hiện tại thì hiển thị thẻ span
                               // ngược lại hiển thị thẻ a
                               if ($i == $current_page){
-                                  echo '<li class="active"><a href="tables.php?page='.$current_page.'">'.$i.'</a></li>';
+                                  echo '<li class="li-menu" class="active"><a href="tables.php?page='.$current_page.'">'.$i.'</a></li>';
                               }
                               else{
-                                  echo '<li><a href="tables.php?page='.$i.'">'.$i.'</a> </li>';
+                                  echo '<li class="li-menu"><a href="tables.php?page='.$i.'">'.$i.'</a> </li>';
                               }
                           }
                
                           // nếu current_page < $total_page và total_page > 1 mới hiển thị nút prev
                           if ($current_page < $total_page && $total_page > 1){
-                              echo '<li>
+                              echo '<li class="li-menu">
                               <a href="tables.php?page='.($current_page+1).'" class="Next">Next<i class="fa fa-chevron-right"></i></a> 
                               </li> 
                               </ul>';

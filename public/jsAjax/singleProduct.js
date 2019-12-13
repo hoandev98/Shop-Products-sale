@@ -39,7 +39,7 @@ function showSingleProduct(data) {
 
     result2 = `
     <h2>${data.TenSP}</h2>
-    <span class="product-details-ref">Reference: ${data.LSP.TenLSP}</span>
+    <span class="product-details-ref">Loại sản phẩm: ${data.LSP.TenLSP}</span>
     <div class="rating-box pt-20">
         <ul class="rating rating-with-review-item">
             ${convertToRate(data.SoSao)}
@@ -85,6 +85,8 @@ function addToCard() {
     Swal.fire({
         type: "success",
         title: "Thêm vào giỏ hàng thành công"
+    }).then(() => {
+        window.location.replace("shop.php");
     });
 }
 
@@ -96,6 +98,8 @@ function addToWishList() {
     Swal.fire({
         type: "success",
         title: "Thêm vào danh sách yêu thích thành công"
+    }).then(() => {
+        window.location.replace("wishlist.php");
     });
 }
 
@@ -244,3 +248,4 @@ function saveReview(idSp, idNd, numStar, feedback) {
         }
     })
 }
+

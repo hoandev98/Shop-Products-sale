@@ -37,6 +37,8 @@ function ready() {
 
     // gán wishlist
     document.getElementById("numberWishList").innerText = dem;
+
+    
     $.ajax({
         type: "POST",
         url: "/shop/controller/xulysanpham.php",
