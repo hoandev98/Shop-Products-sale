@@ -62,7 +62,7 @@
                             <div class="col-lg-3 col-md-4">
                                 <div class="header-top-left">
                                     <ul class="phone-wrap">
-                                        <li><span>Hotline:</span><a href="#">0377.601.559</a></li>
+                                        <li><span>Liên hệ:</span><a href="#"> 0377.601.559</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -104,7 +104,7 @@
                                 <!-- Begin Header Middle Searchbox Area -->
                                 <form method="get" action="/shop/index.php" class="hm-searchbox">
                                     <select id="tags" class=""  onchange="window.location = this.value;">
-                                        <option class="all-first">All</option>  
+                                        <option class="all-first">Tất cả</option>  
                                                             
 </select>
                                     <input name="search" type="text" placeholder="Enter your search key ...">

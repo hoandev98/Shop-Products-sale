@@ -259,7 +259,7 @@ function checkDangXuat(onSuccess) {
 function capNhatThongTinUser() {
     getCurrentUser((data) => {
         if(!data) {
-            document.getElementById("btnTaiKhoan").innerHTML = '<i class="fa fa-user"></i> _My Account';
+            document.getElementById("btnTaiKhoan").innerHTML = '<i class="fa fa-user"></i> _Tài khoản của bạn';
             document.getElementsByClassName("menuMember")[0].classList.add('hide');
 
         } else {
