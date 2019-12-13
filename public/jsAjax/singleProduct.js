@@ -168,13 +168,13 @@ function writeReview() {
             if (data) {
                 console.log(data);
             } else {
-                alert("Bạn chưa đăng nhập mời bạn đăng nhập!");
+                alert("Bạn chưa đăng nhập, chuyển đến đăng nhập ngay!");
                 window.location.replace("login-register.php");
             }
         },
         error: function(e) {
             // if(onFail) onFail(e);
-            alert("Bạn chưa đănh nhập mời bạn đăng nhập!");
+            alert("Bạn chưa đăng nhập, chuyển đến đăng nhập ngay!");
             window.location.replace("login-register.php");
         }
     })
@@ -200,13 +200,13 @@ function postReview() {
             if (data) {
                 saveReview(idSp, data.MaND, numStar, feedback);
             } else {
-                alert("Bạn chưa đănh nhập mời bạn đăng nhập!");
+                alert("Bạn chưa đăng nhập mời bạn đăng nhập!");
                 window.location.replace("login-register.php");
             }
         },
         error: function(e) {
             // if(onFail) onFail(e);
-            alert("Bạn chưa đănh nhập mời bạn đăng nhập!");
+            alert("Bạn chưa đăng nhập mời bạn đăng nhập!");
             window.location.replace("login-register.php");
         }
     })

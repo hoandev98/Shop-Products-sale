@@ -1,5 +1,4 @@
 <?php $row = mysqli_fetch_assoc($result);
-var_dump($row);
 
 $total_records = $row['total'];
  

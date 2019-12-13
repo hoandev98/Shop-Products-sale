@@ -38,12 +38,12 @@
 /* 05. Main Slider Activision
 /*----------------------------------------*/
 	$(".slider-active").owlCarousel({
-		loop: true,
+		loop: false,
 		margin: 0,
 		nav: true,
 		autoplay: true,
 		items: 1,
-		autoplayTimeout: 10000,
+		autoplayTimeout: 1000000,
 		navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
 		dots: true,
 		autoHeight: true,
@@ -57,7 +57,7 @@
 		nav: true,
 		dots: false,
 		autoplay: false,
-		autoplayTimeout: 5000,
+		autoplayTimeout: 500000,
 		navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
 		item: 5,
 		responsive: {

@@ -22,9 +22,7 @@
      
 $sql = "UPDATE nguoidung SET Ho='$Ho',Ten='$Ten',GioiTinh='$GioiTinh',SDT='$SDT',Email='$Email',TaiKhoan='$TaiKhoan',MatKhau='$MatKhau',MaQuyen='$MaQuyen',TrangThai='$TrangThai' WHERE MaND=$MaND";
     
-var_dump($sql);//updating the table
 		$result = mysqli_query($mysqli, $sql);
-var_dump($result);
 	
 		//redirectig to the display page. In our case, it is index.php
 		header("Location: tables.php");

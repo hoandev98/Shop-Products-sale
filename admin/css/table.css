@@ -9,3 +9,17 @@
     left: 40%;
     background-color: #fff;
 }
+
+li {
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+}
+
+li a i {
+    margin-left: 0px;
+}
+
+ul {
+    margin-left: 5px;
+}

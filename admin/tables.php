@@ -179,10 +179,8 @@ $result = mysqli_query($mysqli, "SELECT * FROM nguoidung ORDER BY MaND DESC LIMI
 
                             }
                             echo'</table> ';
-                            if ($current_page > 1 && $total_page > 1){
                               echo '<ul class="pagination-box pt-xs-20 pb-xs-15">
-                              <li> <a href="tables.php?page='.($current_page-1).'" class="Previous"><i class="fa fa-chevron-left"></i>Prev</a> | ';
-                          }
+                              <li> <a href="tables.php?page='.($current_page-1).'" class="Previous"><i class="fa fa-chevron-left"></i>Prev</a>';
                
                           // Lặp khoảng giữa
                           for ($i = 1; $i <= $total_page; $i++){
