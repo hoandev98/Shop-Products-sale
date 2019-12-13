@@ -41,8 +41,7 @@
 	function dangNhap() {
 		$taikhoan=$_POST['data_username'];
 		$matkhau=$_POST['data_pass'];
-		$matkhau=$matkhau;
-		
+		$matkhau=md5($matkhau);
 
 		$sql = "SELECT * FROM nguoidung WHERE TaiKhoan='$taikhoan' AND MatKhau='$matkhau' AND MaQuyen=1 AND TrangThai=1";
 		$result = (new DB_driver())->get_row($sql);
@@ -61,16 +60,16 @@
 		$xuli_email=$_POST['data_email'];
 		$xuli_newUser=$_POST['data_newUser'];
 		$xuli_newPass=$_POST['data_newPass'];
-		// $xuli_newPass=md5($xuli_newPass);
+		$xuli_newPass=md5($xuli_newPass);
 
 		$status = (new NguoiDungBUS())->add_new(array(
-            "MaND" => "",
+            // "MaND" => ,
 			"Ho" => $xuli_ho,
             "Ten" => $xuli_ten,
             "GioiTinh" => '',
 			"SDT" => $xuli_sdt,
 			"Email" => $xuli_email,
-			"DiaChi" => '',
+			// "DiaChi" => '',
 			"TaiKhoan" => $xuli_newUser,
 			"MatKhau" => $xuli_newPass,
 			"MaQuyen" => 1,
