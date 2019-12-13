@@ -1,0 +1,11 @@
+#user_dialog {
+    display: none;
+    width: 400px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    position: absolute;
+    top: 200px;
+    left: 40%;
+    background-color: #fff;
+}
