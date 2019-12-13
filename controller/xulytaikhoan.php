@@ -63,7 +63,7 @@
 		$xuli_newPass=md5($xuli_newPass);
 
 		$status = (new NguoiDungBUS())->add_new(array(
-            // "MaND" => ,
+            "MaND" => '',
 			"Ho" => $xuli_ho,
             "Ten" => $xuli_ten,
             "GioiTinh" => '',

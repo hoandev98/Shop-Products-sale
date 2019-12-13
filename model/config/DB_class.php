@@ -93,8 +93,9 @@ class HoaDonBUS extends DB_business
     }
 
     function getHoaDonCuaNguoiDung($mand) {
-        $sql = "SELECT * FROM hoadon WHERE MaND=$mand";
+        $sql = "SELECT chitiethoadon.MaHD, sanpham.TenSP,chitiethoadon.SoLuong, chitiethoadon.DonGia, hoadon.NgayLap FROM ((chitiethoadon INNER JOIN sanpham ON sanpham.MaSP = chitiethoadon.MaSP) INNER JOIN hoadon ON hoadon.MaHD = chitiethoadon.MaHD) WHERE hoadon.MaND = $mand";
         $dsdh = (new HoaDonBUS())->get_list($sql);
+        return $dsdh;
     }
 
     function getHoaDonTheoNgay($day) {

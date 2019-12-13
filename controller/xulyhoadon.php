@@ -8,9 +8,20 @@
         case 'themhoadon':
             themHoaDon();
             break;
+        case 'layhoadontheoma':
+            layHoaDonTheoMa();
+
+            break;
     	default:
     		# code...
     		break;
+    }
+
+    function layHoaDonTheoMa() {
+        $mand = $_POST['mand'];
+        $data = (new HoaDonBUS())->getHoaDonCuaNguoiDung($mand);
+
+        die(json_encode($data));
     }
 
     function themHoaDon() {

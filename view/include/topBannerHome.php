@@ -25,7 +25,7 @@ function topBannerHome()
                                         <div class="slider-content">
                                             <h5>Sale Offer <span>Black Friday</span> This Week</h5>
                                             <h2>Work Desk Surface Studio 2020</h2>
-                                            <h3>Starting at <span>$824.00</span></h3>
+                                            <h3>Starting at <span>824.00đ</span></h3>
                                             <div class="default-btn slide-btn">
                                                 <a class="links" href="./view/shop.php">Shopping Now</a>
                                             </div>
@@ -35,7 +35,7 @@ function topBannerHome()
                                         <div class="slider-content">
                                             <h5>Sale Offer <span>-10% Off</span> This Week</h5>
                                             <h2>Phantom 4 Pro+ Obsidian</h2>
-                                            <h3>Starting at <span>$1849.00</span></h3>
+                                            <h3>Starting at <span>1849.00đ</span></h3>
                                             <div class="default-btn slide-btn">
                                                 <a class="links" href="./view/shop.php">Shopping Now</a>
                                             </div>
@@ -45,7 +45,7 @@ function topBannerHome()
                                         <div class="slider-content">
                                             <h5>Sale Offer <span>-20% Off</span> This Week</h5>
                                             <h2>Chamcham Galaxy S9 | S9+</h2>
-                                            <h3>Starting at <span>$1209.00</span></h3>
+                                            <h3>Starting at <span>1209.00đ</span></h3>
                                             <div class="default-btn slide-btn">
                                                 <a class="links" href="./view/shop.php">Shopping Now</a>
                                             </div>
@@ -55,7 +55,7 @@ function topBannerHome()
                                         <div class="slider-content">
                                             <h5>Sale Offer <span>Black Friday</span> This Week</h5>
                                             <h2>Work Desk Surface Studio 2020</h2>
-                                            <h3>Starting at <span>$824.00</span></h3>
+                                            <h3>Starting at <span>824.00đ</span></h3>
                                             <div class="default-btn slide-btn">
                                                 <a class="links" href="./view/shop.php">Shopping Now</a>
                                             </div>
@@ -65,7 +65,7 @@ function topBannerHome()
                                         <div class="slider-content">
                                             <h5>Sale Offer <span>-10% Off</span> This Week</h5>
                                             <h2>Phantom 4 Pro+ Obsidian</h2>
-                                            <h3>Starting at <span>$1849.00</span></h3>
+                                            <h3>Starting at <span>1849.00đ</span></h3>
                                             <div class="default-btn slide-btn">
                                                 <a class="links" href="./view/shop.php">Shopping Now</a>
                                             </div>
@@ -75,7 +75,7 @@ function topBannerHome()
                                         <div class="slider-content">
                                             <h5>Sale Offer <span>-20% Off</span> This Week</h5>
                                             <h2>Chamcham Galaxy S9 | S9+</h2>
-                                            <h3>Starting at <span>$1209.00</span></h3>
+                                            <h3>Starting at <span>1209.00đ</span></h3>
                                             <div class="default-btn slide-btn">
                                                 <a class="links" href="./view/shop.php">Shopping Now</a>
                                             </div>
@@ -85,7 +85,7 @@ function topBannerHome()
                                         <div class="slider-content">
                                             <h5>Sale Offer <span>Black Friday</span> This Week</h5>
                                             <h2>Work Desk Surface Studio 2020</h2>
-                                            <h3>Starting at <span>$824.00</span></h3>
+                                            <h3>Starting at <span>824.00đ</span></h3>
                                             <div class="default-btn slide-btn">
                                                 <a class="links" href="./view/shop.php">Shopping Now</a>
                                             </div>
@@ -98,12 +98,12 @@ function topBannerHome()
                         <div class="col-lg-4 col-md-4 text-center pt-xs-30">
                             <div class="li-banner">
                                 <a href="#">
-                                    <img src="public/images/banner/1_1.jpg" alt="">
+                                    <img src="/shop/public/images/banner/1_1.jpg" alt="">
                                 </a>
                             </div>
                             <div class="li-banner mt-15 mt-sm-30 mt-xs-30">
                                 <a href="#">
-                                    <img src="public/images/banner/1_2.jpg" alt="">
+                                    <img src="/shop/public/images/banner/1_2.jpg" alt="">
                                 </a>
                             </div>
                         </div>

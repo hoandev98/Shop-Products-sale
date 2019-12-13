@@ -83,30 +83,51 @@ function checkDangKy() {
         var confpassword = document.forms["formDangKy"]["confNewPass"].value;
         
         if (ten.length < 2 || ten.length > 30) {
-            alert(" Please enter firstname must be lenght 2 to 30 characters");
+            Swal.fire({
+                type: "error",
+                title: "Please enter firstname must be lenght 2 to 30 characters!"
+            })
             return false;
         } else if (ho.length < 2 || ho.length > 30) {
-            alert("Please enter lastname must be lenght 2 to 30 characters");
+            Swal.fire({
+                type: "error",
+                title: "Please enter lastname must be lenght 2 to 30 characters!"
+            })
             return false;
     
         } else if (username.length < 2 || username.length > 30) {
-            alert("Please enter userName must be lenght 2 to 30 characters");
+            Swal.fire({
+                type: "error",
+                title: "Please enter userName must be lenght 2 to 30 characters!"
+            })
             return false;
     
         } else if (sdt.length < 5 || sdt.length > 30) {
-            alert("Please enter SDT must be lenght 5 to 30 characters");
+            Swal.fire({
+                type: "error",
+                title: "Please enter SDT must be lenght 5 to 30 characters!"
+            })
             return false;
     
         }else if (atposition < 1 || dotposition < 1 ||
             (dotposition + 1) >= email.length) {
-            alert("Please enter a valid e-mail address.");
+            Swal.fire({
+                type: "error",
+                title: "Please enter a valid e-mail address.!"
+            })
             return false;
         } else if (pass == '' || pass.length < 2 || pass.length > 30) {
-            alert("Please enter password must be lenght 2 to 30 characters");
+            Swal.fire({
+                type: "error",
+                title: "Please enter password must be lenght 2 to 30 characters!"
+            })
             return false;
         } 
         else if (pass != confpassword) {
-            alert("Please validate password again");
+            Swal.fire({
+                type: "error",
+                title: "Please validate password again!"
+            })
             return false;
         }else {
 

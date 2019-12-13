@@ -109,18 +109,18 @@
                                 <div class="hb-menu">
                                     <nav>
                                         <ul>
-                                            <li class="homepage " style="font-weight:bold"><a href="/shop/index.php">Trang chủ</a>
+                                            <li class="homepage " style="font-weight:bold"><a href="/shop/index.php">HOME</a>
                                              
                                             </li>
-                                            <li class="megamenu-holder"><a href="/shop/view/shop.php">Cửa hàng</a>
+                                            <li class="megamenu-holder"><a href="/shop/view/shop.php">SHOP</a>
                                     
                                             </li>
                                             <li class="dropdown-holder"><a href="/shop/view/blog.php">Blog</a>
                         
                                             </li>
                     
-                                            <li><a href="/shop/view/about-us.php">Giới thiệu</a></li>
-                                            <li style="padding-left:20px ;"><a href="/shop/view/contact.php">Liên hệ</a></li>
+                                            <li><a href="/shop/view/about-us.php">ABOUT US</a></li>
+                                            <li style="padding-left:20px ;"><a href="/shop/view/contact.php">CONTACT</a></li>
                                             
                                         </ul>
                                     </nav>

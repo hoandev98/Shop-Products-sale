@@ -31,11 +31,24 @@
         
     </div>
 
-	<div class="footer">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form action="#">
+                    <div class="table-content table-responsive">
+                        <div id="showbill"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+	<div class="footer" style="margin-top: 30px">
     <?php include "./include/footer.php" ?>
 	</div>
 
-	
+	<script type="text/javascript" src="/shop/public/jsAjax/user.js?1500"></script>
 </body>
 
 </html>

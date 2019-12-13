@@ -39,9 +39,9 @@ class DB_driver
         foreach ($data as $key => $value) {
             $value_list .= ",'" . mysqli_escape_string($this->__conn, $value) . "'";
         }
-        // $resultValue = trim($value_list,',');
+        $resultValue = trim($value_list,',');
         // Vì sau vòng lặp các biến $field_list và $value_list sẽ thừa một dấu , nên ta sẽ dùng hàm trim để xóa đi
-        $sql = 'INSERT INTO ' . $table . ' VALUES (null'.$value_list.')';
+        $sql = 'INSERT INTO ' . $table . ' VALUES ('.$resultValue.')';
         return mysqli_query($this->__conn, $sql);
     }
 
